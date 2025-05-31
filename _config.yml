@@ -9,7 +9,7 @@ name: Case Studies
 description: Highlighted Customer Solutions
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /images/Nimbuslogo_black.png
+avatar: /images/logoTechMekaBlack.png
 
 #
 # Flags below are optional
@@ -47,7 +47,7 @@ analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://nimbuscorp.github.io
+url: https://techmeka.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
