@@ -19,12 +19,14 @@ A **hospital in Ontario, Canada** needed to migrate its on-premises SharePoint S
 - Old and inefficient CSS
 - Short timeline to achieve assessment, plan and migrate to SharePoint Online.
 - Thousands of orphaned and detached identity objects.
+- Sensitive data sprawl without governance controls
 
 ## Solution:
 TechMeka assisted in delivering a successful migration within short timeframe. Our PS team provided an assessment on the hospitals current SharePoint 2016 infrastructure and helped design the entire migration. 
 
 The Key elements that TechMeka assisted with:
 - Assessment on current SharePoint server infrastructure using SharePoint Migration Assessment Tools (SMAT).
+- Designed and implemented Governance and security controls for data protection
 - Designed migration plan to target steep timelines and clean cutovers and change management.
 - Prepped and transformed source environments to ensure clean migration.
 - Redesigned and optimized multiple master pages to be more performant using modern styling techniques and moved media assets to CDN.
