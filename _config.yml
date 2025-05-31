@@ -90,3 +90,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+# excerpt settings
+excerpt_separator: "<!--more-->"
