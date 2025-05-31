@@ -4,7 +4,7 @@ title: SharePoint Migration for Ontario Hospital
 date: 2024-07-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
-image: images/sharepoint2016MigrationExtraSmall.png
+image: /images/sharepoint2016MigrationExtraSmall.png
 published: true
 ---
 
