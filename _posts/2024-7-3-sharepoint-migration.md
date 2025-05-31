@@ -29,7 +29,7 @@ The Key elements that TechMeka assisted with:
 - Prepped and transformed source environments to ensure clean migration.
 - Redesigned and optimized multiple master pages to be more performant using modern styling techniques and moved media assets to CDN.
 - Facilitated rolling cutovers and onboarding of all departments to the new SharePoint online experience.
-- Provided white glove and stability support with short SLAs to ensure Hospital operations run smoothly.
+- White glove and stability support with short SLAs to ensure Hospital operations run smoothly.
 - Coordinated client and partner project teams to deliver the project successfully and smoothly.
 
 
