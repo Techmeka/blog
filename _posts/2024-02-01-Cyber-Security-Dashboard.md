@@ -9,12 +9,9 @@ published: true
 ---
 
 
-## Background:
-
-![cyberSecurityDashboard][1]
-
 A **Toronto-based hospital** aimed to develop comprehensive cybersecurity dashboards that would deliver real-time hygiene and security insights across all managed endpoints and services. Additionally, the hospital sought to integrate and fully automate its vendor risk assessment process. <!--more--> With hundreds of vendors and a legacy, manual system that was both time-consuming and inefficient, the existing workflow placed a heavy burden on internal resources. The hospital engaged TechMeka to redesign and automate the entire process end to end, significantly enhancing efficiency, visibility, and accuracy.
 
+![cyberSecurityDashboard][1]
 
 ## Challenges:
 - Designing a flexible form structure capable of capturing comprehensive information across a diverse vendor base, including details about their internal controls.
