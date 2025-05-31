@@ -4,13 +4,16 @@ title: Cyber Security Dashboard - Power BI & Power Automate solution
 date: 2024-02-01 00:00:00
 tags: [ SharePoint, Power Automate, PowerBI, SCCM, Intune, SentinelOne, Governance ]
 categories: [Data, Technology]
+image: /images/cyberSecurityDashboard.png
 published: true
 ---
 
 
 ## Background:
 
-A **Toronto-based hospital** aimed to develop comprehensive cybersecurity dashboards that would deliver real-time hygiene and security insights across all managed endpoints and services. Additionally, the hospital sought to integrate and fully automate its vendor risk assessment process. With hundreds of vendors and a legacy, manual system that was both time-consuming and inefficient, the existing workflow placed a heavy burden on internal resources. The hospital engaged TechMeka to redesign and automate the entire process end to end, significantly enhancing efficiency, visibility, and accuracy.
+![cyberSecurityDashboard][1]
+
+A **Toronto-based hospital** aimed to develop comprehensive cybersecurity dashboards that would deliver real-time hygiene and security insights across all managed endpoints and services. Additionally, the hospital sought to integrate and fully automate its vendor risk assessment process. <!--more--> With hundreds of vendors and a legacy, manual system that was both time-consuming and inefficient, the existing workflow placed a heavy burden on internal resources. The hospital engaged TechMeka to redesign and automate the entire process end to end, significantly enhancing efficiency, visibility, and accuracy.
 
 
 ## Challenges:
@@ -31,3 +34,8 @@ TechMeka delivered a fully integrated Microsoft 365 solution that automated the 
 - Vendors were able to complete the form and submit it effortlessly by sending it as an email attachment.
 - Submitted forms were automatically cataloged and securely stored in an internal database for further analysis.
 - Telemetry and risk data from **SCCM**, **SentinelOne**, and **Intune** were integrated into a unified semantic model, enabling comprehensive, real-time reporting through interactive Power BI dashboards.
+
+## Benefits:
+
+
+ [1]: /images/cyberSecurityDashboard.png
