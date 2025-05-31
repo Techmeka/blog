@@ -4,7 +4,7 @@ title: SharePoint Migration for Hospital
 date: 2024-07-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
-published: false
+published: true
 ---
 
 ## Background:
