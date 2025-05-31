@@ -4,7 +4,7 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post" style="display: flex; gap: 20px; margin-bottom: 40px; align-items: flex-start;">
+    <article class="post" style="display: flex; gap: 20px; margin-bottom: 40px; align-items: center;">
 
       {% if post.image %}
         <div style="flex-shrink: 0;">
@@ -13,7 +13,7 @@ layout: default
       {% endif %}
 
       <div style="flex: 1;">
-        <h2 style="margin-top: 0;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <h2 style="margin-top: 0; margin-bottom: 10px;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 
         <div class="entry" style="margin-bottom: 10px;">
           {{ post.excerpt }}
