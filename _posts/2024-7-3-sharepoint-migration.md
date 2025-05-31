@@ -37,4 +37,4 @@ The Key elements that TechMeka assisted with:
 ## Benefits:
 
 
- [1]: /images/sharepoint2016Migration.png
+ [1]: /images/sharepoint2016MigrationSmall.png
