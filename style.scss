@@ -360,29 +360,30 @@ nav {
 /* Mobile: stack vertically in order → Title, Image, Content */
 @media (max-width: 768px) {
   .post-preview {
-    flex-direction: column;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
-  /* Title first (order: 1) */
+  .post-right {
+    display: contents; /* This makes its children become direct children of the grid container */
+  }
+
   .post-title {
-    order: 1;
+    grid-row: 1; /* Title first */
   }
 
-  /* Image second (order: 2) */
   .post-image {
-    order: 2;
-    margin: 0 0 15px 0;
-
+    grid-row: 2; /* Image second */
+    
     img {
       width: 100%;
       height: auto;
     }
   }
 
-  /* Content last (order: 3) */
   .post-content {
-    order: 3;
+    grid-row: 3; /* Content last */
   }
 }
 
