@@ -323,7 +323,6 @@ nav {
   }
 }
 
-
 .post-preview {
   /* Desktop: side-by-side layout */
   display: flex;
@@ -351,7 +350,6 @@ nav {
 /* Mobile: stack vertically in order → Title, Image, Content */
 @media (max-width: 768px) {
   .post-preview {
-    display: flex; /* Switch back to flexbox for mobile */
     flex-direction: column; /* Stack items vertically */
     align-items: stretch; /* Align items to stretch across the container */
   }
@@ -371,7 +369,6 @@ nav {
     order: 2; /* Content last */
   }
 }
-
 
 .post {
   blockquote {
