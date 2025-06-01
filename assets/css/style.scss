@@ -283,34 +283,8 @@ footer {
   text-align: center;
 }
 
-/* MOBILE: (max-width: 768px) */
-/* Hide desktop image, show mobile image */
-@media (max-width: 768px) {
-  .post-image-desktop {
-    display: none !important;
-    background: red !important;
-  }
-  .post-image {
-    display: block !important;
-    width: 100% !important;
-    background: green !important;
-  }
-}
 
-/* DESKTOP: (min-width: 769px) */
-/* Hide mobile image, show desktop image */
-@media (min-width: 769px) {
-  .post-image {
-    display: none !important;
-    background: yellow !important;
-  }
-  .post-image-desktop {
-    display: block !important;
-    background: blue !important;
-  }
-}
 
-body { background: pink !important; }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
