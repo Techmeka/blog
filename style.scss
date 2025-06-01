@@ -347,26 +347,26 @@ nav {
   }
 }
 
-/* Mobile: stack vertically in order → Title, Image, Content */
+/* Mobile: two-column layout */
 @media (max-width: 768px) {
   .posts .post-preview {
-    flex-direction: column; /* Stack items vertically */
-    align-items: stretch; /* Align items to stretch across the container */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Image takes 1fr, content takes 2fr */
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: start; /* Align items to the top */
   }
 
   .posts .post-preview > .post-image {
-    order: 1; /* Image second */
-    width: 100%; /* Make image full width */
-    margin-bottom: 15px; /* Add some spacing below the image */
-
-    img {
-      width: 100%;
-      height: auto;
-    }
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .posts .post-preview > .post-content {
-    order: 2; /* Content last */
+    grid-column: 2;
+    grid-row: 1;
   }
 }
 
