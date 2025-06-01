@@ -326,10 +326,10 @@ nav {
 .posts .post-preview {
   /* Desktop: two-column layout */
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Image takes 1fr, content takes 2fr */
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
   margin-bottom: 40px;
-  align-items: start; /* Align items to the top */
+  align-items: start;
 }
 
 .posts .post-preview > .post-image {
@@ -344,19 +344,16 @@ nav {
   grid-row: 1;
 }
 
-/* Mobile: revert to stacked layout */
+/* Mobile: Stacked layout */
 @media (max-width: 768px) {
   .posts .post-preview {
-    display: block; /* Revert to block display */
+    display: flex;
+    flex-direction: column;
   }
 
   .posts .post-preview > .post-image {
-    width: 100%; /* Make image full width */
-    margin-bottom: 15px; /* Add spacing below image */
-  }
-
-  .posts .post-preview > .post-content {
     width: 100%;
+    margin-bottom: 15px;
   }
 }
 
