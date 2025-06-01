@@ -367,6 +367,22 @@ nav {
   }
 }
 
+/* Hide post-image-desktop on mobile */
+@media (max-width: 768px) {
+  .posts .post-preview .post-image-desktop,
+  .post-image-desktop {
+    display: none !important;
+  }
+}
+
+/* Hide post-image on desktop */
+@media (min-width: 769px) {
+  .posts .post-preview .post-image,
+  .post-image {
+    display: none !important;
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;
