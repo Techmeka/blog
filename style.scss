@@ -323,7 +323,7 @@ nav {
   }
 }
 
-.post-preview {
+.posts .post-preview {
   /* Desktop: side-by-side layout */
   display: flex;
   gap: 20px;
@@ -349,7 +349,7 @@ nav {
 
 /* Mobile: stack vertically in order → Title, Image, Content */
 @media (max-width: 768px) {
-  .post-preview {
+  .posts .post-preview {
     flex-direction: column; /* Stack items vertically */
     align-items: stretch; /* Align items to stretch across the container */
   }
