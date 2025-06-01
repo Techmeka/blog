@@ -324,49 +324,35 @@ nav {
 }
 
 .posts .post-preview {
-  /* Desktop: side-by-side layout */
-  display: flex;
+  /* Desktop: two-column layout */
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image takes 1fr, content takes 2fr */
   gap: 20px;
   margin-bottom: 40px;
-  align-items: center; /* Vertically center content */
-
-  > .post-image {
-    /* No special order on desktop; it remains on the left by default */
-    flex-shrink: 0;
-
-    img {
-      width: 200px;
-      height: auto;
-      border-radius: 6px;
-    }
-  }
-
-  > .post-content {
-    /* Make the right side content (title, excerpt, read-more) */
-    flex: 1;
-  }
+  align-items: start; /* Align items to the top */
 }
 
-/* Mobile: two-column layout */
+.posts .post-preview > .post-image {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.posts .post-preview > .post-content {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Mobile: revert to stacked layout */
 @media (max-width: 768px) {
   .posts .post-preview {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Image takes 1fr, content takes 2fr */
-    gap: 10px;
-    margin-bottom: 20px;
-    align-items: start; /* Align items to the top */
+    display: block; /* Revert to block display */
   }
 
   .posts .post-preview > .post-image {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    margin-bottom: 0;
-  }
-
-  .posts .post-preview > .post-content {
-    grid-column: 2;
-    grid-row: 1;
+    width: 100%; /* Make image full width */
+    margin-bottom: 15px; /* Add spacing below image */
   }
 }
 
