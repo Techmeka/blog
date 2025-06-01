@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background: $white;
+	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
+
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -70,7 +71,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-  cursor: pointer;
+	cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -133,12 +134,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
 
 /*********************/
@@ -159,7 +160,6 @@ img {
 
   @include mobile {
     text-align: center;
-    padding: 10px 0; // tighter spacing
   }
 }
 
@@ -173,13 +173,6 @@ img {
     float: none;
     display: block;
     margin: 0 auto;
-    width: 100px; // smaller avatar
-    height: auto;
-
-    img {
-      width: 100px;
-      height: auto;
-    }
   }
 
   img {
@@ -194,7 +187,6 @@ img {
     float: none;
     display: block;
     margin: 0 auto;
-    text-align: center;
   }
 }
 
@@ -206,16 +198,12 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
-  
-  @include mobile {
-    font-size: 20px;
-  }
 }
 
 .site-description {
-  margin: 3px 0;
+  margin: -5px 0 0 0;
   color: $gray;
-  font-size: 14px;
+  font-size: 16px;
 
   @include mobile {
     margin: 3px 0;
@@ -263,167 +251,6 @@ nav {
   border-bottom: none;
 }
 
-.read-more {
-  margin-top: 10px;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: $blue;
-  text-transform: uppercase;
-}
-
-// Standard post layout
-.posts .post {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-
-  img {
-    width: 200px;
-    height: auto;
-    border-radius: 6px;
-  }
-
-  .entry {
-    flex: 1;
-  }
-
-  .read-more {
-    margin-top: 10px;
-    display: inline-block;
-    color: $blue;
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
-  
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: stretch;
-
-    img {
-      width: 100%;
-      height: auto;
-      margin: 10px 0;
-    }
-
-    .entry {
-      margin-top: 10px;
-    }
-  }
-}
-
-/* Post Preview styles - consolidated */
-.posts .post-preview {
-  margin-bottom: 40px;
-  border-bottom: 1px solid $lightGray;
-  padding-bottom: 20px;
-}
-
-.posts .post-preview:last-child {
-  border-bottom: none;
-}
-
-/* Desktop layout */
-@media (min-width: 769px) {
-  .posts .post-preview {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .posts .post-preview .post-image-desktop {
-    display: block;
-    flex: 0 0 200px;
-    margin-right: 15px;
-  }
-  
-  .posts .post-preview .post-image-desktop img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-  
-  .posts .post-preview .post-image {
-    display: none;
-  }
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-  .posts .post-preview .post-image-desktop {
-    display: none;
-  }
-  
-  .posts .post-preview .post-image {
-    display: block;
-    margin: 15px 0;
-  }
-  
-  .posts .post-preview .post-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-}
-
-/* Desktop-specific rules */
-@media (min-width: 769px) {
-  /* Hide on desktop */
-  [class*="post-image"]:not([class*="post-image-desktop"]) {
-    display: none !important;
-  }
-  
-  /* Show on desktop */
-  [class*="post-image-desktop"] {
-    display: block !important;
-  }
-}
-
-/* Mobile layout (max-width: 768px) */
-@media (max-width: 768px) {
-  .post-image-desktop {
-    display: none !important;
-  }
-  .post-image {
-    display: block !important;
-    width: 100% !important;
-  }
-}
-
-/* Desktop layout (min-width: 769px) */
-@media (min-width: 769px) {
-  .post-image {
-    display: none !important;
-  }
-  .post-image-desktop {
-    display: block !important;
-  }
-}
-
-/* FINAL: Hide/Show post images by device */
-
-/* On desktop (min-width: 769px): hide the mobile version, show the desktop version */
-@media (min-width: 769px) {
-  .post-image {
-    display: none !important;
-  }
-  .post-image-desktop {
-    display: block !important;
-  }
-}
-
-/* On mobile (max-width: 768px): hide the desktop version, show the mobile version */
-@media (max-width: 768px) {
-  .post-image {
-    display: block !important;
-    width: 100% !important;
-  }
-  .post-image-desktop {
-    display: none !important;
-  }
-}
-
 .post {
   blockquote {
     margin: 1.8em .8em;
@@ -456,33 +283,8 @@ footer {
   text-align: center;
 }
 
-/* Force hiding elements based on screen size */
-@media (max-width: 768px) {
-  /* Hide on mobile */
-  [class*="post-image-desktop"] {
-    display: none !important;
-  }
-  
-  /* Show on mobile */
-  [class*="post-image"]:not([class*="post-image-desktop"]) {
-    display: block !important;
-    width: 100%;
-  }
-}
-
-/* Desktop layout: (min-width: 769px) */
-/* Hide mobile image and show desktop image */
-@media (min-width: 769px) {
-  .post-image {
-    display: none !important;
-  }
-  .post-image-desktop {
-    display: block !important;
-  }
-}
-
-/* Mobile layout: (max-width: 768px) */
-/* Hide desktop image and show mobile image */
+/* MOBILE: (max-width: 768px) */
+/* Hide desktop image, show mobile image */
 @media (max-width: 768px) {
   .post-image-desktop {
     display: none !important;
@@ -490,6 +292,17 @@ footer {
   .post-image {
     display: block !important;
     width: 100% !important;
+  }
+}
+
+/* DESKTOP: (min-width: 769px) */
+/* Hide mobile image, show desktop image */
+@media (min-width: 769px) {
+  .post-image {
+    display: none !important;
+  }
+  .post-image-desktop {
+    display: block !important;
   }
 }
 
