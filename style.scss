@@ -470,6 +470,20 @@ nav {
   }
 }
 
+/* Hide post-image-desktop on mobile */
+@media (max-width: 768px) {
+  .post-image-desktop {
+    display: none;
+  }
+}
+
+/* Hide post-image on desktop */
+@media (min-width: 769px) {
+  .post-image {
+    display: none;
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;
