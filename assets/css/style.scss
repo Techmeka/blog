@@ -316,3 +316,17 @@ body { background: pink !important; }
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+@media (min-width: 769px) {
+  .post-image {
+    display: none !important;
+    background: yellow !important;
+  }
+  .post-image-desktop {
+    display: block !important;
+    background: blue !important;
+  }
+}
+
+body { background: pink !important; }
