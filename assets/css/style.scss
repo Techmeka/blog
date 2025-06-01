@@ -292,6 +292,31 @@ footer {
 @import "svg-icons";
 
 
+/* Show .post-image-desktop only on desktop */
+.post-image-desktop {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .post-preview-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .post-image-desktop {
+    display: block;
+    flex: 0 0 250px; /* Adjust width as needed */
+    max-width: 250px;
+  }
+  .post-preview-content {
+    flex: 1;
+  }
+  /* Hide the mobile image on desktop */
+  .post-image {
+    display: none;
+  }
+}
+
 @media (min-width: 769px) {
   .post-image {
     display: none !important;
