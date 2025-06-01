@@ -300,12 +300,12 @@ footer {
 @media (min-width: 900px) {
   .post-preview-flex {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Vertically center content with image */
     gap: 2rem;
   }
   .post-image-desktop {
     display: block;
-    flex: 0 0 250px; /* Adjust width as needed */
+    flex: 0 0 250px;
     max-width: 250px;
   }
   .post-preview-content {
