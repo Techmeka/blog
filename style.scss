@@ -323,95 +323,7 @@ nav {
   }
 }
 
-/* Post Preview - shared styles */
-.post-preview {
-  margin-bottom: 40px;
-  border-bottom: 1px solid $lightGray;
-  padding-bottom: 20px;
-}
-
-.post-preview:last-child {
-  border-bottom: none;
-}
-
-.post-preview h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.post-preview .read-more {
-  margin-top: 15px;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: $blue;
-  text-transform: uppercase;
-}
-
-/* Desktop Layout (default) */
-@media (min-width: 769px) {
-  .post-preview {
-    display: flex;
-    gap: 25px;
-    align-items: flex-start;
-  }
-  
-  .post-preview .post-image {
-    flex: 0 0 200px; /* Fixed width, don't grow or shrink */
-    order: 0; /* Appears first (left) */
-  }
-  
-  .post-preview .post-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    object-fit: cover;
-  }
-  
-  .post-preview .post-title {
-    order: 1; /* Title shows at top of right column */
-  }
-  
-  .post-preview .post-content {
-    order: 2; /* Content shows below title in right column */
-    flex: 1; /* Take up remaining space */
-  }
-  
-  /* For posts without images */
-  .post-preview:not(:has(.post-image)) .post-title,
-  .post-preview:not(:has(.post-image)) .post-content {
-    margin-left: 0;
-  }
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .post-preview {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .post-preview .post-title {
-    order: 1; /* Title first */
-  }
-  
-  .post-preview .post-image {
-    order: 2; /* Image second */
-    margin: 10px 0 15px;
-  }
-  
-  .post-preview .post-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-  
-  .post-preview .post-content {
-    order: 3; /* Content third */
-  }
-}
-
-/* Post preview styles - shared */
+/* Post Preview - clean rules */
 .posts .post-preview {
   margin-bottom: 40px;
   border-bottom: 1px solid $lightGray;
@@ -422,44 +334,43 @@ nav {
   border-bottom: none;
 }
 
-/* Desktop layout (screens wider than 768px) */
+/* Hide/show appropriate images based on screen size */
+.posts .post-preview .post-image-desktop {
+  display: block;
+}
+
+.posts .post-preview .post-image {
+  display: none;
+}
+
+/* Desktop layout */
 @media (min-width: 769px) {
   .posts .post-preview {
-    display: grid;
-    grid-template-columns: 200px 1fr;
+    display: flex;
     gap: 20px;
     align-items: center;
   }
   
-  .posts .post-preview .post-image {
-    grid-column: 1;
-    grid-row: 1 / span 2; /* Span two rows */
+  .posts .post-preview .post-image-desktop {
+    flex: 0 0 200px;
+    margin-right: 15px;
   }
   
-  .posts .post-preview .post-title {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  
-  .posts .post-preview .post-content {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  
-  .posts .post-preview .post-image img {
+  .posts .post-preview .post-image-desktop img {
     width: 100%;
     height: auto;
     border-radius: 6px;
   }
 }
 
-/* Mobile layout (screens 768px or narrower) */
+/* Mobile layout */
 @media (max-width: 768px) {
-  .posts .post-preview {
-    display: block; /* Simplest approach to preserve HTML order */
+  .posts .post-preview .post-image-desktop {
+    display: none;
   }
   
   .posts .post-preview .post-image {
+    display: block;
     margin: 15px 0;
   }
   
@@ -467,34 +378,6 @@ nav {
     width: 100%;
     height: auto;
     border-radius: 6px;
-  }
-}
-
-/* Hide post-image-desktop on mobile devices */
-@media (max-width: 768px) {
-  .posts .post-preview .post-image-desktop {
-    display: none !important;
-  }
-}
-
-/* Hide post-image on desktop devices */
-@media (min-width: 769px) {
-  .posts .post-preview .post-image {
-    display: none !important;
-  }
-}
-
-/* Hide post-image-desktop on mobile */
-@media (max-width: 768px) {
-  .post-image-desktop {
-    display: none;
-  }
-}
-
-/* Hide post-image on desktop */
-@media (min-width: 769px) {
-  .post-image {
-    display: none;
   }
 }
 
