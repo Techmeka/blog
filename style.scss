@@ -354,6 +354,10 @@ nav {
     width: 100%; /* Make image full width */
     margin-bottom: 15px; /* Add spacing below image */
   }
+
+  .posts .post-preview > .post-content {
+    width: 100%;
+  }
 }
 
 .post {
