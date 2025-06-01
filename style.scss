@@ -367,6 +367,40 @@ nav {
   }
 }
 
+/* Desktop-specific rules */
+@media (min-width: 769px) {
+  /* Hide on desktop */
+  [class*="post-image"]:not([class*="post-image-desktop"]) {
+    display: none !important;
+  }
+  
+  /* Show on desktop */
+  [class*="post-image-desktop"] {
+    display: block !important;
+  }
+}
+
+/* Mobile layout (max-width: 768px) */
+@media (max-width: 768px) {
+  .post-image-desktop {
+    display: none !important;
+  }
+  .post-image {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+/* Desktop layout (min-width: 769px) */
+@media (min-width: 769px) {
+  .post-image {
+    display: none !important;
+  }
+  .post-image-desktop {
+    display: block !important;
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;
