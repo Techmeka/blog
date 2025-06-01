@@ -1,6 +1,6 @@
 ---
 layout: post
-title: On-premises SharePoint and file server infrastructure migration to Cloud for Toronto Hospital
+title: Cloud Migration of SharePoint and File Server Infrastructure for a Leading Toronto Hospital
 date: 2023-10-03 00:00:00
 tags: [ SharePoint, OneDrive, Migration, Modernization, Fileserver, Governance ]
 categories: [Data, Technology]
