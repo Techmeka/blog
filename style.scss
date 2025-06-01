@@ -373,20 +373,9 @@ nav {
     flex-direction: column;
     align-items: stretch;
     
-    .post-content {
-      display: flex;
-      flex-direction: column;
-      
-      h2 {
-        order: -1; /* Move title to the top */
-        font-size: 22px;
-        margin-bottom: 15px;
-      }
-    }
-    
     .post-image {
-      order: 0; /* Keep image in the middle */
-      margin: 0 0 15px 0;
+      order: 2; /* Move image below title */
+      margin: 15px 0;
       
       img {
         width: 100%;
@@ -394,9 +383,23 @@ nav {
       }
     }
     
-    .post-content .entry,
-    .post-content .read-more {
-      order: 1; /* Keep text content below the image */
+    .post-content {
+      order: 1; /* Content container comes first */
+      
+      h2 {
+        order: 1; /* Title first */
+        font-size: 22px;
+        margin-bottom: 0;
+      }
+      
+      .entry {
+        order: 3; /* Entry after image */
+        margin-top: 15px;
+      }
+      
+      .read-more {
+        order: 4; /* Read more link last */
+      }
     }
   }
 }
