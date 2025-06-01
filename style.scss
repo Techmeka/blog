@@ -160,6 +160,7 @@ img {
 
   @include mobile {
     text-align: center;
+    padding: 10px 0; // tighter spacing
   }
 }
 
@@ -173,6 +174,13 @@ img {
     float: none;
     display: block;
     margin: 0 auto;
+    width: 100px; // smaller avatar
+    height: auto;
+
+    img {
+      width: 100px;
+      height: auto;
+    }
   }
 
   img {
@@ -187,6 +195,7 @@ img {
     float: none;
     display: block;
     margin: 0 auto;
+    text-align: center;
   }
 }
 
@@ -198,12 +207,16 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+  
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .site-description {
-  margin: -5px 0 0 0;
+  margin: 3px 0;
   color: $gray;
-  font-size: 16px;
+  font-size: 14px;
 
   @include mobile {
     margin: 3px 0;
@@ -249,6 +262,56 @@ nav {
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.posts .post {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+
+  // Optional: cap the image size
+  img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* stack vertically */
+    align-items: stretch;
+
+    img {
+      width: 100%; /* full-width on small screen */
+      height: auto;
+      margin: 10px 0;
+    }
+
+    .entry {
+      margin-top: 10px;
+    }
+
+    .read-more {
+      margin-top: 10px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: $blue;
+      text-transform: uppercase;
+    }
+  }
+
+  .entry {
+    flex: 1;
+  }
+
+  .read-more {
+    margin-top: 10px;
+    display: inline-block;
+    color: $blue;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
 }
 
 .post {
