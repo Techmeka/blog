@@ -264,6 +264,15 @@ nav {
   border-bottom: none;
 }
 
+.read-more {
+  margin-top: 10px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $blue;
+  text-transform: uppercase;
+}
+
 .posts .post {
   display: flex;
   gap: 20px;
@@ -311,6 +320,69 @@ nav {
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
+  }
+}
+
+.post-preview {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+
+  .post-image {
+    flex-shrink: 0;
+
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 6px;
+    }
+  }
+
+  .post-content {
+    flex: 1;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      a {
+        color: $darkGray;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      margin-top: 10px;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: $blue;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    .post-image img {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .post-content {
+      h2 {
+        font-size: 22px;
+      }
+    }
   }
 }
 
