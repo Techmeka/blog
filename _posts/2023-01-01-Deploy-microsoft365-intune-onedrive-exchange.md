@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Designed the entire IT infrastructure and controls for wealth management firm
+title: End-to-End Secure Workplace Infrastructure Design for a Wealth Management Firm
 date: 2023-04-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
