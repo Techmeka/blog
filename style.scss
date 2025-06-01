@@ -411,6 +411,76 @@ nav {
   }
 }
 
+/* Post preview styles - shared */
+.posts .post-preview {
+  margin-bottom: 40px;
+  border-bottom: 1px solid $lightGray;
+  padding-bottom: 20px;
+}
+
+.posts .post-preview:last-child {
+  border-bottom: none;
+}
+
+/* Desktop layout (screens wider than 768px) */
+@media (min-width: 769px) {
+  .posts .post-preview {
+    display: flex;
+    gap: 25px;
+    align-items: center; /* Vertically center content */
+  }
+  
+  .posts .post-preview .post-image {
+    flex: 0 0 200px; /* Fixed width */
+    order: 0; /* Keep image first (left) on desktop */
+  }
+  
+  .posts .post-preview .post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .posts .post-preview .post-title,
+  .posts .post-preview .post-content {
+    width: 100%; /* Full width within the flex container */
+  }
+  
+  /* Group title and content together on the right */
+  .posts .post-preview .post-title,
+  .posts .post-preview .post-content {
+    flex: 1; /* Together take remaining space */
+  }
+}
+
+/* Mobile layout (screens 768px or narrower) */
+@media (max-width: 768px) {
+  .posts .post-preview {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .posts .post-preview .post-title {
+    order: 1; /* Title first */
+  }
+  
+  .posts .post-preview .post-image {
+    order: 2; /* Image second */
+    margin: 15px 0;
+    width: 100%;
+  }
+  
+  .posts .post-preview .post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .posts .post-preview .post-content {
+    order: 3; /* Content third */
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;
