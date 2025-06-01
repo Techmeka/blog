@@ -365,6 +365,10 @@ nav {
     align-items: stretch; /* Align items to stretch across the container */
   }
 
+  .post-title {
+    order: 1; /* Title first */
+  }
+
   .post-image {
     order: 2; /* Image second */
     width: 100%; /* Make image full width */
@@ -376,8 +380,8 @@ nav {
     }
   }
 
-  .post-right {
-    order: 1; /* Title and content first */
+  .post-content {
+    order: 3; /* Content last */
   }
 }
 
