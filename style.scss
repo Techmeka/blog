@@ -288,10 +288,12 @@ footer {
 @media (max-width: 768px) {
   .post-image-desktop {
     display: none !important;
+    background: red !important;
   }
   .post-image {
     display: block !important;
     width: 100% !important;
+    background: green !important;
   }
 }
 
@@ -300,9 +302,11 @@ footer {
 @media (min-width: 769px) {
   .post-image {
     display: none !important;
+    background: yellow !important;
   }
   .post-image-desktop {
     display: block !important;
+    background: blue !important;
   }
 }
 
