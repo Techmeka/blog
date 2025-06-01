@@ -425,14 +425,16 @@ nav {
 /* Desktop layout (screens wider than 768px) */
 @media (min-width: 769px) {
   .posts .post-preview {
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "image content";
     gap: 25px;
     align-items: center; /* Vertically center content */
   }
   
   .posts .post-preview .post-image {
-    flex: 0 0 200px; /* Fixed width */
-    order: 0; /* Keep image first (left) on desktop */
+    grid-area: image;
+    width: 100%;
   }
   
   .posts .post-preview .post-image img {
@@ -441,15 +443,22 @@ nav {
     border-radius: 6px;
   }
   
-  .posts .post-preview .post-title,
-  .posts .post-preview .post-content {
-    width: 100%; /* Full width within the flex container */
+  /* Group title and content together on the right */
+  .posts .post-preview .post-title {
+    grid-area: content;
+    order: 1; /* Title first in content area */
   }
   
-  /* Group title and content together on the right */
+  .posts .post-preview .post-content {
+    grid-area: content;
+    order: 2; /* Content after title in content area */
+  }
+  
+  /* Force the content area to behave as a column */
   .posts .post-preview .post-title,
   .posts .post-preview .post-content {
-    flex: 1; /* Together take remaining space */
+    display: block;
+    width: 100%;
   }
 }
 
@@ -465,7 +474,7 @@ nav {
   }
   
   .posts .post-preview .post-image {
-    order: 2; /* Image second */
+    order: 2; /* Image second, under the title */
     margin: 15px 0;
     width: 100%;
   }
