@@ -328,7 +328,7 @@ nav {
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
-  align-items: center; // vertically center content on desktop
+  align-items: center; // vertically center text w.r.t. image on desktop
 }
 
 .post-image {
@@ -346,7 +346,6 @@ nav {
 }
 
 .post-title {
-  /* On desktop, the title stays in place inside the right column */
   h2 {
     margin-top: 0;
     margin-bottom: 10px;
@@ -376,26 +375,22 @@ nav {
   }
 }
 
-/* Mobile layout:
-   Stack the title, image, and content vertically as:
-   Title → Image → Excerpt → Read More  */
+/* Mobile layout: Reorder so that the image appears before the title.
+   Here we use grid with defined areas.
+   The order will be: image → title → content */
 @media (max-width: 768px) {
   .post-preview {
     display: grid;
     grid-template-areas:
-      "title"
       "image"
+      "title"
       "content";
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  /* Use display: contents on .post-right so we can assign grid areas
-     to its children individually */
+  /* Allow children of .post-right to receive grid areas */
   .post-right {
     display: contents;
-  }
-  .post-title {
-    grid-area: title;
   }
   .post-image {
     grid-area: image;
@@ -404,6 +399,9 @@ nav {
       width: 100%;
       margin: 0;
     }
+  }
+  .post-title {
+    grid-area: title;
   }
   .post-content {
     grid-area: content;
