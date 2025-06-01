@@ -326,22 +326,26 @@ nav {
 /* Desktop: two-column layout */
 .posts .post-preview {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 200px 1fr; /* Fixed width for image, rest for content */
+  grid-template-areas: 
+    "image title"
+    "image content";
   gap: 20px;
   margin-bottom: 40px;
   align-items: start;
 }
 
 .posts .post-preview > .post-image {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: image;
   width: 100%;
-  margin-bottom: 0;
+}
+
+.posts .post-preview > .post-title {
+  grid-area: title;
 }
 
 .posts .post-preview > .post-content {
-  grid-column: 2;
-  grid-row: 1;
+  grid-area: content;
 }
 
 /* Mobile: Stacked layout */
@@ -355,8 +359,9 @@ nav {
     margin-bottom: 15px;
   }
 
+  .posts .post-preview > .post-title,
   .posts .post-preview > .post-content {
-    display: block; /* Ensure content also reverts to block */
+    width: 100%;
   }
 }
 
