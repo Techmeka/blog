@@ -381,6 +381,39 @@ nav {
   }
 }
 
+/* Override display properties for images */
+.posts .post-preview .post-image-desktop {
+  display: block !important;
+}
+
+.posts .post-preview .post-image {
+  display: none !important;
+}
+
+/* Desktop layout */
+@media (min-width: 769px) {
+  .posts .post-preview .post-image-desktop {
+    display: block !important;
+    flex: 0 0 200px;
+  }
+  
+  .posts .post-preview .post-image {
+    display: none !important;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .posts .post-preview .post-image-desktop {
+    display: none !important;
+  }
+  
+  .posts .post-preview .post-image {
+    display: block !important;
+    margin: 15px 0;
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;
