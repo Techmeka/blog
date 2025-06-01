@@ -10,7 +10,7 @@ published: true
 
 A **Toronto hospital** required a rapid migration of its on-premises file infrastructure and unstructured data—including file servers and a SharePoint Server 2013 environment—to the cloud. <!--more--> The hospital adopted a **multi-staged transformation strategy**, beginning with a lift-and-shift migration of its SharePoint environment to **SharePoint Online**, taking advantage of the enhanced security, scalability, and integration offered by **Microsoft 365**. In parallel, user home drives hosted on file servers were migrated to OneDrive, while departmental and organizational data was moved to **SharePoint Online**, unlocking modern collaboration features for staff. In the final stage, the legacy SharePoint classic architecture was modernized.
 
-![sharepoint2016Migration][1]
+![sharepoint2013Migration][1]
 ## Challenges:
 - No collaboration and cloud and device based data protection and security controls. 
 - One Large site collection and with thousands of nested subsite structure on SharePoint server 2013.

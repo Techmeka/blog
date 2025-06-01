@@ -10,6 +10,7 @@ published: true
 
 A **hospital in Ontario, Canada** needed to migrate its on-premises SharePoint Server 2016 environment to SharePoint Online within a short timeframe. <!--more--> The hospital opted for a lift-and-shift migration, moving to SharePoint Online with a classic architecture that included highly customized master pages and several legacy solutions.
 
+
 ![sharepoint2016Migration][1]
 ## Challenges:
 - Large site collections and with massive nested subsites infrastructure on SharePoint server 2016
