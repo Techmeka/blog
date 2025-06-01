@@ -354,7 +354,7 @@ nav {
     align-items: stretch; /* Align items to stretch across the container */
   }
 
-  > .post-image {
+  .posts .post-preview > .post-image {
     order: 1; /* Image second */
     width: 100%; /* Make image full width */
     margin-bottom: 15px; /* Add some spacing below the image */
@@ -365,7 +365,7 @@ nav {
     }
   }
 
-  > .post-content {
+  .posts .post-preview > .post-content {
     order: 2; /* Content last */
   }
 }
