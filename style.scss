@@ -401,6 +401,29 @@ nav {
   }
 }
 
+/* FINAL: Hide/Show post images by device */
+
+/* On desktop (min-width: 769px): hide the mobile version, show the desktop version */
+@media (min-width: 769px) {
+  .post-image {
+    display: none !important;
+  }
+  .post-image-desktop {
+    display: block !important;
+  }
+}
+
+/* On mobile (max-width: 768px): hide the desktop version, show the mobile version */
+@media (max-width: 768px) {
+  .post-image {
+    display: block !important;
+    width: 100% !important;
+  }
+  .post-image-desktop {
+    display: none !important;
+  }
+}
+
 .post {
   blockquote {
     margin: 1.8em .8em;

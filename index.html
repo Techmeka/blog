@@ -11,29 +11,28 @@ layout: default
         </div>
       {% endif %}
 
-     <div style="flex: 1;">
-
-      <div class="post-title">
-        <h2>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </h2>
-      </div>
-
-      {% if post.image %}
-        <div class="post-image">
-          <img src="{{ post.image }}" alt="Image for {{ post.title }}">
+      <div style="flex: 1;">
+        <div class="post-title">
+          <h2>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </h2>
         </div>
-      {% endif %}
 
-      <div class="post-content">
-        <div class="entry">
-          {{ post.excerpt }}
+        {% if post.image %}
+          <div class="post-image">
+            <img src="{{ post.image }}" alt="Image for {{ post.title }}">
+          </div>
+        {% endif %}
+
+        <div class="post-content">
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+            Read More
+          </a>
         </div>
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-          Read More
-        </a>
       </div>
-      </div>  
     </article>
   {% endfor %}
 </div>
