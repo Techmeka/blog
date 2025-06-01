@@ -323,45 +323,91 @@ nav {
   }
 }
 
-/* Desktop: two-column layout */
-.posts .post-preview {
-  display: grid;
-  grid-template-columns: 200px 1fr; /* Fixed width for image, rest for content */
-  grid-template-areas: 
-    "image title"
-    "image content";
-  gap: 20px;
+/* Post Preview - shared styles */
+.post-preview {
   margin-bottom: 40px;
-  align-items: start;
+  border-bottom: 1px solid $lightGray;
+  padding-bottom: 20px;
 }
 
-.posts .post-preview > .post-image {
-  grid-area: image;
-  width: 100%;
+.post-preview:last-child {
+  border-bottom: none;
 }
 
-.posts .post-preview > .post-title {
-  grid-area: title;
+.post-preview h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
-.posts .post-preview > .post-content {
-  grid-area: content;
+.post-preview .read-more {
+  margin-top: 15px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $blue;
+  text-transform: uppercase;
 }
 
-/* Mobile: Stacked layout */
+/* Desktop Layout (default) */
+@media (min-width: 769px) {
+  .post-preview {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+  }
+  
+  .post-preview .post-image {
+    flex: 0 0 200px; /* Fixed width, don't grow or shrink */
+    order: 0; /* Appears first (left) */
+  }
+  
+  .post-preview .post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  
+  .post-preview .post-title {
+    order: 1; /* Title shows at top of right column */
+  }
+  
+  .post-preview .post-content {
+    order: 2; /* Content shows below title in right column */
+    flex: 1; /* Take up remaining space */
+  }
+  
+  /* For posts without images */
+  .post-preview:not(:has(.post-image)) .post-title,
+  .post-preview:not(:has(.post-image)) .post-content {
+    margin-left: 0;
+  }
+}
+
+/* Mobile Layout */
 @media (max-width: 768px) {
-  .posts .post-preview {
-    display: block;
+  .post-preview {
+    display: flex;
+    flex-direction: column;
   }
-
-  .posts .post-preview > .post-image {
-    width: 100%;
-    margin-bottom: 15px;
+  
+  .post-preview .post-title {
+    order: 1; /* Title first */
   }
-
-  .posts .post-preview > .post-title,
-  .posts .post-preview > .post-content {
+  
+  .post-preview .post-image {
+    order: 2; /* Image second */
+    margin: 10px 0 15px;
+  }
+  
+  .post-preview .post-image img {
     width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .post-preview .post-content {
+    order: 3; /* Content third */
   }
 }
 
