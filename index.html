@@ -12,14 +12,16 @@ layout: default
       </div>
 
       <div class="post-content">
-        <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-        
-        <div class="entry">
+      <div style="flex: 1;">
+        <h2 style="margin-top: 0; margin-bottom: 10px;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+        <div class="entry" style="margin-bottom: 10px;">
           {{ post.excerpt }}
         </div>
-        
+
         <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </div>
+
     </article>
   {% endfor %}
 </div>
