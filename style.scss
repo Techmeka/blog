@@ -427,66 +427,46 @@ nav {
   .posts .post-preview {
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-areas: "image content";
-    gap: 25px;
-    align-items: center; /* Vertically center content */
+    gap: 20px;
+    align-items: center;
   }
   
   .posts .post-preview .post-image {
-    grid-area: image;
-    width: 100%;
+    grid-column: 1;
+    grid-row: 1 / span 2; /* Span two rows */
+  }
+  
+  .posts .post-preview .post-title {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .posts .post-preview .post-content {
+    grid-column: 2;
+    grid-row: 2;
   }
   
   .posts .post-preview .post-image img {
     width: 100%;
     height: auto;
     border-radius: 6px;
-  }
-  
-  /* Group title and content together on the right */
-  .posts .post-preview .post-title {
-    grid-area: content;
-    order: 1; /* Title first in content area */
-  }
-  
-  .posts .post-preview .post-content {
-    grid-area: content;
-    order: 2; /* Content after title in content area */
-  }
-  
-  /* Force the content area to behave as a column */
-  .posts .post-preview .post-title,
-  .posts .post-preview .post-content {
-    display: block;
-    width: 100%;
   }
 }
 
 /* Mobile layout (screens 768px or narrower) */
 @media (max-width: 768px) {
   .posts .post-preview {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .posts .post-preview .post-title {
-    order: 1; /* Title first */
+    display: block; /* Simplest approach to preserve HTML order */
   }
   
   .posts .post-preview .post-image {
-    order: 2; /* Image second, under the title */
     margin: 15px 0;
-    width: 100%;
   }
   
   .posts .post-preview .post-image img {
     width: 100%;
     height: auto;
     border-radius: 6px;
-  }
-  
-  .posts .post-preview .post-content {
-    order: 3; /* Content third */
   }
 }
 
