@@ -330,7 +330,7 @@ nav {
   margin-bottom: 40px;
   align-items: center; /* Vertically center content */
 
-  .post-image {
+  > .post-image {
     /* No special order on desktop; it remains on the left by default */
     flex-shrink: 0;
 
@@ -341,7 +341,7 @@ nav {
     }
   }
 
-  .post-content {
+  > .post-content {
     /* Make the right side content (title, excerpt, read-more) */
     flex: 1;
   }
@@ -354,7 +354,7 @@ nav {
     align-items: stretch; /* Align items to stretch across the container */
   }
 
-  .post-image {
+  > .post-image {
     order: 1; /* Image second */
     width: 100%; /* Make image full width */
     margin-bottom: 15px; /* Add some spacing below the image */
@@ -365,7 +365,7 @@ nav {
     }
   }
 
-  .post-content {
+  > .post-content {
     order: 2; /* Content last */
   }
 }
