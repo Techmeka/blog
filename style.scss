@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -71,7 +70,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-    cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -134,12 +133,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -273,40 +272,16 @@ nav {
   text-transform: uppercase;
 }
 
+// Standard post layout
 .posts .post {
   display: flex;
   gap: 20px;
   align-items: flex-start;
 
-  // Optional: cap the image size
   img {
     width: 200px;
     height: auto;
     border-radius: 6px;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column; /* stack vertically */
-    align-items: stretch;
-
-    img {
-      width: 100%; /* full-width on small screen */
-      height: auto;
-      margin: 10px 0;
-    }
-
-    .entry {
-      margin-top: 10px;
-    }
-
-    .read-more {
-      margin-top: 10px;
-      display: inline-block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: $blue;
-      text-transform: uppercase;
-    }
   }
 
   .entry {
@@ -321,9 +296,24 @@ nav {
     font-size: 0.9rem;
     text-transform: uppercase;
   }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    .entry {
+      margin-top: 10px;
+    }
+  }
 }
 
-/* Post Preview - clean rules */
+/* Post Preview styles - consolidated */
 .posts .post-preview {
   margin-bottom: 40px;
   border-bottom: 1px solid $lightGray;
@@ -332,15 +322,6 @@ nav {
 
 .posts .post-preview:last-child {
   border-bottom: none;
-}
-
-/* Hide/show appropriate images based on screen size */
-.posts .post-preview .post-image-desktop {
-  display: block;
-}
-
-.posts .post-preview .post-image {
-  display: none;
 }
 
 /* Desktop layout */
@@ -352,6 +333,7 @@ nav {
   }
   
   .posts .post-preview .post-image-desktop {
+    display: block;
     flex: 0 0 200px;
     margin-right: 15px;
   }
@@ -360,6 +342,10 @@ nav {
     width: 100%;
     height: auto;
     border-radius: 6px;
+  }
+  
+  .posts .post-preview .post-image {
+    display: none;
   }
 }
 
@@ -378,39 +364,6 @@ nav {
     width: 100%;
     height: auto;
     border-radius: 6px;
-  }
-}
-
-/* Override display properties for images */
-.posts .post-preview .post-image-desktop {
-  display: block !important;
-}
-
-.posts .post-preview .post-image {
-  display: none !important;
-}
-
-/* Desktop layout */
-@media (min-width: 769px) {
-  .posts .post-preview .post-image-desktop {
-    display: block !important;
-    flex: 0 0 200px;
-  }
-  
-  .posts .post-preview .post-image {
-    display: none !important;
-  }
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-  .posts .post-preview .post-image-desktop {
-    display: none !important;
-  }
-  
-  .posts .post-preview .post-image {
-    display: block !important;
-    margin: 15px 0;
   }
 }
 
