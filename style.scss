@@ -329,7 +329,7 @@ nav {
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
-  align-items: flex-start; /* Align items to the top */
+  align-items: center; /* Vertically center content */
 
   .post-image {
     /* No special order on desktop; it remains on the left by default */

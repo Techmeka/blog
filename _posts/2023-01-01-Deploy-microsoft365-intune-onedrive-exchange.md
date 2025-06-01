@@ -8,7 +8,7 @@ image: /images/fsSPOPE.png
 published: true
 ---
 
-A former Raymond James partner firm evolved into an independent **wealth management** entity, necessitating the establishment of a complete technology infrastructure—from hardware and software to managed services. Operating across the Canada–U.S. border and within highly regulated **financial sectors**, the firm required stringent data compliance and governance at every level. In parallel with designing the new IT architecture, a seamless and secure migration from the incumbent’s systems was also essential to support business continuity and compliance.
+A former Raymond James partner firm evolved into an independent **wealth management** entity, necessitating the establishment of a complete technology infrastructure—from hardware and software to managed services. <!--more--> Operating across the Canada–U.S. border and within highly regulated **financial sectors**, the firm required stringent data compliance and governance at every level. In parallel with designing the new IT architecture, a seamless and secure migration from the incumbent’s systems was also essential to support business continuity and compliance.
 
 
 ![FSSPO][1]
