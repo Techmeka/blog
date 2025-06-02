@@ -268,6 +268,8 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+    display: inline-block;
+    margin-bottom: 2rem; // Add this line for spacing
   }
 }
 
@@ -279,8 +281,8 @@ nav {
 }
 
 .tag {
-  background: #f0f4f8;
-  color: #2563eb;
+  background: #f3f4f6;
+  color: #374151;
   font-size: 0.85em;
   padding: 0.25em 0.75em;
   border-radius: 999px;
@@ -295,6 +297,27 @@ nav {
   color: #fff;
   cursor: pointer;
 }
+
+.tag-javascript    { background: #ffe6a7; color: #b68900; }
+.tag-python        { background: #d0f4de; color: #357960; }
+.tag-css           { background: #dbeafe; color: #2563eb; }
+.tag-html          { background: #ffe4e6; color: #be123c; }
+.tag-react         { background: #e0f2fe; color: #0284c7; }
+.tag-django        { background: #e0f2f1; color: #00695c; }
+.tag-ruby          { background: #ffe5ec; color: #b91c1c; }
+.tag-linux         { background: #fef9c3; color: #a16207; }
+.tag-default       { background: #f3f4f6; color: #374151; }
+.tag-sharepoint    { background: #e3eaff; color: #2b4a8b; }
+.tag-migration     { background: #ffe7e7; color: #a94442; }
+.tag-governance    { background: #e7f9f1; color: #22795d; }
+.tag-onedrive      { background: #e0f7fa; color: #0277bd; }
+.tag-modernization { background: #f3e8ff; color: #7c3aed; }
+.tag-fileserver    { background: #fff7e6; color: #b26a00; }
+.tag-power-automate { background: #e6f7ff; color: #005fa3; }
+.tag-powerbi       { background: #fffde7; color: #b59f00; }
+.tag-sccm          { background: #e6f4ea; color: #2e7d32; }
+.tag-intune        { background: #e3f2fd; color: #1565c0; }
+.tag-sentinelone   { background: #f3e8ff; color: #6d28d9; }
 
 .post-separator {
   border: none;
