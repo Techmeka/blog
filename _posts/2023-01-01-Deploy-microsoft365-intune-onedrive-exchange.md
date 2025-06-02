@@ -4,7 +4,7 @@ title: End-to-End Secure Workplace Infrastructure Design for a Wealth Management
 date: 2023-04-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
-image: /images/fsSPOPE.png
+image: /images/managedIT.png
 published: true
 ---
 
