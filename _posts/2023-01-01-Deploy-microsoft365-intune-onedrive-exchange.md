@@ -2,7 +2,7 @@
 layout: post
 title: End-to-End Secure Workplace Infrastructure Design for a Wealth Management Firm
 date: 2023-04-01 00:00:00
-tags: [ ExchangeOnline, OneDrive, Teams, Managed, SharePoint, Migration, Governance ]
+tags: [ Exchange Online, OneDrive, Teams, Managed, SharePoint, Migration, Governance ]
 categories: [Data, Technology]
 image: /images/managedIT.png
 published: true
