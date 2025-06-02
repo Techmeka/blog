@@ -36,5 +36,8 @@ layout: default
         </div>
       </div>
     </article>
+    {% unless forloop.last %}
+      <hr class="post-separator">
+    {% endunless %}
   {% endfor %}
 </div>
