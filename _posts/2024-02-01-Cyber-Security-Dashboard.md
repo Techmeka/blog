@@ -2,7 +2,7 @@
 layout: post
 title: Cyber Security Dashboard - Power BI & Power Automate solution
 date: 2024-02-01 00:00:00
-tags: [ SharePoint, Power Automate, PowerBI, SCCM, Intune, SentinelOne, Governance, Automation, Dashboard ]
+tags: [ SharePoint, Power Automate, PowerBI, SCCM, Intune, SentinelOne, Governance, Automation, Dashboard, Security ]
 categories: [Data, Technology]
 image: /images/cyberSecurityDashboard.png
 published: true
