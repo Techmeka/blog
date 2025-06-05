@@ -10,6 +10,7 @@ permalink: /feed.json
       "url": {{ post.url | relative_url | jsonify }},
       "image": {{ post.image | default: '/images/default.jpg' | jsonify }},
       "date": {{ post.date | date: "%Y-%m-%d" | jsonify }},
+      "tags": {{ post.tags | jsonify }},
       "content": {{ post.content | jsonify }}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
