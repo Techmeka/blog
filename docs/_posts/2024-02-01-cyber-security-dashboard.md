@@ -4,7 +4,7 @@ title: Cyber Security Dashboard - Power BI & Power Automate solution
 date: 2024-02-01 00:00:00
 tags: [ SharePoint, Power Automate, PowerBI, SCCM, Intune, SentinelOne, Governance, Automation, Dashboard, Security ]
 categories: [Data, Technology]
-image: /images/cyberSecurityDashboard.png
+image: /blog/images/cyberSecurityDashboard.png
 published: true
 ---
 
@@ -35,4 +35,4 @@ TechMeka delivered a fully integrated Microsoft 365 solution that automated the 
 ## Benefits:
 
 
- [1]: /images/cyberSecurityDashboard.png
+ [1]: /blog/images/cyberSecurityDashboard.png

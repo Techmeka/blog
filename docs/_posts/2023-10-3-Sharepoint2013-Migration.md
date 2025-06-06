@@ -4,7 +4,7 @@ title: Cloud Migration of SharePoint and File Server Infrastructure for a Leadin
 date: 2023-10-03 00:00:00
 tags: [ SharePoint, OneDrive, Migration, Modernization, Fileserver, Governance ]
 categories: [Data, Technology]
-image: /images/sharepoint2013MigrationFSOD.png
+image: /blog/images/sharepoint2013MigrationFSOD.png
 published: true
 ---
 
@@ -42,4 +42,4 @@ Key Contributions by TechMeka:
 ## Benefits:
 
 
- [1]: /images/sharepoint2013MigrationFSOD.png
+ [1]: /blog/images/sharepoint2013MigrationFSOD.png
