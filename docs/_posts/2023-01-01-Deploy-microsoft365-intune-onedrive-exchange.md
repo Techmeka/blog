@@ -4,7 +4,7 @@ title: End-to-End Secure Workplace Infrastructure Design for a Wealth Management
 date: 2023-04-01 00:00:00
 tags: [ Exchange Online, OneDrive, Teams, Managed, SharePoint, Migration, Governance, Secured Workplace, Device Management ]
 categories: [Data, Technology]
-image: /images/managedIT.png
+image: "{{ site.baseurl }}/images/managedIT.png"
 published: true
 ---
 
@@ -37,4 +37,4 @@ To meet the firm’s aggressive timelines and regulatory obligations, TechMeka d
 ## Benefits:
 
 
- [1]: /images/managedIT.png
+ [1]: ({{ site.baseurl }}/images/managedIT.png)
