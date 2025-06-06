@@ -4,7 +4,7 @@ title: SharePoint Migration for Ontario Hospital
 date: 2024-07-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
-image: /images/sharepoint2016MigrationExtraSmall.png
+image: /blog/images/sharepoint2016MigrationExtraSmall.png
 published: true
 ---
 
@@ -39,4 +39,4 @@ The Key elements that TechMeka assisted with:
 ## Benefits:
 
 
- [1]: /images/sharepoint2016Migration.png
+ [1]: /blog/images/sharepoint2016Migration.png
