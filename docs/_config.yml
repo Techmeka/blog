@@ -37,12 +37,12 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: G-38VX5VJFLV
+google_analytics: G-B72XLQXRF7
 
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-T8675BCSSB"
+    tracking_id: "G-B72XLQXRF7"
     anonymize_ip: false # default
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
