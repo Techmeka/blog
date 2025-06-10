@@ -275,12 +275,12 @@ nav {
 
 .post-video-desktop {
   flex: 0 0 auto;
-  width: 100%;
+  width: 250px;
   max-width: 250px;
 }
 
 .post-video {
-  width: 250px;
+  width: 100% !important;
   height: auto;
   aspect-ratio: 16 / 9; /* maintain proper video aspect ratio */
   display: block;
