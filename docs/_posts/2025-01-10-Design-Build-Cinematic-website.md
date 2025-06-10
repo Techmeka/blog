@@ -12,7 +12,7 @@ video: /blog/videos/imprintedParts.webm
 published: true
 ---
 
-A 3D printing and design firm required TechMeka to design a new and striking Landing page any cinematic eye catching Hero section.
+A 3D printing and design firm required TechMeka to design a new and striking Landing page any cinematic eye catching Hero section.<!--more-->
 
 
 ![imprintedPartsDesign][1]
