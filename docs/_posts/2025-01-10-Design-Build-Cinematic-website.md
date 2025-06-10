@@ -15,7 +15,11 @@ published: true
 A 3D printing and design firm required TechMeka to design a new and striking Landing page any cinematic eye catching Hero section.<!--more-->
 
 
-![imprintedPartsDesign][1]
+<video autoplay loop muted playsinline preload="none" width="100%" height="auto" style="border-radius: 8px; margin-top: 1rem;">
+  <source src="/assets/videos/imprintedParts.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
 ## Challenges:
 - Tight timelines for sourcing and provisioning hardware across both user and infrastructure environments.
 - No in-house IT personnel, requiring full external support for strategy, execution, and ongoing management.
