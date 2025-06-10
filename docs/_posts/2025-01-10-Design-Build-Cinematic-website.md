@@ -16,9 +16,11 @@ A 3D printing and design firm required TechMeka to design a new and striking Lan
 
 
 <video autoplay loop muted playsinline preload="none" width="100%" height="auto" style="border-radius: 8px; margin-top: 1rem;">
-  <source src="/assets/videos/imprintedParts.webm" type="video/webm">
+  <source src="/blog/videos/imprintedParts.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
+
+![imprintedParts][1]
 
 ## Challenges:
 - Tight timelines for sourcing and provisioning hardware across both user and infrastructure environments.
@@ -45,4 +47,4 @@ To meet the firm’s aggressive timelines and regulatory obligations, TechMeka d
 ## Benefits:
 
 
- [1]: /blog/videos/imprintedParts.webm
+ [1]: /blog/images/imprintedParts.webm
