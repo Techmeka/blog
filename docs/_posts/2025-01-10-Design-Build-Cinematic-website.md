@@ -12,7 +12,7 @@ video: /blog/videos/imprintedParts.webm
 published: true
 ---
 
-A **Toronto-based** 3D printing firm, Imprinted.Parts, approached TechMeka to design a bold, cinematic landing page that would capture their brand’s essence and showcase their high-precision printing capabilities.<!--more--> The goal: create a visually compelling hero section that blends minimal design with abstract storytelling to leave a strong first impression. 
+A **Toronto-based** 3D printing firm, [Imprinted.Parts](https://imprinted.parts), approached TechMeka to design a bold, cinematic landing page that would capture their brand’s essence and showcase their high-precision printing capabilities.<!--more--> The goal: create a visually compelling hero section that blends minimal design with abstract storytelling to leave a strong first impression. 
 
 
 <video autoplay loop muted playsinline preload="none" width="100%" height="auto" style="border-radius: 8px; margin-top: 1rem;">
