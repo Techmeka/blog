@@ -286,7 +286,6 @@ nav {
   display: block;
   border-radius: 6px;
   object-fit: cover;
-  max-width: 250px;
 }
 
 .post-tags {
@@ -433,8 +432,8 @@ footer {
     display: none !important;
   }
   .post-video-mobile {
-  width: 350px;
-  max-width: 350px;
+  width: 90%;
+  max-width: 90%;
   }
   .post-tags {
     margin-bottom: 2em; // Increase as needed for more space below tags
