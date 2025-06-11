@@ -9,7 +9,7 @@ image: /blog/images/imprintedParts.png
 published: true
 ---
 
-[BuyCanadianOnly.ca](https://buycanadianonly.ca) approached TechMeka with a clear challenge: Canadian consumers lacked a centralized, modern platform to discover and support locally made products, and small to mid-sized businesses had limited digital visibility in an increasingly globalized marketplace.
+[BuyCanadian](https://buycanadianonly.ca) approached TechMeka with a clear challenge: Canadian consumers lacked a centralized, modern platform to discover and support locally made products, and small to mid-sized businesses had limited digital visibility in an increasingly globalized marketplace.<!--more-->
 
 To address this, TechMeka designed and developed a mission-driven platform that connects consumers with Canadian businesses through a clean, accessible, and responsive interface. With intuitive search and filtering, scalable architecture, and a focus on trust and national pride, BuyCanadianOnly.ca now empowers users to shop locally, while helping Canadian brands grow their digital footprint and strengthen the national economy.
 
