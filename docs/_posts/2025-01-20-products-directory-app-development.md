@@ -4,8 +4,8 @@ title: "Built for Canada: Designing a Platform to Strengthen Local Economies"
 date: 2025-01-20 00:00:00
 tags: [ Platform, Development, React, Tailwind, Hosting, Node, Marketing, Design, Security, API ]
 categories: [Data, Technology]
-image: /blog/images/imprintedParts.png
-# video: /blog/videos/imprintedParts.webm
+image: /blog/images/buyCanadian.gif
+# video: /blog/videos/buyCanadian.webm
 published: true
 ---
 
@@ -19,7 +19,7 @@ To address this, TechMeka designed and developed a mission-driven platform that 
   Your browser does not support the video tag.
 </video> -->
 
-<!-- ![imprintedParts][1] -->
+![buyCanadianImg][1]
 
 ## Challenges:
 - Cleaning Large-Scale Data Inputs: Process and standardize millions of product entries sourced from the web, third-party APIs, and AI/LLM outputs.
@@ -32,6 +32,10 @@ To address this, TechMeka designed and developed a mission-driven platform that 
 To address the complexity and scale of the Buy Canadian's goals, TechMeka implemented a multi-layered solution combining AI-driven automation with human oversight and modern design practices:
 - Data Cleansing Pipeline: Built robust data cleaning workflows to normalize millions of product entries, using regex logic, AI-powered parsing, and rules-based validation to eliminate duplicates, junk data, and inconsistencies.
 - AI-Based Catalog Verification: Developed a point-in-time validation system leveraging LLMs and product schema models to cross-check incoming product data for completeness, relevance, and accuracy.
+<video autoplay loop muted playsinline preload="none" width="100%" height="auto" style="border-radius: 8px; margin-top: 1rem;">
+  <source src="/blog/videos/buyCanadian.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 - Image Recognition Integration: Integrated computer vision tools to analyze and match product images with listing descriptions, flagging mismatches and improving catalog trustworthiness.
 - Human Verification Layer: Introduced a human-in-the-loop verification queue, allowing platform admins or approved reviewers to override AI decisions and validate edge cases—ensuring accuracy for regulated or ambiguous listings.
 - Modern Front-End Architecture: Delivered a sleek, responsive UI using React, Tailwind CSS, and animation libraries to provide users with a frictionless, mobile-first shopping experience that feels modern and trustworthy.
@@ -47,4 +51,4 @@ To address the complexity and scale of the Buy Canadian's goals, TechMeka implem
 - Regulatory Readiness: The layered verification system lays the foundation for future compliance with local commerce standards and certifications.
 
 
- [1]: /blog/images/imprintedParts.png
+ [1]: /blog/images/buyCanadian.gif
