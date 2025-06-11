@@ -2,7 +2,7 @@
 layout: post
 title: "Built for Canada: Designing a Platform to Strengthen Local Economies"
 date: 2025-01-20 00:00:00
-tags: [ Platform, Development, React, Tailwind, Hosting, Node, Marketing, Design, Security, API ]
+tags: [ Platform, Development, React, Tailwind, Hosting, Node, Marketing, Design, Security, API, AI, Computer Vision ]
 categories: [Data, Technology]
 image: /blog/images/buyCanadian.gif
 # video: /blog/videos/buyCanadian.webm
@@ -14,10 +14,6 @@ published: true
 To address this, TechMeka designed and developed a mission-driven platform that connects consumers with Canadian businesses through a clean, accessible, and responsive interface. With intuitive search and filtering, scalable architecture, and a focus on trust and national pride, BuyCanadianOnly.ca now empowers users to shop locally, while helping Canadian brands grow their digital footprint and strengthen the national economy.
 
 
-<!-- <video autoplay loop muted playsinline preload="none" width="100%" height="auto" style="border-radius: 8px; margin-top: 1rem;">
-  <source src="/blog/videos/imprintedParts.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video> -->
 
 ![buyCanadianImg][1]
 
