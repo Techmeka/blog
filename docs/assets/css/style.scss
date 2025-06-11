@@ -432,6 +432,10 @@ footer {
   .post-video-desktop {
     display: none !important;
   }
+  .post-video-mobile {
+  width: 350px;
+  max-width: 350px;
+  }
   .post-tags {
     margin-bottom: 2em; // Increase as needed for more space below tags
   }
