@@ -432,8 +432,7 @@ footer {
     display: none !important;
   }
   .post-video-mobile {
-  width: 90%;
-  max-width: 90%;
+  min-width: 90% !important;
   }
   .post-tags {
     margin-bottom: 2em; // Increase as needed for more space below tags
