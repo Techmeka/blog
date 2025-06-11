@@ -29,11 +29,27 @@ layout: default
               </div>
             {% endif %}
           </div>
-          {% if post.image %}
+
+          {% if post.video %}
+          <div class="post-video-desktop">
+            <video class="post-video" autoplay loop muted playsinline preload="none">
+              <source src="{{ post.video }}" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        {% elsif post.image %}
+          <div class="post-image">
+            <img src="{{ post.image }}" alt="Image for {{ post.title }}">
+          </div>
+        {% endif %}
+
+
+
+          <!-- {% if post.image %}
             <div class="post-image">
               <img src="{{ post.image }}" alt="Image for {{ post.title }}">
             </div>
-          {% endif %}
+          {% endif %} -->
           <div class="post-content">
             <div class="entry">
               {{ post.excerpt }}
