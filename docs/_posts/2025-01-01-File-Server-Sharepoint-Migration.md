@@ -22,7 +22,7 @@ Their legacy environment included deeply nested file shares with inconsistent AC
 - No centralized governance or standardized branding across collaboration platforms.
 - Multiple user personas ranging from frontline researchers to compliance officers, requiring role-specific training.
 
-## Solution – Enterprise-Grade Architecture with Microsoft Purview
+## Solution – Enterprise-Grade Architecture
 
 TechMeka led a full-lifecycle SharePoint Online deployment—from design through implementation—integrating security, compliance, and long-term scalability.
 
