@@ -58,7 +58,8 @@ TechMeka led a full-lifecycle SharePoint Online deployment—from design through
 - **Operational Readiness**: The SharePoint intranet now supports both day-to-day collaboration and long-term record keeping in a high-regulation research environment.
 
 ---
-
+<br>
+<br>
 Through deep integration of **Microsoft 365** and **Microsoft Purview**, TechMeka empowered this life sciences organization to modernize its collaboration systems while meeting the demanding security and compliance requirements of its industry. This case demonstrates our ability to deliver SharePoint solutions that are not only technically sound but also aligned with enterprise-grade data governance and usability standards.
 
 [1]: /blog/images/SharePointNFP.png
