@@ -8,7 +8,7 @@ image: /blog/images/SharePointNFP.png
 published: true
 ---
 
-A large **not‑for‑profit organization**, **CCRM (Centre for Commercialization of Regenerative Medicine)**, desired to transform their fragmented legacy systems into a modern, secure, and compliant digital workspace using **SharePoint Online**. <!--more--> As a federally funded biotech hub operating across **13 departments**, CCRM manages highly sensitive, regulated content—requiring advanced governance, structured collaboration, and future‑proofed digital practices.
+A large **not‑for‑profit**, **CCRM (Centre for Commercialization of Regenerative Medicine)**, desired to transform their fragmented legacy systems into a modern, secure, and compliant digital workspace using **SharePoint Online**. <!--more--> As a federally funded biotech hub operating across **13 departments**, CCRM manages highly sensitive, regulated content—requiring advanced governance, structured collaboration, and future‑proofed digital practices.
 
 Their legacy environment included deeply nested file shares with inconsistent ACLs, outdated SharePoint sites, and interlinked Excel workbooks essential cell & gene therapy manufacturing. The task required a strategic transformation grounded in modern governance, Microsoft Purview integration, and intranet best practices.
 
