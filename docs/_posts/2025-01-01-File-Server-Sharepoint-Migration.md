@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SharePoint Intranet for Cancer Research Non-For-Profit Organization
+title: SharePoint for Cancer Research Non-For-Profit Organization
 date: 2025-01-01 00:00:00
 tags: [ SharePoint, Microsoft Purview, Migration, Information Architecture, Governance, Intranet ]
 categories: [Data, Technology]
