@@ -8,7 +8,7 @@ image: /blog/images/facilitiesPowerApps.png
 published: true
 ---
 
-**CCRM’s Operations team** required a modern, centralized system to manage a growing volume of **facilities and clean lab service requests**. <!--more--> Their previous ITSM platform was inflexible and unable to meet the real-time demands of a **GMP-regulated research and manufacturing environment**. High-priority requests originating from **clean lab areas**—used for critical research and cell & gene therapy production—required immediate routing, tracking, and resolution to ensure operational continuity.
+**CCRM’s** Operations team required a modern, centralized system to manage a growing volume of facilities and clean lab service requests. <!--more--> Their previous ITSM platform was inflexible and unable to meet the real-time demands of a **GMP-regulated research and manufacturing environment**. High-priority requests originating from **clean lab areas**—used for critical research and cell & gene therapy production—required immediate routing, tracking, and resolution to ensure operational continuity.
 
 To address these needs, TechMeka delivered a **custom ticketing tool** using **Microsoft Power Platform**—leveraging SharePoint, PowerApps, and Power Automate to support secure, compliant, and responsive request handling.
 
