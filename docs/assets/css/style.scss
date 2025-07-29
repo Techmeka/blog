@@ -397,24 +397,24 @@ footer {
 // CTA button styling for Schedule A Meeting
 .cta-button {
   display: inline-block;
-  background: #000000;
+  background: #0a0e17; /* Obsidian black-blue base */
   color: white !important;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid #000000;
+  border: 2px solid #131a2a; /* Slightly lighter border */
   position: relative;
-  overflow: hidden;
   z-index: 1;
   
-  // Animated glow effect
-  animation: glowing 3s infinite;
+  /* Animated obsidian blue glow effect */
+  animation: obsidian-glow 3s infinite;
   
   &:hover {
     transform: translateY(-1px);
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+    background: #131a2a; /* Slightly lighter on hover */
+    box-shadow: 0 0 18px rgba(28, 58, 99, 0.7); /* Enhanced glow on hover */
   }
   
   &:active {
@@ -422,20 +422,20 @@ footer {
   }
 }
 
-// Glow animation
-@keyframes glowing {
+/* Obsidian glow animation */
+@keyframes obsidian-glow {
   0% {
-    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 5px rgba(15, 36, 71, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.7);
+    box-shadow: 0 0 20px rgba(28, 58, 99, 0.8);
   }
   100% {
-    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 5px rgba(15, 36, 71, 0.4);
   }
 }
 
-// Make button more prominent on larger screens
+/* Responsive sizing */
 @media (min-width: 768px) {
   .cta-button {
     padding: 12px 20px;
