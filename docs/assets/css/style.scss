@@ -172,6 +172,7 @@ img {
 
   @include mobile {
     text-align: center;
+    padding: 8px 15px; // Reduced padding for mobile
   }
 }
 
@@ -185,6 +186,9 @@ img {
     float: none;
     display: block;
     margin: 0 auto;
+    width: 35px; // Smaller logo
+    height: 35px;
+    margin-right: 8px;
   }
 
   img {
@@ -210,6 +214,11 @@ img {
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
+
+  @include mobile {
+    font-size: 16px; // Smaller site name
+    margin-bottom: 0;
+  }
 }
 
 .site-description {
@@ -218,7 +227,10 @@ img {
   font-size: 16px;
 
   @include mobile {
-    margin: 3px 0;
+    font-size: 12px; // Smaller description
+    margin-top: 1px;
+    margin-bottom: 0;
+    line-height: 1.2;
   }
 }
 
@@ -230,9 +242,9 @@ nav {
 
   @include mobile {
     float: none;
-    margin-top: 9px;
+    margin-top: 5px; // Reduced margin for mobile
     display: block;
-    font-size: 16px;
+    font-size: 14px; // Smaller font size
   }
 
   a {
@@ -420,6 +432,11 @@ footer {
   &:active {
     transform: translateY(1px);
   }
+
+  @include mobile {
+    padding: 6px 10px; // Smaller padding for mobile
+    font-size: 13px; // Smaller font size
+  }
 }
 
 /* Obsidian glow animation */
@@ -440,6 +457,50 @@ footer {
   .cta-button {
     padding: 12px 20px;
     font-size: 16px;
+  }
+}
+
+/* Mobile-friendly masthead with smaller elements */
+@media (max-width: 768px) {
+  .masthead {
+    padding: 8px 15px;
+  }
+  
+  /* Smaller logo */
+  .site-avatar {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+  }
+  
+  /* Smaller site name */
+  .site-name {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  /* Smaller or hidden description */
+  .site-description {
+    font-size: 12px;
+    margin-top: 1px;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+  
+  /* Tighter navigation */
+  nav {
+    margin-top: 5px;
+  }
+  
+  nav a {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  /* Smaller CTA button */
+  .cta-button {
+    padding: 6px 10px;
+    font-size: 13px;
   }
 }
 
