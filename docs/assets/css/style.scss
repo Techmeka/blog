@@ -168,7 +168,7 @@ img {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); // Optional: adds subtle shadow
   display: flex;
   align-items: center; // Vertically center content
-  justify-content: center;
+  justify-content: space-evenly;
 
   @include mobile {
     text-align: center;
@@ -397,33 +397,53 @@ footer {
 // CTA button styling for Schedule A Meeting
 .cta-button {
   display: inline-block;
-  background: #2563eb;
+  background: #000000;
   color: white !important;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
-  transition: all 0.2s ease;
-  border: 2px solid #2563eb;
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid #000000;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  
+  // Animated glow effect
+  animation: glowing 3s infinite;
   
   &:hover {
-    background: #1d4ed8;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
   }
   
   &:active {
     transform: translateY(1px);
-    box-shadow: 0 1px 2px rgba(37, 99, 235, 0.2);
+  }
+}
+
+// Glow animation
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+  }
+}
+
+// Make button more prominent on larger screens
+@media (min-width: 768px) {
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 
 
-// Ensure the button isn't too close to other nav items
-nav a {
-  margin-left: 15px;
-}
 
 
 
