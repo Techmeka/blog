@@ -395,9 +395,9 @@ footer {
 }
 
 // CTA button styling for Schedule A Meeting
-nav a[href*="calendly"] {
+.cta-button {
   display: inline-block;
-  background: #2563eb; // Bright blue background
+  background: #2563eb;
   color: white !important;
   font-weight: 600;
   padding: 10px 16px;
@@ -408,7 +408,7 @@ nav a[href*="calendly"] {
   box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
   
   &:hover {
-    background: #1d4ed8; // Slightly darker on hover
+    background: #1d4ed8;
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
   }
@@ -419,13 +419,6 @@ nav a[href*="calendly"] {
   }
 }
 
-// Make button more prominent on larger screens
-@media (min-width: 768px) {
-  nav a[href*="calendly"] {
-    padding: 12px 20px;
-    font-size: 16px;
-  }
-}
 
 // Ensure the button isn't too close to other nav items
 nav a {
