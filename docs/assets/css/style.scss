@@ -462,6 +462,10 @@ footer {
 
 /* Mobile-friendly masthead with smaller elements */
 @media (max-width: 768px) {
+
+  .wrapper-masthead {
+    margin-bottom: 0px;
+  }
   .masthead {
     padding: 8px 15px;
   }
@@ -473,6 +477,11 @@ footer {
     margin-right: 8px;
   }
   
+   .site-avatar img {
+
+    height: 35px;
+  
+  }
   /* Smaller site name */
   .site-name {
     font-size: 16px;
@@ -499,8 +508,8 @@ footer {
   
   /* Smaller CTA button */
   .cta-button {
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 6px 05px;
+    font-size: 10px;
   }
 }
 
