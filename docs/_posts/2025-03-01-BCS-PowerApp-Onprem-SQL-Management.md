@@ -23,16 +23,16 @@ A large freight and logistics client using **Business Connectivity Services (BCS
 
 TechMeka delivered an end-to-end modernization of the BCS solution by designing and building a **PowerApps application** backed by a secure **on-premises SQL Server connection** using **Microsoft’s On-Premises Data Gateway**.
 
-### 🔍 Discovery & Planning
+### Discovery & Planning
 - Conducted a deep-dive review of the existing **BCS Service Application**, including external content types, connected SharePoint sites, and external lists.
 - Collaborated with business teams to **document user stories**, define scope, and prioritize functionality.
 - Identified performance bottlenecks and security gaps in the legacy SharePoint-BCS-SQL flow.
 
-### ✏️ UX/UI Design with Figma
+### UX/UI Design with Figma
 - Designed **modern, responsive UI wireframes** in Figma.
 - Gathered feedback through iterative reviews with stakeholders and finalized the design for implementation.
 
-### 🏗️ Technical Implementation
+### Technical Implementation
 - Installed and configured the **On-Premises Data Gateway** to enable secure access to on-prem SQL Server.
 - Built the PowerApps canvas app to:
   - Connect securely to SQL Server via gateway.
@@ -41,17 +41,17 @@ TechMeka delivered an end-to-end modernization of the BCS solution by designing 
   - Enforce **form validation rules** to prevent bad input and ensure database integrity.
 - Published the final app via **SharePoint Online** for seamless access by authenticated users.
 
-### 🧪 Testing, Training, and Handoff
+### Testing, Training, and Handoff
 - Conducted **User Acceptance Testing (UAT)** with designated staff to validate business workflows.
 - Delivered hands-on **end-user training** and **admin sessions** on managing connectors, troubleshooting, and Power Platform governance.
 - Provided detailed **solution documentation** covering configuration, access control, and long-term maintenance.
 
 ## Results & Benefits:
-- ✅ **Modern UI & UX**: PowerApps delivered a sleek, responsive interface far more usable than BCS lists.
-- ✅ **Secure Gateway Integration**: Enabled real-time interaction with on-prem SQL without exposing database credentials or VPN reliance.
-- ✅ **Customizable & Maintainable**: The low-code solution is easily extensible by internal IT with minimal dev effort.
-- ✅ **Improved Data Integrity**: Form validation and controlled input ensure cleaner database records.
-- ✅ **Governance Ready**: Updated Power Platform tenant security model and maintenance documentation aligned with enterprise best practices.
+- **Modern UI & UX**: PowerApps delivered a sleek, responsive interface far more usable than BCS lists.
+- **Secure Gateway Integration**: Enabled real-time interaction with on-prem SQL without exposing database credentials or VPN reliance.
+- **Customizable & Maintainable**: The low-code solution is easily extensible by internal IT with minimal dev effort.
+- **Improved Data Integrity**: Form validation and controlled input ensure cleaner database records.
+- **Governance Ready**: Updated Power Platform tenant security model and maintenance documentation aligned with enterprise best practices.
 
 ---
 
