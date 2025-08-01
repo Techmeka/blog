@@ -8,7 +8,7 @@ image: /blog/images/bcsPowerAppsModernization.png
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 
 A large freight and logistics client using **Business Connectivity Services (BCS)** to manage on-premises SQL data in SharePoint faced growing limitations with scalability, maintainability, and user experience. <!--more--> The legacy configuration involved external content types and external lists that were difficult to customize and poorly suited to modern collaboration needs. The client engaged TechMeka to modernize the system using Microsoft Power Platform — replacing BCS with a secure, user-friendly, and maintainable solution.
 
@@ -61,4 +61,3 @@ By replacing BCS with PowerApps and Power Automate, TechMeka empowered the clien
 
 [1]: /blog/images/bcsPowerAppsModernization.png
 
-</article>

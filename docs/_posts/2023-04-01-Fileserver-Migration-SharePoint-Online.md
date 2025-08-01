@@ -8,7 +8,6 @@ image: /blog/images/fsSPOPE.png
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
 
 A leading **Toronto-based** private equity firm sought to migrate its on-premises file server data to the cloud to enhance data protection, security, and collaboration. <!--more--> The organization managed a significant volume of sensitive information, including proprietary financial models and intellectual property, necessitating a secure and well-structured migration approach. This project laid the foundation for the firm’s future-state document management system on **SharePoint Online**, with a strong focus on information architecture and governance.
 
@@ -50,4 +49,3 @@ The following key actions were taken:
 
  [1]: /blog/images/fsSPOPE.png
 
- </article>

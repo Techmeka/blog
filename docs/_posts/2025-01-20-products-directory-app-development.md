@@ -9,7 +9,7 @@ image: /blog/images/buyCanadian.gif
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 
 [BuyCanadian](https://buycanadianonly.ca) approached TechMeka with a clear challenge: Canadian consumers lacked a centralized, modern platform to discover and support locally made products, and small to mid-sized businesses had limited digital visibility in an increasingly globalized marketplace.<!--more-->
 
@@ -50,5 +50,3 @@ To address the complexity and scale of the Buy Canadian's goals, TechMeka implem
 
 
  [1]: /blog/images/buyCanadian.gif
-
- </article>

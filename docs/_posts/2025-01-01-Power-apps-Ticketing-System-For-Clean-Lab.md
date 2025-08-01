@@ -8,7 +8,7 @@ image: /blog/images/facilitiesPowerApps.png
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 
 **CCRM’s** Operations team required a modern, centralized system to manage a growing volume of facilities and clean lab service requests. <!--more--> Their previous ITSM platform was inflexible and unable to meet the real-time demands of a **GMP-regulated research and manufacturing environment**. High-priority requests originating from **clean lab areas**—used for critical research and cell & gene therapy production—required immediate routing, tracking, and resolution to ensure operational continuity.
 
@@ -61,4 +61,3 @@ Through a purpose-built Power Platform solution, TechMeka enabled CCRM to stream
 
 [1]: /blog/images/facilitiesPowerApps.png
 
-</article>

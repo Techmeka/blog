@@ -8,7 +8,7 @@ image: /blog/images/SharePointNFP.png
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 
 A large **not‑for‑profit**, **CCRM (Centre for Commercialization of Regenerative Medicine)**, desired to transform their fragmented legacy systems into a modern, secure, and compliant digital workspace using **SharePoint Online**. <!--more--> As a federally funded biotech hub operating across **13 departments**, CCRM manages highly sensitive, regulated content—requiring advanced governance, structured collaboration, and future‑proofed digital practices.
 
@@ -66,4 +66,3 @@ Through deep integration of **Microsoft 365** and **Microsoft Purview**, TechMek
 
 [1]: /blog/images/SharePointNFP.png
 
-</article>

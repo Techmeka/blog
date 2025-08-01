@@ -8,7 +8,7 @@ image: /blog/images/PowerAppsConferenceTool.png
 published: true
 ---
 
-<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 
 One of the operations team from **CCRM** previously managed conference placement and attendance tracking through a heavily manual process involving spreadsheets and email threads. <!--more--> The approach relied on maintaining a master Excel file and coordinating approvals over email—leading to versioning issues, inconsistent data, and delayed responses across departments.
 
@@ -59,4 +59,3 @@ By modernizing a manual and fragmented process into a seamless low-code solution
 
 [1]: /blog/images/PowerAppsConferenceTool.png
 
-</article>
