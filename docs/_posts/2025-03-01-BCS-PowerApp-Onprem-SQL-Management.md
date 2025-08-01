@@ -10,7 +10,7 @@ published: true
 
 
 
-A large freight and logistics client using **Business Connectivity Services (BCS)** to manage on-premises SQL data in SharePoint faced growing limitations with scalability, maintainability, and user experience. <!--more--> The legacy configuration involved external content types and external lists that were difficult to customize and poorly suited to modern collaboration needs. The client engaged TechMeka to modernize the system using Microsoft Power Platform — replacing BCS with a secure, user-friendly, and maintainable solution.
+A global freight and logistics client using **Business Connectivity Services (BCS)** to manage on-premises SQL data in SharePoint faced growing limitations with scalability, maintainability, and user experience. <!--more--> The legacy configuration involved external content types and external lists that were difficult to customize and poorly suited to modern collaboration needs. The client engaged TechMeka to modernize the system using Microsoft Power Platform — replacing BCS with a secure, user-friendly, and maintainable solution.
 
 ![BCS to PowerApps Modernization][1]
 
