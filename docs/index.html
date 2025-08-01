@@ -94,33 +94,34 @@ layout: default
         
         const selectedTag = this.getAttribute('data-tag');
         
-        // Track which posts are visible
-        const visiblePosts = new Set();
+        // Track visible posts
+        let visiblePosts = [];
         
-        if (selectedTag === 'all') {
-          // Show all posts
-          posts.forEach((post, index) => {
+        // First pass: determine which posts are visible
+        posts.forEach((post, index) => {
+          if (selectedTag === 'all') {
             post.style.display = 'block';
-            visiblePosts.add(index + 1);
-          });
-        } else {
-          // Filter posts by tag
-          posts.forEach((post, index) => {
+            visiblePosts.push(index);
+          } else {
             const postTags = post.getAttribute('data-tags');
             if (postTags && postTags.includes(selectedTag)) {
               post.style.display = 'block';
-              visiblePosts.add(index + 1);
+              visiblePosts.push(index);
             } else {
               post.style.display = 'none';
             }
-          });
-        }
+          }
+        });
         
-        // Handle separators
-        separators.forEach(separator => {
-          const followsPostIndex = parseInt(separator.getAttribute('data-follows-post'));
-          if (visiblePosts.has(followsPostIndex) && 
-              visiblePosts.has(followsPostIndex + 1)) {
+        // Second pass: handle separators
+        separators.forEach((separator, index) => {
+          // A separator should be visible if:
+          // 1. The post before it is visible
+          // 2. There is at least one more visible post after it
+          const postBeforeIndex = index;
+          
+          if (visiblePosts.includes(postBeforeIndex) && 
+              visiblePosts.some(idx => idx > postBeforeIndex)) {
             separator.style.display = 'block';
           } else {
             separator.style.display = 'none';
@@ -128,8 +129,10 @@ layout: default
         });
         
         // Show message if no posts visible
+        let visiblePostCount = visiblePosts.length;
+        
         const noResultsMsg = document.getElementById('no-results');
-        if (visiblePosts.size === 0) {
+        if (visiblePostCount === 0) {
           if (!noResultsMsg) {
             const message = document.createElement('p');
             message.id = 'no-results';
