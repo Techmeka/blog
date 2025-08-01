@@ -93,3 +93,12 @@ exclude:
 
 # excerpt settings
 excerpt_separator: "<!--more-->"
+
+# Featured tags for filtering posts
+filter_tags:
+  - SharePoint
+  - Migration
+  - Security
+  - Automation
+  - DevOps
+  - Teams
