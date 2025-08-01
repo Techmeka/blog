@@ -8,6 +8,8 @@ image: /blog/images/managedIT.png
 published: true
 ---
 
+<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 A former Raymond James partner firm evolved into an independent **wealth management** entity, necessitating the establishment of a complete technology infrastructure—from hardware and software to managed services. <!--more--> Operating across the Canada–U.S. border and within highly regulated **financial sectors**, the firm required stringent data compliance and governance at every level. In parallel with designing the new IT architecture, a seamless and secure migration from the incumbent’s systems was also essential to support business continuity and compliance.
 
 
@@ -47,3 +49,5 @@ To meet the firm’s aggressive timelines and regulatory obligations, TechMeka d
 
 
  [1]: /blog/images/managedIT.png
+
+ </article>

@@ -8,6 +8,8 @@ image: /blog/images/sharepoint2016MigrationExtraSmall.png
 published: true
 ---
 
+<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 A **hospital in Ontario, Canada** needed to migrate its on-premises SharePoint Server 2016 environment to SharePoint Online within a short timeframe. <!--more--> The hospital opted for a lift-and-shift migration, moving to SharePoint Online with a classic architecture that included highly customized master pages and several legacy solutions.
 
 
@@ -49,3 +51,5 @@ The Key elements that TechMeka assisted with:
 
 
  [1]: /blog/images/sharepoint2016Migration.png
+
+ </article>

@@ -8,6 +8,8 @@ image: /blog/images/PowerAppsConferenceTool.png
 published: true
 ---
 
+<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 One of the operations team from **CCRM** previously managed conference placement and attendance tracking through a heavily manual process involving spreadsheets and email threads. <!--more--> The approach relied on maintaining a master Excel file and coordinating approvals over email—leading to versioning issues, inconsistent data, and delayed responses across departments.
 
 To modernize this workflow, TechMeka developed a fully integrated **Conference Management and Placement system** using Microsoft’s **Power Platform**. The solution replaced manual entry and disconnected approvals with an intelligent, low-code application built entirely on **Microsoft 365** infrastructure.
@@ -56,3 +58,5 @@ The conference management app was built using the following Microsoft 365 compon
 By modernizing a manual and fragmented process into a seamless low-code solution, TechMeka empowered CCRM’s Attract team to focus on strategic operations—not spreadsheet maintenance. The **Conference Management System** is a powerful example of how Microsoft 365 can transform traditional admin-heavy workflows into scalable, compliant digital tools.
 
 [1]: /blog/images/PowerAppsConferenceTool.png
+
+</article>

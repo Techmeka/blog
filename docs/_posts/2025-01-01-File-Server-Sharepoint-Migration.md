@@ -8,6 +8,8 @@ image: /blog/images/SharePointNFP.png
 published: true
 ---
 
+<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 A large **not‑for‑profit**, **CCRM (Centre for Commercialization of Regenerative Medicine)**, desired to transform their fragmented legacy systems into a modern, secure, and compliant digital workspace using **SharePoint Online**. <!--more--> As a federally funded biotech hub operating across **13 departments**, CCRM manages highly sensitive, regulated content—requiring advanced governance, structured collaboration, and future‑proofed digital practices.
 
 Their legacy environment included deeply nested file shares with inconsistent ACLs, outdated SharePoint sites, and interlinked Excel workbooks essential cell & gene therapy manufacturing. The task required a strategic transformation grounded in modern governance, Microsoft Purview integration, and intranet best practices.
@@ -63,3 +65,5 @@ TechMeka led a full-lifecycle SharePoint Online deployment—from design through
 Through deep integration of **Microsoft 365** and **Microsoft Purview**, TechMeka empowered this life sciences organization to modernize its collaboration systems while meeting the demanding security and compliance requirements of its industry. This case demonstrates our ability to deliver SharePoint solutions that are not only technically sound but also aligned with enterprise-grade data governance and usability standards.
 
 [1]: /blog/images/SharePointNFP.png
+
+</article>

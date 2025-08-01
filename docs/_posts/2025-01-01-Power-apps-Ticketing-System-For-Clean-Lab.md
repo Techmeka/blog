@@ -8,6 +8,8 @@ image: /blog/images/facilitiesPowerApps.png
 published: true
 ---
 
+<article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+
 **CCRM’s** Operations team required a modern, centralized system to manage a growing volume of facilities and clean lab service requests. <!--more--> Their previous ITSM platform was inflexible and unable to meet the real-time demands of a **GMP-regulated research and manufacturing environment**. High-priority requests originating from **clean lab areas**—used for critical research and cell & gene therapy production—required immediate routing, tracking, and resolution to ensure operational continuity.
 
 To address these needs, TechMeka delivered a **custom ticketing tool** using **Microsoft Power Platform**—leveraging SharePoint, PowerApps, and Power Automate to support secure, compliant, and responsive request handling.
@@ -58,3 +60,5 @@ TechMeka designed a custom request management system with compliance, prioritiza
 Through a purpose-built Power Platform solution, TechMeka enabled CCRM to streamline and safeguard critical operations in both general facilities and highly controlled clean lab environments—supporting uptime, compliance, and efficiency for Canada’s leading regenerative medicine manufacturer.
 
 [1]: /blog/images/facilitiesPowerApps.png
+
+</article>
