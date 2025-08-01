@@ -512,13 +512,76 @@ footer {
   }
 }
 
+// Tag filtering styles
+.tag-filter-container {
+  margin: 0 0 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+}
 
+.popular-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
 
+.filter-label {
+  font-weight: 500;
+  color: #555;
+  margin-right: 5px;
+}
 
+.filter-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  color: #555;
+  background: #f3f4f6;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: 1px solid #e0e7ef;
+}
 
+.filter-tag:hover {
+  background: #e5e7eb;
+}
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+.filter-tag.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.no-results-message {
+  text-align: center;
+  padding: 30px 0;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .tag-filter-container {
+    margin: 10px 0 20px;
+    padding: 10px 0;
+  }
+  
+  .popular-tags {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  
+  .filter-tag {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+/* Settled on moving the import of syntax highlighting to the bottom of the CSS
+... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start */
 @import "highlights";
 @import "svg-icons";
 
