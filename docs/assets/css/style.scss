@@ -23,9 +23,7 @@ body {
   color: $darkGray;
 }
 
-body .container {
-  padding-top: 50px !important;
-}
+
 
 .container {
   padding-top: 50px !important; 
@@ -478,6 +476,11 @@ footer {
 
 /* Mobile-friendly masthead with smaller elements */
 @media (max-width: 768px) {
+
+  .container {
+  padding-top: 30px !important; 
+  
+}
 
   .wrapper-masthead {
     margin-bottom: 0px;
