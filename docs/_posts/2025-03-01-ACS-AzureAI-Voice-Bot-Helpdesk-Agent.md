@@ -59,12 +59,3 @@ TechMeka designed and deployed a **cloud-native voice bot solution** using the M
 
 ---
 
-## Architecture Diagram
-
-```plaintext
-1. Phone Call → Azure Communication Services (ACS)
-2. ACS Event → Event Grid → Webhook (Express Server)
-3. Call Handler → Start STT
-4. STT → Azure OpenAI → GPT-4o
-5. GPT-4o Output → TTS → Azure Blob Storage
-6. Bot Plays Audio → Continues Recognition or Escalates
