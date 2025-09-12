@@ -20,7 +20,7 @@ Built using **Azure Communication Services (ACS)**, **Azure Speech Services**, a
 - Need for a secure, low-latency voice agent hosted within the client’s Azure environment
 - No off-the-shelf solution met the requirements for privacy, scalability, and call automation
 
-## Solution – Tenant-Hosted AI Voice Support Agent
+## Solution – Azure-Hosted AI Voice Support Agent
 
 TechMeka designed and deployed a **cloud-native voice bot solution** using the Microsoft Azure stack, with a focus on security, latency, and extensibility.
 
@@ -59,3 +59,4 @@ TechMeka designed and deployed a **cloud-native voice bot solution** using the M
 
 ---
 
+ [1]: /blog/images/azureACS.png
