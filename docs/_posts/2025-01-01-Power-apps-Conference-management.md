@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automating Conference Request & Approval with PowerApps for CCRM
+title: Automating Conference Request & Approval with PowerApps 
 date: 2025-01-01 00:00:00
 tags: [ PowerApps, Power Automate, SharePoint, Digital Workflow, Microsoft 365, Low Code ]
 categories: [Technology, Apps]
