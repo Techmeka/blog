@@ -24,31 +24,31 @@ Built using **Azure Communication Services (ACS)**, **Azure Speech Services**, a
 
 TechMeka designed and deployed a **cloud-native voice bot solution** using the Microsoft Azure stack, with a focus on security, latency, and extensibility.
 
-### 🔧 Core Technology Stack
+### Core Technology Stack
 - **Azure Communication Services (ACS)**: Call handling, speech recognition, media playback
 - **Azure Speech Services**: Real-time speech-to-text (STT) and neural text-to-speech (TTS)
 - **Azure OpenAI (GPT-4o)**: Contextual support responses
 
 
-### 📞 How It Works
+### How It Works
 - **Inbound Call**: ACS receives call via PSTN or direct dial
 - **Greeting + Recognition**: Bot greets the caller, activates speech-to-text
 - **AI Response**: Azure OpenAI analyzes the user’s question and generates a Response back to the caller
 - **Escalation**: Complex or unresolved issues trigger escalation to a human agent
 
 
-### 🔐 Secure by Design
+### Secure by Design
 - **Data Residency**: All speech, processing, and responses are handled **inside the organization’s Azure tenant**
 
 - **No External SaaS**: No third-party processing or API interaction outside Azure
 
 
 ## Outcomes & Benefits:
-- ✅ **Automated Support**: First-line resolution of repetitive issues (e.g., password help, email access, software guides)
-- ✅ **Professional Voice Experience**: Human-sounding, high-quality neural voices
-- ✅ **Secure by Default**: Zero data leaves the organization’s tenant
-- ✅ **Scalable Architecture**: Can be scaled horizontally, containerized, or deployed globally
-- ✅ **Cost-Efficient**: Runs on consumption-based Azure services—no licensing overhead
+- **Automated Support**: First-line resolution of repetitive issues (e.g., password help, email access, software guides)
+- **Professional Voice Experience**: Human-sounding, high-quality neural voices
+- **Secure by Default**: Zero data leaves the organization’s tenant
+- **Scalable Architecture**: Can be scaled horizontally, containerized, or deployed globally
+- **Cost-Efficient**: Runs on consumption-based Azure services—no licensing overhead
 
 ## Extendable Use Cases
 - IT Helpdesk support (24/7 password resets, software access)
