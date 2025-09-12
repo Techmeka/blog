@@ -32,7 +32,7 @@ TechMeka designed and deployed a **cloud-native voice bot solution** using the M
 
 ### How It Works
 - **Inbound Call**: ACS receives call via PSTN or direct dial
-- **Greeting + Recognition**: Bot greets the caller, activates speech-to-text
+- **Greeting + Recognition**: Bot greets the caller
 - **AI Response**: Azure OpenAI analyzes the user’s question and generates a Response back to the caller
 - **Escalation**: Complex or unresolved issues trigger escalation to a human agent
 
