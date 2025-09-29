@@ -2,7 +2,7 @@
 layout: post
 title: Automating Invoice Intake and Approval with Microsoft 365
 date: 2025-09-01 00:00:00
-tags: [ SharePoint, Power Automate, Invoice Automation, Finance Transformation, Microsoft 365 ]
+tags: [ SharePoint, Power Automate, Invoice, Automation, Finance, Transformation, Microsoft 365 ]
 categories: [Finance, Technology]
 image: /blog/images/invoiceAutomationWorkflow.png
 published: true
@@ -42,7 +42,7 @@ TechMeka delivered a modern, low-code system using **SharePoint Online** and **P
 - Each invoice follows a clear status path:  
   `New → Under Review → Approved → Ready for Payment → Paid → Archived`
 
-### 👥 Secure Access & Role Control
+### Secure Access & Role Control
 - Submitters, approvers, finance ops, and admins each have tailored permissions
 - All actions are logged for transparency and accountability
 
