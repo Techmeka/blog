@@ -8,7 +8,7 @@ image: /blog/images/invoiceAutomationWorkflow.png
 published: true
 ---
 
-Finance teams often struggle with disconnected invoice submission methods, manual tracking, and approval delays. <!--more--> In a recent project, TechMeka helped a growing organization streamline their invoice process using **Microsoft 365** and **SharePoint Premium**—bringing automation, AI, and compliance into a secure, centralized system.
+Finance teams often struggle with disconnected invoice submission methods, manual tracking, and approval delays. <!--more--> In a recent project, TechMeka has been helping organizations streamline their invoice process using **Microsoft 365** and **SharePoint Premium**—bringing automation, AI, and compliance into a secure, centralized system.
 
 The result? A structured, intelligent, and auditable workflow from email to approval to payment—built natively in the Microsoft ecosystem.
 
