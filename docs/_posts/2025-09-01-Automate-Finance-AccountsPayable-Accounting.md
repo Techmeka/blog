@@ -1,73 +1,114 @@
 ---
 layout: post
-title: Automating Invoice Intake and Approval with Microsoft 365
-date: 2025-09-01 00:00:00
-tags: [ SharePoint, Power Automate, Invoice, Automation, Finance, Transformation, Microsoft 365 ]
+title: Automating Invoice Intake and Approval with Microsoft 365 and SharePoint Premium
+date: 2025-08-01 00:00:00
+tags: [ SharePoint, SharePoint Premium, Power Automate, Invoice Automation, Finance Transformation, Microsoft 365 ]
 categories: [Finance, Technology]
 image: /blog/images/invoiceAutomationWorkflow.png
 published: true
 ---
 
-Finance teams often struggle with disconnected invoice submission methods, manual tracking, and delayed approvals. <!--more--> In a recent project, TechMeka helped a growing organization replace their email-and-spreadsheet invoice process with a **secure, automated approval system** built entirely on **Microsoft 365**.
+Finance teams often struggle with disconnected invoice submission methods, manual tracking, and approval delays. <!--more--> In a recent project, TechMeka helped a growing organization streamline their invoice process using **Microsoft 365** and **SharePoint Premium**—bringing automation, AI, and compliance into a secure, centralized system.
 
-The result? A structured, auditable, and scalable invoice workflow—without adding new software or complexity.
+The result? A structured, intelligent, and auditable workflow from email to approval to payment—built natively in the Microsoft ecosystem.
 
 ![Invoice Automation Workflow][1]
 
 ## The Challenge
 
-Before the solution was implemented, the finance team faced:
-- Invoices scattered across email inboxes and shared drives
-- Manual file renaming and inconsistent naming conventions
-- Slow or missed approvals due to lack of notifications
-- Limited visibility into payment status or approval timelines
+Before implementation, the organization faced:
+- Invoices scattered across inboxes and drives
+- Manual uploads and inconsistent file naming
+- Spreadsheet-based tracking with limited visibility
+- Approval delays and missed payment deadlines
+- No document intelligence or content classification
 
 ## The Solution
 
-TechMeka delivered a modern, low-code system using **SharePoint Online** and **Power Automate**, enabling:
+TechMeka deployed a secure invoice automation system using **SharePoint Online, Power Automate, and SharePoint Premium**, offering intelligent intake, approval, and lifecycle management—all within the Microsoft cloud.
 
-### Streamlined Intake
-- Invoices submitted by email are automatically saved in SharePoint
-- Manual uploads and scanned documents follow the same workflow
-- Common formats like PDF, Word, Excel, and images are supported
+### Automated Intake from Multiple Channels
+- Invoices emailed to a **shared mailbox** are automatically extracted and saved to SharePoint
+- Scanned or manually uploaded invoices follow the same workflow
+- Common formats supported: PDF, Word, Excel, image files (JPEG, PNG)
 
-### Intelligent Metadata & File Naming
-- Invoice details are extracted from emails or attachments
-- Files are renamed consistently with specific metadata (e.g., `Supplier Name - Invoice# - Date`)
-- Metadata like supplier name, invoice number, and date are auto-filled in the document library
+### AI-Powered Metadata Extraction with SharePoint Premium
+- **Structured & unstructured invoice data** is automatically extracted using AI models
+- SharePoint Premium's **document processing** identifies key fields like:
+  - Supplier Name
+  - Invoice Number
+  - Invoice Date
+  - Due Date
+  - Total Amount
+- Extracted values are mapped to SharePoint **metadata columns** for search, filtering, and reporting
 
-### Approval & Tracking
-- Department managers are notified when a new invoice is added
-- Approvals happen via email or Microsoft Teams, with reminders built in
-- Each invoice follows a clear status path:  
+### Smart File Naming & Tagging
+- Files are renamed consistently using extracted data:  
+  **`Supplier – Invoice# – YYYY-MM-DD`**
+- Tagged with metadata for:
+  - Department
+  - Status
+  - Source (Email / Manual / Scanner)
+- SharePoint Premium’s **custom classifiers** and **extraction rules** further improve accuracy over time
+
+### Approval Workflow & Lifecycle Management
+- Department managers are auto-notified when new invoices arrive
+- Approvals are handled via email or Teams with a **first-to-respond** model
+- Invoice status flows from:  
   `New → Under Review → Approved → Ready for Payment → Paid → Archived`
+- Finance team updates payment info directly in SharePoint with **audit logs maintained**
 
-### Secure Access & Role Control
-- Submitters, approvers, finance ops, and admins each have tailored permissions
-- All actions are logged for transparency and accountability
+### Real-Time Tracking & Views
+- Custom views built for Finance Ops, Department Managers, and Approvers
+- Linked **payment tracking list** to log:
+  - Payment status
+  - Reference numbers
+  - Bank reconciliation records
 
-### Visibility for Finance Teams
-- SharePoint views and tracking lists provide real-time insight into:
-  - Pending approvals
-  - Paid vs unpaid invoices
-  - Bank transfer records and reconciliation logs
+### Role-Based Access & Security
+- Permissions assigned using Microsoft Entra ID groups:
+  - Submitters (read/write access to upload area)
+  - Approvers (can view and approve)
+  - Finance Ops (can update payment metadata)
+  - Admins (full control)
+- SharePoint Premium’s **sensitivity labels** and **data loss prevention (DLP)** ensure compliance with financial governance policies
 
-## The Impact
+### Power Automate for Orchestration
+- Power Automate flows manage:
+  - Email processing and file intake
+  - Triggering AI document understanding
+  - Approval routing and reminders
+  - Escalation and error logging
+- **Exception handling** and retry logic ensure high reliability
 
-- **Faster approvals** with automated routing and reminders
-- **Stronger governance** with centralized storage and audit-ready metadata
-- **Improved visibility** for finance and department leaders
-- **Zero licensing bloat** — all built with Microsoft 365 tools
-- **Scalable foundation** for future automation (e.g., OCR, integrations)
+## The SharePoint Premium Advantage
+
+By integrating **SharePoint Premium**, the organization gained:
+- **AI-powered document understanding** with high accuracy
+- **Zero manual data entry** from invoices
+- **Trainable document models** that improve over time
+- **End-to-end lifecycle management** of financial documents
+- **Compliance-ready audit trails**, versioning, and access control
+
+## Business Impact
+
+- **Faster approvals** and shorter payment cycles
+- **Centralized visibility** across departments and finance ops
+- **Reduced manual effort** in document intake and tracking
+- **Secure, governed platform** within Microsoft 365
+- **AI-powered scalability** with SharePoint Premium intelligence
 
 ---
 
-## Let’s Modernize Your Invoice Process
+## Ready to Modernize Invoice Handling?
 
-This invoice automation solution is part of TechMeka’s growing portfolio of **secure, Microsoft 365-based workflow systems** designed to eliminate manual steps, reduce risk, and unlock visibility.
+Whether you're processing 50 or 50,000 invoices a month, TechMeka’s Microsoft 365 and SharePoint Premium solution gives your finance team:
+- End-to-end visibility  
+- Intelligent document processing  
+- Automated approval workflows  
+- Full compliance and control  
 
-If your organization is still processing invoices via inbox folders or shared spreadsheets, we can help.
+📞 [Talk to our automation team](https://techmeka.com/contact) and bring intelligence to your invoice workflow.
 
-[Book a discovery session](https://techmeka.com/contact) to learn how we can streamline your document workflows.
 
 [1]: /blog/images/invoiceAutomationWorkflow.png
