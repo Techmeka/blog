@@ -68,6 +68,6 @@ This invoice automation solution is part of TechMeka’s growing portfolio of **
 
 If your organization is still processing invoices via inbox folders or shared spreadsheets, we can help.
 
-📞 [Book a discovery session](https://techmeka.com/contact) to learn how we can streamline your document workflows.
+[Book a discovery session](https://techmeka.com/#contactUs) to learn how we can streamline your document workflows.
 
 [1]: /blog/images/invoiceAutomationWorkflow.png
