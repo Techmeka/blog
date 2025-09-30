@@ -2,7 +2,7 @@
 layout: post
 title: Automating Invoice Intake and Approval with Microsoft 365 and SharePoint Premium
 date: 2025-08-01 00:00:00
-tags: [ SharePoint, SharePoint Premium, Power Automate, Invoice, Automation, Finance, Transformation, Microsoft 365 ]
+tags: [ SharePoint, SharePoint Premium, Power Automate, Invoice, Automation, Finance, Transformation, Microsoft 365, AI ]
 categories: [Finance, Technology]
 image: /blog/images/invoiceAutomationWorkflow.png
 published: true
