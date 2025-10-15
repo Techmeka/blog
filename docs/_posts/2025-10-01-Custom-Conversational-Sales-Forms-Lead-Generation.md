@@ -2,7 +2,7 @@
 layout: post
 title: Turning Lead Gen into a Conversation. The Start Experience
 date: 2025-10-14 00:00:00
-tags: [ Lead Generation, Microsoft 365, Interactive Forms, Edge, Workers, UX, Marketing Automation ]
+tags: [ Lead Generation, Microsoft 365, Interactive Forms, Edge, Workers, UX, Marketing Automation, SharePoint, Power Automate ]
 categories: [Product, Marketing]
 image: /blog/images/start-page-quiz.png
 published: true
@@ -129,7 +129,7 @@ Our sales team now gets leads **pre-qualified** by company size, tech needs, dev
 It's **consultative**, not transactional  
 It generates **qualified, segmented** leads  
 It builds **trust and brand equity**  
-It proves TechMeka’s ability to deliver polished, scalable cloud solutions
+
 
 We built the experience **with the same Microsoft 365 tools we recommend to clients**—and the results speak for themselves.
 
