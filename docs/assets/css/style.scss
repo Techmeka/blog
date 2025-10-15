@@ -697,16 +697,16 @@ footer {
 
 .post th, .post td {
   padding: 14px 18px;
-  text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
 
 .post th {
-  background: #2563eb;
+  background: #111;
   color: #fff;
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .post tr:last-child td {
@@ -716,6 +716,12 @@ footer {
 .post td {
   font-size: 1em;
   color: #222;
+}
+
+/* Center the Before and After column values */
+.post td:nth-child(2),
+.post td:nth-child(3) {
+  text-align: center;
 }
 
 @media (max-width: 600px) {
