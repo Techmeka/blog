@@ -413,6 +413,12 @@ nav {
 .tag-invoice           { background: #fff7e6; color: #b26a00; }
 .tag-finance           { background: #e0f2f1; color: #00695c; }
 .tag-transformation    { background: #f3e8ff; color: #7c3aed; }
+.tag-lead-generation      { background: #e0f7fa; color: #0277bd; }
+.tag-interactive-forms   { background: #f3e8ff; color: #7c3aed; }
+.tag-edge                { background: #e6f0fa; color: #2563eb; }
+.tag-workers             { background: #fef9c3; color: #a16207; }
+.tag-ux                  { background: #ffe4e6; color: #be123c; }
+.tag-marketing-automation { background: #e7f9f1; color: #22795d; }
 
 .post-separator {
   border: none;
@@ -674,6 +680,48 @@ footer {
   }
   .post-tags {
     margin-bottom: 2em; // Increase as needed for more space below tags
+  }
+}
+
+/* Modern table styling for blog posts */
+.post table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2em 0;
+  background: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.05);
+}
+
+.post th, .post td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.post th {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+}
+
+.post tr:last-child td {
+  border-bottom: none;
+}
+
+.post td {
+  font-size: 1em;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .post table, .post th, .post td {
+    font-size: 0.95em;
+    padding: 10px 8px;
   }
 }
 
