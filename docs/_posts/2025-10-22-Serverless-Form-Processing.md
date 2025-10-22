@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Introducing Teleport Observer: Serverless Form Infrastructure for the Modern Web"
-date: 2025-09-12 00:00:00
-tags: [ Cloudflare, Serverless, Workers, Lead Generation, API Security, Form Automation, Teleport Observer ]
+date: 2025-10-22 00:00:00
+tags: [ Cloudflare, Serverless, Workers, API Security, Form Automation, Teleport Observer ]
 categories: [Product, Technology]
 image: /blog/images/teleport-observer-architecture.png
 published: true
