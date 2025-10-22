@@ -35,6 +35,8 @@ We needed something faster, leaner, and built for the modern edge.
 
 Teleport Observer is a **form API platform that runs entirely at the edge**. It processes, sanitizes, and routes your form submissions securely—**without servers, middleware, or backend maintenance**.
 
+**[Learn more at teleport.observer →](https://teleport.observer)**
+
 ---
 
 ## Core Capabilities
