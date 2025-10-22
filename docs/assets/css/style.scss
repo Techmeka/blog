@@ -281,11 +281,13 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    border-left: 4px solid #2563eb;
+    padding: 0.8em 1.5em;
     color: $gray;
-    font-size: 22px;
+    font-size: 20px;
     font-style: italic;
+    background: #f8fafc;
+    border-radius: 4px;
   }
 
   .comments {
@@ -297,6 +299,43 @@ nav {
     font-size: 15px;
     display: inline-block;
     margin-bottom: 2rem; // Add this line for spacing
+  }
+
+  // Enhanced spacing for better readability
+  h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  // Better image spacing
+  img {
+    margin: 3rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  // Improved list spacing
+  ul, ol {
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+  }
+
+  // Better paragraph spacing
+  p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  // Spacing before horizontal rules
+  hr {
+    margin: 3rem 0;
   }
 }
 
