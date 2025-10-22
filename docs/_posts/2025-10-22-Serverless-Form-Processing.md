@@ -10,7 +10,7 @@ published: true
 
 > What if you could process **millions of form submissions**—without managing a single server?
 
-**Teleport Observer** is TechMeka's new **serverless form processing platform**, built for modern teams that want **secure, scalable, and maintenance-free form infrastructure**. It handles inbound web form data at the edge, filters out threats, applies business logic, and securely delivers data to the right system—**in under 50ms globally**. <!--more-->
+Teleport Observer is TechMeka's new serverless form processing platform, built for modern teams that want **secure, scalable, and maintenance-free form infrastructure**.<!--more--> It handles inbound web form data at the edge, filters out threats, applies business logic, and securely delivers data to the right system—**in under 50ms globally**. 
 
 Whether you're collecting leads, quiz responses, support requests, or internal approvals, **Teleport Observer** eliminates backend overhead and ships with **enterprise-grade security**.
 
