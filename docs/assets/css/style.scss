@@ -467,8 +467,12 @@ nav {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #ffffff !important;
   border: none;
-  font-weight: 600;
   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+
+  &::before {
+    content: "🌐 ";
+    margin-right: 0.25em;
+  }
 
   &:hover {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
