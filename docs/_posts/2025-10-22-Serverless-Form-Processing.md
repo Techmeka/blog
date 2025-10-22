@@ -44,7 +44,7 @@ Teleport Observer is a **form API platform that runs entirely at the edge**. It 
 - No cold starts, no latency spikes
 - Ultra-fast TTFB for users worldwide
 
-### 🛡️ Enterprise Security (Out of the Box)
+### Enterprise Security (Out of the Box)
 Teleport Observer includes a hardened security layer with:
 
 | Feature | Built-In? |
@@ -112,7 +112,7 @@ Teleport Observer is built for **form-heavy organizations** who need reliability
 |--------|-------------------|-------------------|
 | Deployment Time | 1–2 weeks | <30 minutes |
 | Bot Protection | Manual | Built-in |
-| Monthly Ops Cost | $400–1000+ | Starts at $5 (Cloudflare) |
+| Monthly Ops Cost | $400–1000+ | up to 90% lower |
 | Global Speed | Regional | Sub-50ms global |
 | Infrastructure Burden | High | None |
 | Updates & Patches | Ongoing | Not required |
