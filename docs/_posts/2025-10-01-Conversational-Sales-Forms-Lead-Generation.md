@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Turning Lead Gen into a Conversation. The Start Experience
-date: 2025-10-14 00:00:00
+date: 2025-10-01 00:00:00
 tags: [ Lead Generation, Microsoft 365, Interactive Forms, Edge, Workers, UX, Marketing Automation, SharePoint, Power Automate ]
 categories: [Product, Marketing]
 image: /blog/images/start-page-quiz.png
