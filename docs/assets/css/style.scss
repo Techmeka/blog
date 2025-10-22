@@ -468,10 +468,21 @@ nav {
   color: #ffffff !important;
   border: none;
   box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  padding-left: 0.5em;
 
   &::before {
-    content: "🌐 ";
-    margin-right: 0.25em;
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.35em;
+    background-image: url('/blog/images/teleportObserverLogo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    position: relative;
+    top: -0.05em;
   }
 
   &:hover {
