@@ -455,9 +455,27 @@ nav {
 .tag-lead-generation      { background: #e0f7fa; color: #0277bd; }
 .tag-interactive-forms   { background: #f3e8ff; color: #7c3aed; }
 .tag-edge                { background: #e6f0fa; color: #2563eb; }
-.tag-workers             { background: #fef9c3; color: #a16207; }
+.tag-workers             { background: #ffedd5; color: #c2410c; }
 .tag-ux                  { background: #ffe4e6; color: #be123c; }
 .tag-marketing-automation { background: #e7f9f1; color: #22795d; }
+.tag-serverless { background: #f3e8ff; color: #7c3aed; }
+.tag-api-security { background: #fee2e2; color: #dc2626; }
+.tag-form-automation { background: #d1fae5; color: #059669; }
+
+// Special gradient tag for Teleport Observer
+.tag-teleport-observer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+
+  &:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  }
+}
 
 .post-separator {
   border: none;
