@@ -4,7 +4,7 @@ title: SharePoint for Cancer Research Non-For-Profit Organization
 date: 2025-01-01 00:00:00
 tags: [ SharePoint, Microsoft Purview, Migration, Information Architecture, Governance, Intranet ]
 categories: [Data, Technology]
-image: /images/SharePointNFP.png
+image: https://techmeka.com/blog/images/SharePointNFP.png
 published: true
 ---
 

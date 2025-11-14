@@ -4,7 +4,7 @@ title: Power Apps to Manage Facilities and Lab Requests
 date: 2025-01-01 00:00:00
 tags: [ PowerApps, Power Automate, SharePoint, Ticketing System, Clean Lab, Manufacturing ]
 categories: [Technology, Apps]
-image: /images/facilitiesPowerApps.png
+image: https://techmeka.com/blog/images/facilitiesPowerApps.png
 published: true
 ---
 
