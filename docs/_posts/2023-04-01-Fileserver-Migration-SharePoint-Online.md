@@ -4,7 +4,7 @@ title: Fileserver Migration to SharePoint Online
 date: 2023-04-01 00:00:00
 tags: [ SharePoint, Migration, Governance ]
 categories: [Data, Technology]
-image: /blog/images/fsSPOPE.png
+image: /images/fsSPOPE.png
 published: true
 ---
 

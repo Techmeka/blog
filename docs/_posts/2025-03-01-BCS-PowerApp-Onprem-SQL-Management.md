@@ -4,7 +4,7 @@ title: Modernizing BCS with PowerApps for On-Prem SQL Integration
 date: 2025-03-01 00:00:00
 tags: [ PowerApps, Power Automate, SharePoint, On-Premises Data Gateway, SQL Server, Low Code, BCS ]
 categories: [Technology, Apps]
-image: /blog/images/bcsPowerAppsModernization.png
+image: /images/bcsPowerAppsModernization.png
 published: true
 ---
 

@@ -12,30 +12,6 @@ TechMeka specializes in delivering innovative solutions for SharePoint, Microsof
 
 Visit our blog at: [https://techmeka.com/blog](https://techmeka.com/blog)
 
-## Technology Stack
-
-This blog is built with:
-- **Jekyll**: Static site generator for fast, secure content delivery
-- **GitHub Pages**: Automated deployment and hosting
-- **jekyll-seo-tag**: Optimized social media and search engine metadata
-
-## Features
-
-- Responsive design optimized for all devices
-- Social media integration (Twitter, LinkedIn)
-- RSS feed for content syndication
-- Tag-based content filtering
-- Google Analytics integration
-
-## Content Structure
-
-All blog posts are located in `/docs/_posts/` and follow the naming convention: `YYYY-MM-DD-title.md`
-
-Each post includes:
-- Featured images for social media sharing
-- Categories and tags for organization
-- Automatic excerpt generation
-- SEO-optimized metadata
 
 ## Contributing
 

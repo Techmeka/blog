@@ -4,7 +4,7 @@ title: "Introducing Teleport Observer: Serverless Form Infrastructure for the Mo
 date: 2025-10-22 00:00:00
 tags: [ Serverless, Workers, API Security, Form Automation, Teleport Observer ]
 categories: [Product, Technology]
-image: /blog/images/teleport-observer-architecture.png
+image: /images/teleport-observer-architecture.png
 published: true
 ---
 

@@ -4,7 +4,7 @@ title: "Built for Canada: Designing a Platform to Strengthen Local Economies"
 date: 2025-01-20 00:00:00
 tags: [ Platform, Development, React, Tailwind, Hosting, Node, Marketing, Design, Security, API, AI, Computer Vision ]
 categories: [Data, Technology]
-image: /blog/images/buyCanadian.gif
+image: /images/buyCanadian.gif
 # video: /blog/videos/buyCanadian.webm
 published: true
 ---

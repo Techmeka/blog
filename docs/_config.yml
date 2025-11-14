@@ -9,7 +9,7 @@ name: Case Studies
 description: Highlighted Customer Solutions
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /blog/images/logoTechMekaBlack.png
+avatar: /images/logoTechMekaBlack.png
 
 #
 # Flags below are optional
@@ -60,7 +60,7 @@ author: TechMeka
 twitter:
   username: tech_meka
   card: summary_large_image
-logo: /blog/images/logoTechMekaBlack.png
+logo: /images/logoTechMekaBlack.png
 
 # Social profile links (used by jekyll-seo-tag)
 social:

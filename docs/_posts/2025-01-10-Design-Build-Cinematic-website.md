@@ -7,7 +7,7 @@ title: "First Impressions Matter — The Story Behind Imprinted.Parts Homepage"
 date: 2025-01-10 00:00:00
 tags: [ Website, Development, React, Three.js, Hosting, Marketing, Design ]
 categories: [Data, Technology]
-image: /blog/images/imprintedParts.png
+image: /images/imprintedParts.png
 video: /blog/videos/imprintedParts.webm
 published: true
 ---

@@ -4,7 +4,7 @@ title: AI-Powered Voice Helpdesk Agent Using Azure Communication Services
 date: 2025-08-01 00:00:00
 tags: [ Azure, Communication Services, AI Helpdesk, GPT-4o, Speech Services, Internal Support, Voice Bot, Secure AI ]
 categories: [Technology, Automation]
-image: /blog/images/azureACS.png
+image: /images/azureACS.png
 published: True
 ---
 
