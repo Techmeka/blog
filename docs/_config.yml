@@ -21,12 +21,12 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: 
+  github:
   instagram:
-  linkedin:
+  linkedin: company/techmeka
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: 
+  twitter: tech_meka 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -55,6 +55,21 @@ url: "https://techmeka.com"
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: "/blog"
 
+# Social media configuration for jekyll-seo-tag
+author: TechMeka
+twitter:
+  username: tech_meka
+  card: summary_large_image
+logo: /blog/images/logoTechMekaBlack.png
+
+# Social profile links (used by jekyll-seo-tag)
+social:
+  name: TechMeka
+  links:
+    - https://twitter.com/tech_meka
+    - https://www.linkedin.com/company/techmeka
+    - https://techmeka.com
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
@@ -82,6 +97,13 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag # Generate SEO meta tags for social media sharing
+
+# Also add to plugins for Jekyll 3.5+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude these files from your production _site
 exclude:

@@ -98,10 +98,10 @@ Our sales team now gets leads **pre-qualified** by company size, tech needs, dev
 
 ## Behind the Scenes
 
-- **Frontend:** React with Tailwind for snappy UI  
-- **Backend:** Handled by Teleport.Observer  
-- **Storage:** Microsoft SharePoint List (lead data stored securely)  
-- **Security:** Turnstile bot protection, CORS filtering, origin validation  
+- **Frontend:** React with Tailwind for snappy UI
+- **Backend:** Handled by [Teleport.Observer](https://teleport.observer)
+- **Storage:** Microsoft SharePoint List (lead data stored securely)
+- **Security:** Turnstile bot protection, CORS filtering, origin validation
 - **Notification:** Email alerts and CRM updates
 
 ---
