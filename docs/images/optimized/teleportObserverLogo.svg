@@ -1,0 +1,131 @@
+<svg width="256" height="256" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100" height="100" fill="transparent"/>
+
+  <!-- Simple filter for glow -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Animation for photons orbiting -->
+    <style>
+      @keyframes orbit1 {
+        from { transform: rotate(0deg) translateX(22px) rotate(0deg); }
+        to { transform: rotate(360deg) translateX(22px) rotate(-360deg); }
+      }
+      @keyframes orbit2 {
+        from { transform: rotate(45deg) translateX(24px) rotate(-45deg); }
+        to { transform: rotate(405deg) translateX(24px) rotate(-405deg); }
+      }
+      @keyframes orbit3 {
+        from { transform: rotate(90deg) translateX(20px) rotate(-90deg); }
+        to { transform: rotate(450deg) translateX(20px) rotate(-450deg); }
+      }
+      @keyframes orbit4 {
+        from { transform: rotate(135deg) translateX(26px) rotate(-135deg); }
+        to { transform: rotate(495deg) translateX(26px) rotate(-495deg); }
+      }
+      @keyframes orbit5 {
+        from { transform: rotate(180deg) translateX(23px) rotate(-180deg); }
+        to { transform: rotate(540deg) translateX(23px) rotate(-540deg); }
+      }
+      @keyframes orbit6 {
+        from { transform: rotate(225deg) translateX(21px) rotate(-225deg); }
+        to { transform: rotate(585deg) translateX(21px) rotate(-585deg); }
+      }
+      @keyframes orbit7 {
+        from { transform: rotate(270deg) translateX(25px) rotate(-270deg); }
+        to { transform: rotate(630deg) translateX(25px) rotate(-630deg); }
+      }
+      @keyframes orbit8 {
+        from { transform: rotate(315deg) translateX(22px) rotate(-315deg); }
+        to { transform: rotate(675deg) translateX(22px) rotate(-675deg); }
+      }
+
+      .photon1 { animation: orbit1 8s linear infinite; transform-origin: 50px 50px; }
+      .photon2 { animation: orbit2 9s linear infinite; transform-origin: 50px 50px; }
+      .photon3 { animation: orbit3 7s linear infinite; transform-origin: 50px 50px; }
+      .photon4 { animation: orbit4 10s linear infinite; transform-origin: 50px 50px; }
+      .photon5 { animation: orbit5 8.5s linear infinite; transform-origin: 50px 50px; }
+      .photon6 { animation: orbit6 9.5s linear infinite; transform-origin: 50px 50px; }
+      .photon7 { animation: orbit7 7.5s linear infinite; transform-origin: 50px 50px; }
+      .photon8 { animation: orbit8 8.8s linear infinite; transform-origin: 50px 50px; }
+    </style>
+  </defs>
+
+  <!-- Globe wireframe - minimal and abstract -->
+  <g stroke="rgba(56, 189, 248, 0.6)" fill="none" stroke-width="0.6">
+    <!-- Vertical lines (meridians) -->
+    <ellipse cx="50" cy="50" rx="32" ry="32" opacity="0.6"/>
+    <ellipse cx="50" cy="50" rx="27" ry="32" opacity="0.5"/>
+    <ellipse cx="50" cy="50" rx="22" ry="32" opacity="0.4"/>
+    <ellipse cx="50" cy="50" rx="16" ry="32" opacity="0.4"/>
+    <ellipse cx="50" cy="50" rx="10" ry="32" opacity="0.3"/>
+    <ellipse cx="50" cy="50" rx="5" ry="32" opacity="0.3"/>
+
+    <!-- Horizontal lines (parallels) -->
+    <ellipse cx="50" cy="50" rx="32" ry="4" opacity="0.5"/>
+    <ellipse cx="50" cy="50" rx="32" ry="10" opacity="0.5"/>
+    <ellipse cx="50" cy="50" rx="32" ry="16" opacity="0.5"/>
+    <ellipse cx="50" cy="50" rx="32" ry="22" opacity="0.4"/>
+    <ellipse cx="50" cy="50" rx="32" ry="26" opacity="0.4"/>
+
+    <!-- Center vertical line -->
+    <line x1="50" y1="18" x2="50" y2="82" opacity="0.6"/>
+  </g>
+
+  <!-- Animated Photons -->
+
+  <!-- Cyan photon -->
+  <g class="photon1">
+    <circle cx="50" cy="50" r="1.5" fill="rgb(34, 211, 238)"/>
+    <circle cx="50" cy="50" r="3.5" fill="rgba(34, 211, 238, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Orange photon -->
+  <g class="photon2">
+    <circle cx="50" cy="50" r="1.4" fill="rgb(251, 146, 60)"/>
+    <circle cx="50" cy="50" r="3.2" fill="rgba(251, 146, 60, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Purple photon -->
+  <g class="photon3">
+    <circle cx="50" cy="50" r="1.4" fill="rgb(168, 85, 247)"/>
+    <circle cx="50" cy="50" r="3.2" fill="rgba(168, 85, 247, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Green photon -->
+  <g class="photon4">
+    <circle cx="50" cy="50" r="1.3" fill="rgb(34, 197, 94)"/>
+    <circle cx="50" cy="50" r="3.0" fill="rgba(34, 197, 94, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Pink photon -->
+  <g class="photon5">
+    <circle cx="50" cy="50" r="1.3" fill="rgb(236, 72, 153)"/>
+    <circle cx="50" cy="50" r="3.0" fill="rgba(236, 72, 153, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Yellow photon -->
+  <g class="photon6">
+    <circle cx="50" cy="50" r="1.3" fill="rgb(234, 179, 8)"/>
+    <circle cx="50" cy="50" r="3.0" fill="rgba(234, 179, 8, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Blue photon -->
+  <g class="photon7">
+    <circle cx="50" cy="50" r="1.4" fill="rgb(59, 130, 246)"/>
+    <circle cx="50" cy="50" r="3.2" fill="rgba(59, 130, 246, 0.5)" filter="url(#glow)"/>
+  </g>
+
+  <!-- Teal photon -->
+  <g class="photon8">
+    <circle cx="50" cy="50" r="1.3" fill="rgb(20, 184, 166)"/>
+    <circle cx="50" cy="50" r="3.0" fill="rgba(20, 184, 166, 0.5)" filter="url(#glow)"/>
+  </g>
+</svg>

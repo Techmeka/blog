@@ -1,6 +1,6 @@
 ---
 layout: default
-image: https://techmeka.com/blog/images/logoTechMekaBlack.png
+image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
 ---
 
 <div class="tag-filter-container">
@@ -27,7 +27,7 @@ image: https://techmeka.com/blog/images/logoTechMekaBlack.png
           </div>
         {% elsif post.image %}
           <div class="post-image-desktop">
-            <img src="{{ post.image }}" alt="Image for {{ post.title }}">
+            {% include responsive-image.html src=post.image alt=post.title %}
           </div>
         {% endif %}
         <div class="post-preview-content">
@@ -51,7 +51,7 @@ image: https://techmeka.com/blog/images/logoTechMekaBlack.png
           </div>
         {% elsif post.image %}
           <div class="post-image">
-            <img src="{{ post.image }}" alt="Image for {{ post.title }}">
+            {% include responsive-image.html src=post.image alt=post.title %}
           </div>
         {% endif %}
 

@@ -830,4 +830,65 @@ footer .svg-icon.linkedin:hover {
   opacity: 1;
 }
 
+/* Responsive Image Styles */
+.responsive-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Ensure smooth loading transition */
+  img.adaptive-image {
+    background: #f3f4f6;
+
+    &[loading="lazy"] {
+      min-height: 200px;
+    }
+  }
+}
+
+/* Post images with responsive support */
+.post-image,
+.post-image-desktop {
+  img, picture {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  picture.responsive-image {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Loading state for adaptive images */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.adaptive-image:not([src]) {
+  background: linear-gradient(to right, #f3f4f6 0%, #e5e7eb 20%, #f3f4f6 40%, #f3f4f6 100%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s infinite linear;
+  min-height: 200px;
+}
+
+/* Optimize images for different screen densities */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .responsive-image img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
 

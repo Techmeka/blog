@@ -1,0 +1,51 @@
+{% comment %}
+  Responsive Image Include
+  Usage: {% include responsive-image.html src="image.png" alt="Description" %}
+
+  This generates a picture element with:
+  - Multiple responsive sizes
+  - Connection-aware loading (serves HQ on fast connections)
+  - Lazy loading support
+{% endcomment %}
+
+{% assign filename = include.src | split: '/' | last %}
+{% assign name_without_ext = filename | split: '.' | first %}
+{% assign ext = filename | split: '.' | last %}
+{% assign base_url = site.baseurl | append: '/images/' %}
+
+{% comment %} Determine if this image has responsive variants {% endcomment %}
+{% assign has_variants = false %}
+{% assign large_images = "sharepoint2016Migration,sharepoint2013MigrationFSOD,SharePointNFP,facilitiesPowerApps,PowerAppsConferenceTool,fsSPOPE,managedIT,sharepoint2016MigrationExtraSmall,start-page-quiz,cyberSecurityDashboard,bcsPowerAppsModernization,invoiceAutomationWorkflow,azureACS,sharepoint2016MigrationSmall" | split: ',' %}
+
+{% for img in large_images %}
+  {% if name_without_ext == img %}
+    {% assign has_variants = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<picture class="responsive-image" data-original="{{ include.src }}">
+  {% if has_variants %}
+    {%comment %} Use responsive variants for large images {% endcomment %}
+    <source media="(min-width: 1920px)"
+            data-srcset="{{ base_url }}responsive/large/{{ name_without_ext }}-1920w.{{ ext }}"
+            data-srcset-slow="{{ base_url }}responsive/medium/{{ name_without_ext }}-1200w.{{ ext }}">
+    <source media="(min-width: 1200px)"
+            data-srcset="{{ base_url }}responsive/medium/{{ name_without_ext }}-1200w.{{ ext }}"
+            data-srcset-slow="{{ base_url }}responsive/small/{{ name_without_ext }}-800w.{{ ext }}">
+    <source media="(min-width: 800px)"
+            data-srcset="{{ base_url }}responsive/small/{{ name_without_ext }}-800w.{{ ext }}">
+    <img src="{{ base_url }}optimized/{{ filename }}"
+         data-src-fast="{{ base_url }}original/{{ filename }}"
+         alt="{{ include.alt }}"
+         loading="lazy"
+         class="adaptive-image">
+  {% else %}
+    {%comment %} Use optimized version for small images, original for fast connections {% endcomment %}
+    <img src="{{ base_url }}optimized/{{ filename }}"
+         data-src-fast="{{ base_url }}original/{{ filename }}"
+         alt="{{ include.alt }}"
+         loading="lazy"
+         class="adaptive-image">
+  {% endif %}
+</picture>
