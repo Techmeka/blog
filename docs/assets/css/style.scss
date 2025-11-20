@@ -675,14 +675,28 @@ footer {
     margin: 10px 0 20px;
     padding: 10px 0;
   }
-  
+
   .popular-tags {
-    overflow-x: auto;
-    padding-bottom: 8px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+    flex-wrap: wrap;
   }
-  
+
+  .filter-label {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .view-toggle {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    margin-left: 0;
+  }
+
+  .view-toggle-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
   .filter-tag {
     white-space: nowrap;
     flex-shrink: 0;
@@ -828,6 +842,182 @@ footer .svg-icon.linkedin {
 
 footer .svg-icon.linkedin:hover {
   opacity: 1;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: #f3f4f6;
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid #e0e7ef;
+  margin-left: auto;
+}
+
+.view-toggle-btn {
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-toggle-btn:hover {
+  background: #e5e7eb;
+}
+
+.view-toggle-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.view-toggle-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Grid View Styles */
+.posts.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.posts.grid-view .post-preview {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e5e7eb;
+}
+
+.posts.grid-view .post-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+}
+
+.posts.grid-view .post-preview-flex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.posts.grid-view .post-image-desktop,
+.posts.grid-view .post-video-desktop {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.posts.grid-view .post-image-desktop img,
+.posts.grid-view .post-image-desktop picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posts.grid-view .post-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.posts.grid-view .post-preview-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts.grid-view .post-title h2 {
+  font-size: 1.25rem;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.posts.grid-view .post-title h2 a {
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.posts.grid-view .post-title h2 a:hover {
+  color: #2563eb;
+}
+
+.posts.grid-view .post-tags {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.posts.grid-view .post-image,
+.posts.grid-view .post-video-mobile {
+  display: none;
+}
+
+.posts.grid-view .entry {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.posts.grid-view .read-more {
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+
+.posts.grid-view .post-separator {
+  display: none !important;
+}
+
+/* Timeline View (Default) Styles */
+.posts.timeline-view .post-preview {
+  display: block;
+}
+
+/* Mobile Grid View */
+@media (max-width: 768px) {
+  .posts.grid-view {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .posts.grid-view .post-image-desktop {
+    display: none !important;
+  }
+
+  .posts.grid-view .post-video-desktop {
+    display: none !important;
+  }
+
+  .posts.grid-view .post-image {
+    display: block !important;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f3f4f6;
+  }
+
+  .posts.grid-view .post-video-mobile {
+    display: block !important;
+    min-width: 100% !important;
+  }
 }
 
 /* Responsive Image Styles */

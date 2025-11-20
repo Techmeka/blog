@@ -7,14 +7,29 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
   <div class="popular-tags">
     <span class="filter-label">Filter:</span>
     <a href="#" class="filter-tag active" data-tag="all">All</a>
-    
+
     {% for tag in site.filter_tags %}
       <a href="#" class="filter-tag tag-{{ tag | downcase | replace: ' ', '-' }}" data-tag="{{ tag | downcase }}">{{ tag }}</a>
     {% endfor %}
+
+    <div class="view-toggle">
+      <button class="view-toggle-btn" data-view="timeline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        Timeline
+      </button>
+      <button class="view-toggle-btn active" data-view="grid">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+        </svg>
+        Cards
+      </button>
+    </div>
   </div>
 </div>
 
-<div class="posts">
+<div class="posts grid-view">
   {% for post in site.posts %}
     <article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
       <div class="post-preview-flex">
@@ -82,6 +97,36 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
     const filterTags = document.querySelectorAll('.filter-tag');
     const posts = document.querySelectorAll('.post-preview');
     const separators = document.querySelectorAll('.post-separator');
+    const postsContainer = document.querySelector('.posts');
+    const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
+
+    // Load saved view preference or default to grid
+    const savedView = localStorage.getItem('blogView') || 'grid';
+    setView(savedView);
+
+    // View toggle functionality
+    viewToggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const view = this.getAttribute('data-view');
+        setView(view);
+        localStorage.setItem('blogView', view);
+      });
+    });
+
+    function setView(view) {
+      // Update active button
+      viewToggleBtns.forEach(btn => {
+        if (btn.getAttribute('data-view') === view) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update posts container class
+      postsContainer.classList.remove('grid-view', 'timeline-view');
+      postsContainer.classList.add(view + '-view');
+    }
     
     filterTags.forEach(tag => {
       tag.addEventListener('click', function(e) {
