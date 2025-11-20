@@ -100,13 +100,19 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
     const postsContainer = document.querySelector('.posts');
     const viewToggleBtns = document.querySelectorAll('.view-toggle-btn');
 
+    console.log('View toggle buttons found:', viewToggleBtns.length);
+    console.log('Posts container:', postsContainer);
+
     // Load saved view preference or default to grid
     const savedView = localStorage.getItem('blogView') || 'grid';
+    console.log('Saved view:', savedView);
     setView(savedView);
 
     // View toggle functionality
     viewToggleBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Button clicked:', this.getAttribute('data-view'));
         const view = this.getAttribute('data-view');
         setView(view);
         localStorage.setItem('blogView', view);
@@ -114,6 +120,8 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
     });
 
     function setView(view) {
+      console.log('Setting view to:', view);
+
       // Update active button
       viewToggleBtns.forEach(btn => {
         if (btn.getAttribute('data-view') === view) {
@@ -126,6 +134,8 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
       // Update posts container class
       postsContainer.classList.remove('grid-view', 'timeline-view');
       postsContainer.classList.add(view + '-view');
+
+      console.log('Posts container classes:', postsContainer.className);
     }
     
     filterTags.forEach(tag => {
