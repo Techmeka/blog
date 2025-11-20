@@ -15,7 +15,7 @@
 
 {% comment %} Determine if this image has responsive variants {% endcomment %}
 {% assign has_variants = false %}
-{% assign large_images = "sharepoint2016Migration,sharepoint2013MigrationFSOD,SharePointNFP,facilitiesPowerApps,PowerAppsConferenceTool,fsSPOPE,managedIT,sharepoint2016MigrationExtraSmall,start-page-quiz,cyberSecurityDashboard,bcsPowerAppsModernization,invoiceAutomationWorkflow,azureACS,sharepoint2016MigrationSmall" | split: ',' %}
+{% assign large_images = "sharepoint2016Migration,sharepoint2013MigrationFSOD,SharePointNFP,facilitiesPowerApps,PowerAppsConferenceTool,fsSPOPE,managedIT" | split: ',' %}
 
 {% for img in large_images %}
   {% if name_without_ext == img %}
