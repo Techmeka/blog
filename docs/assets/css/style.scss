@@ -28,11 +28,24 @@ body {
 .container {
   padding-top: 40px !important;
   margin: 0 auto;
+  max-width: 740px;
   padding: 0 24px;
   width: 100%;
 
   @include mobile {
     padding: 0 16px;
+  }
+}
+
+/* Grid view: full width with 15% padding on each side (30% total) */
+body:has(.posts.grid-view) .container {
+  max-width: none;
+  padding-left: 15%;
+  padding-right: 15%;
+
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
