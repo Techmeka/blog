@@ -26,12 +26,14 @@ body {
 
 
 .container {
-  padding-top: 40px !important; 
+  padding-top: 40px !important;
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  padding: 0 24px;
   width: 100%;
-  
+
+  @include mobile {
+    padding: 0 16px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -861,18 +863,18 @@ footer .svg-icon.linkedin:hover {
 }
 
 .view-toggle-btn {
-  padding: 6px 12px;
+  padding: 8px;
   border: none;
   background: transparent;
   color: #555;
   cursor: pointer;
   border-radius: 6px;
-  font-size: 0.85em;
-  font-weight: 500;
   transition: all 0.2s;
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
 }
 
 .view-toggle-btn:hover {
@@ -976,16 +978,15 @@ footer .svg-icon.linkedin:hover {
 }
 
 .posts.grid-view .entry {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4b5563;
-  margin-bottom: 16px;
-  flex: 1;
+  display: none;
 }
 
 .posts.grid-view .read-more {
-  align-self: flex-start;
-  margin-bottom: 0;
+  display: none;
+}
+
+.posts.grid-view .post-preview {
+  cursor: pointer;
 }
 
 .posts.grid-view .post-separator {
