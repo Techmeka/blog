@@ -20,7 +20,7 @@ published: true
 
 Modern teams face a fragmented landscape:
 
-- **Linear** for tasks, **Toggl** for time, **HubSpot** for CRM—each a silo
+- **Linear** for tasks, **Toggl** for time, **HubSpot** for CRM
 - AI coding assistants run in isolation with no structured workflows
 - No visibility into what AI agents are doing or audit trails for compliance
 - When vendors change pricing or policies, you're stuck
