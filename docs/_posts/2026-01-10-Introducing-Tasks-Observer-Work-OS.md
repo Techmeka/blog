@@ -16,6 +16,10 @@ published: true
 
 ---
 
+![The Observer Platform](/blog/images/observerPlatform.jpg)
+
+
+
 ## The Problem with Today's Tools
 
 Modern teams face a fragmented landscape:
