@@ -130,13 +130,13 @@ transmission.observer exposes over 90 Model Context Protocol tools spanning:
 
 ## Who It's For
 
-### AI-Forward Development Teams
+### AI-Forward Teams
 
 Give your AI agents structured work queues with approval workflows, while maintaining complete visibility and audit trails.
 
-- Context-aware task assignment for Claude Code sessions
+- Context-aware task assignment for sessions
 - Real-time monitoring of AI-generated changes
-- Permission gates for destructive operations
+- Permission gates for operations
 
 ### Billable Services Firms
 
