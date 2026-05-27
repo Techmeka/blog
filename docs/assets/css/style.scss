@@ -487,6 +487,63 @@ nav {
 .tag-managed-platform { background: #e0e7ff; color: #4f46e5; }
 .tag-open-formats { background: #d1fae5; color: #059669; }
 
+// Observer suite — per-product blog tags (pastel)
+// tasks.observer
+.tag-markdown            { background: #f1f5f9; color: #475569; }
+.tag-self-hosted         { background: #ecfeff; color: #155e75; }
+// transmission.observer
+.tag-mcp                 { background: #dbeafe; color: #1d4ed8; }
+.tag-audit               { background: #fef3c7; color: #92400e; }
+.tag-rbac                { background: #fae8ff; color: #86198f; }
+.tag-claude              { background: #fff7ed; color: #c2410c; }
+// tests.observer
+.tag-testing             { background: #dcfce7; color: #15803d; }
+.tag-ci                  { background: #cffafe; color: #0e7490; }
+.tag-devex               { background: #e0e7ff; color: #3730a3; }
+.tag-vitest              { background: #fef9c3; color: #854d0e; }
+.tag-playwright          { background: #ecfdf5; color: #047857; }
+.tag-test-orchestration  { background: #f0fdf4; color: #166534; }
+// state.observer
+.tag-git                 { background: #ffedd5; color: #c2410c; }
+.tag-devops              { background: #e0f2fe; color: #0369a1; }
+.tag-preview             { background: #fae8ff; color: #86198f; }
+.tag-snapshot            { background: #ecfdf5; color: #047857; }
+.tag-portfolio           { background: #fef3c7; color: #a16207; }
+.tag-time-machine        { background: #f5f3ff; color: #5b21b6; }
+// cost.observer
+.tag-finops              { background: #fef3c7; color: #a16207; }
+.tag-cost-management     { background: #fff7ed; color: #c2410c; }
+.tag-llm                 { background: #fae8ff; color: #a21caf; }
+.tag-gateway             { background: #cffafe; color: #0e7490; }
+.tag-budget              { background: #ecfccb; color: #365314; }
+.tag-dlp                 { background: #fee2e2; color: #b91c1c; }
+// shield.observer
+.tag-compliance          { background: #f3e8ff; color: #7c3aed; }
+.tag-soc2                { background: #dbeafe; color: #1d4ed8; }
+.tag-sast                { background: #fef9c3; color: #854d0e; }
+.tag-ai-security         { background: #fee2e2; color: #991b1b; }
+.tag-gdpr                { background: #dcfce7; color: #166534; }
+.tag-hipaa               { background: #cffafe; color: #0e7490; }
+.tag-pci                 { background: #fef3c7; color: #92400e; }
+// logging.observer
+.tag-observability       { background: #e0f2fe; color: #0369a1; }
+.tag-logging             { background: #fef3c7; color: #92400e; }
+.tag-metrics             { background: #f3e8ff; color: #7c3aed; }
+.tag-grafana             { background: #ffedd5; color: #c2410c; }
+.tag-loki                { background: #fae8ff; color: #86198f; }
+.tag-prometheus          { background: #fee2e2; color: #b91c1c; }
+.tag-sre                 { background: #dcfce7; color: #15803d; }
+// automation.observer
+.tag-browser-automation  { background: #e0e7ff; color: #3730a3; }
+.tag-anti-bot            { background: #fee2e2; color: #991b1b; }
+.tag-web-scraping        { background: #dcfce7; color: #15803d; }
+.tag-cdp                 { background: #cffafe; color: #0e7490; }
+// speech.observer (currently unpublished)
+.tag-speech              { background: #fce7f3; color: #be185d; }
+.tag-stt                 { background: #fae8ff; color: #86198f; }
+.tag-whisper             { background: #f3e8ff; color: #7c3aed; }
+.tag-privacy             { background: #e0e7ff; color: #4338ca; }
+
 // Special gradient tag for Teleport Observer
 .tag-teleport-observer {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
