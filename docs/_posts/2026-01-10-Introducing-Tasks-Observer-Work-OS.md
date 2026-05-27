@@ -35,7 +35,7 @@ We built the Observer Platform to solve this—a unified infrastructure where hu
 
 ## The Platform
 
-The Observer Platform is a suite of nine integrated applications, each independently useful and stronger together:
+The Observer Platform is a suite of eight integrated applications, each independently useful and stronger together:
 
 | Application | Purpose |
 |-------------|---------|
@@ -47,7 +47,6 @@ The Observer Platform is a suite of nine integrated applications, each independe
 | **shield.observer** | Continuous security and compliance assessment |
 | **logging.observer** | Observability stack — Loki, Prometheus, Grafana in one container |
 | **automation.observer** | Browser automation backend built for AI agents |
-| **speech.observer** | Local-first, air-gappable speech-to-text |
 
 ---
 
@@ -193,19 +192,6 @@ Centralized observability standing in an afternoon, not a quarter.
 - **Chrome DevTools Protocol** under the hood
 
 Production-tested against Walmart's stack.
-
----
-
-## speech.observer — Speech-to-Text You Can Air-Gap
-
-**speech.observer** wraps Whisper.cpp into a clean HTTP API. Three pre-loaded GGML models with hot runtime swapping. Air-gappable. Dashboard with request audit. No cloud, no API key, no third-party data path.
-
-- **Whisper.cpp + local weights** — no outbound network
-- **Hot model swap** — tiny.en, base.en-q5_1, base.en — no restart
-- **Audio format flexibility** — webm, mp4, mp3, ogg, wav, aac
-- **Comprehensive request audit** in the dashboard
-
-Currently a developer preview — hardening in progress for high-throughput workloads.
 
 ---
 

@@ -5,7 +5,7 @@ date: 2026-03-12 00:00:00
 tags: [ Speech, STT, Whisper, Self-Hosted, Privacy, AI, Compliance ]
 categories: [Product, Technology]
 image: https://techmeka.com/blog/images/speech-observer-hero.png
-published: true
+published: false
 ---
 
 > What if Whisper-grade transcription ran entirely inside your firewall — with hot model swapping and a full request audit log?
