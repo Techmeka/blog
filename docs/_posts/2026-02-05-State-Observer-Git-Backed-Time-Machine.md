@@ -17,6 +17,8 @@ screenshots:
     caption: Built-in SQL workbench against the snapshot store — read-only, schema-aware
   - src: /blog/images/screenshots/state-observer/environments.png
     caption: Environments grid — per-project deploy status across every target
+  - src: /blog/images/screenshots/state-observer/fleet.png
+    caption: Fleet specs — apply snapshots, commits, or shell commands across many projects at once
 ---
 
 > What if you could spin up any commit, in any repo, in a live preview container — without touching your working branch?
