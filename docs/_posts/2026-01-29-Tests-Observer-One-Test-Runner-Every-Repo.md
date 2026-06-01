@@ -13,6 +13,8 @@ screenshots:
     caption: Registered projects with auto-detected stack tags and one-click run buttons
   - src: /blog/images/screenshots/tests-observer/errors-setup.png
     caption: Drop-in script tag — capture client-side errors, breadcrumbs, and perf from any site
+  - src: /blog/images/screenshots/tests-observer/client-errors.png
+    caption: Errors panel — browser errors, console logs, and failed requests aggregated per project
 ---
 
 > What if every test result in your org — human or AI-triggered — showed up on the task that produced it?
