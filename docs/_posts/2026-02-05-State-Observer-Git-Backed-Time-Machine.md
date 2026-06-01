@@ -6,6 +6,17 @@ tags: [ Git, DevOps, Preview, Snapshot, Portfolio, Time Machine ]
 categories: [Product, Technology]
 image: https://techmeka.com/blog/images/state-observer-hero.png
 published: true
+screenshots:
+  - src: /blog/images/screenshots/state-observer/overview.png
+    caption: Portfolio overview — activity calendar, top projects, run status across every repo
+  - src: /blog/images/screenshots/state-observer/runs.png
+    caption: Cron-triggered snapshot runs, with per-project history and trigger metadata
+  - src: /blog/images/screenshots/state-observer/pipelines.png
+    caption: Snapshot pipelines — define what gets captured, when, and on which trigger
+  - src: /blog/images/screenshots/state-observer/sql.png
+    caption: Built-in SQL workbench against the snapshot store — read-only, schema-aware
+  - src: /blog/images/screenshots/state-observer/environments.png
+    caption: Environments grid — per-project deploy status across every target
 ---
 
 > What if you could spin up any commit, in any repo, in a live preview container — without touching your working branch?
@@ -18,6 +29,8 @@ published: true
 
 ![state.observer](/blog/images/state-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with Multi-Repo Git History
 
 When an AI agent (or a human) makes a sequence of changes across a multi-repo project portfolio, *"what state was this 3 hours ago, before everything broke?"* is a question with no good answer.

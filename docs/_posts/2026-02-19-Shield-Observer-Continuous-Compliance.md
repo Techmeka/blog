@@ -18,6 +18,8 @@ published: true
 
 ![shield.observer](/blog/images/shield-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with Modern Compliance
 
 Compliance is a quarterly fire drill. SAST tools find raw bugs but don't speak SOC2, PCI, ISO 27001, or HIPAA. CI gates either block everything or block nothing. When the auditor asks *"show me the evidence that you scanned this repo for AI-prompt-injection risk before deploying it,"* somebody opens a spreadsheet.

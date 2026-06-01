@@ -18,6 +18,8 @@ published: true
 
 ![automation.observer](/blog/images/automation-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with "Giving Claude a Browser"
 
 When you give an LLM "browser access," what it actually needs is *everything about the current page state at once*:

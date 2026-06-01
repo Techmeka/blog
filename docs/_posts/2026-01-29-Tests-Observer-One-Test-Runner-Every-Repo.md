@@ -6,6 +6,13 @@ tags: [ Testing, CI, DevEx, Vitest, Playwright, AI, Test Orchestration ]
 categories: [Product, Technology]
 image: https://techmeka.com/blog/images/tests-observer-hero.png
 published: true
+screenshots:
+  - src: /blog/images/screenshots/tests-observer/dashboard.png
+    caption: Portfolio dashboard — pass rate, recent runs, and failing tests across every repo
+  - src: /blog/images/screenshots/tests-observer/projects.png
+    caption: Registered projects with auto-detected stack tags and one-click run buttons
+  - src: /blog/images/screenshots/tests-observer/errors-setup.png
+    caption: Drop-in script tag — capture client-side errors, breadcrumbs, and perf from any site
 ---
 
 > What if every test result in your org — human or AI-triggered — showed up on the task that produced it?
@@ -18,6 +25,8 @@ published: true
 
 ![tests.observer](/blog/images/tests-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with Multi-Repo Testing
 
 Every project has its own test runner, its own CI pipeline, its own way of surfacing failures. Multi-project orgs end up with test results scattered across GitHub Actions, GitLab CI, CircleCI tabs, console output, and the occasional Slack message nobody reads.

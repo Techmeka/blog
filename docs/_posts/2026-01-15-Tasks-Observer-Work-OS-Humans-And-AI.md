@@ -18,6 +18,8 @@ published: true
 
 ![tasks.observer](/blog/images/tasks-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with Modern Work Platforms
 
 Jira, Linear, Monday, Asana — every modern work platform traps your data in a proprietary cloud database. Export is an afterthought. CRM lives in a separate tool. Time tracking lives in a third. And none of them have a credible answer for AI agents that need to claim a task, propose an approach, wait for approval, and record what they did.

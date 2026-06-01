@@ -18,6 +18,8 @@ published: true
 
 ![transmission.observer](/blog/images/transmission-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with AI in the Enterprise
 
 Claude is brilliant in isolation and useless inside an enterprise. Out of the box, it can't see your task tracker, your test runner, your container orchestrator, your Teams chats, your SharePoint files, your dev databases, or the frontend it's supposed to be debugging.

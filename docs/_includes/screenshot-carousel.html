@@ -1,0 +1,87 @@
+{% comment %}
+  Screenshot carousel — horizontal slider with prev/next arrows + captions.
+  Renders nothing if `page.screenshots` is empty/unset.
+
+  Frontmatter shape:
+    screenshots:
+      - src: /blog/images/screenshots/tasks-observer/kanban.png
+        caption: Kanban board with full hierarchy
+      - src: /blog/images/screenshots/tasks-observer/gantt.png
+        caption: Gantt view with cross-project dependencies
+
+  Multiple carousels on one page would collide on the global id — kept simple
+  for now since each blog post renders one.
+{% endcomment %}
+{% if page.screenshots and page.screenshots.size > 0 %}
+<div class="screenshot-carousel" aria-roledescription="carousel" aria-label="Product screenshots">
+  <div class="screenshot-carousel-viewport">
+    <ol class="screenshot-carousel-track">
+      {% for shot in page.screenshots %}
+        <li class="screenshot-carousel-slide"
+            aria-roledescription="slide"
+            aria-label="{{ forloop.index }} of {{ page.screenshots.size }}">
+          <figure>
+            <img src="{{ shot.src }}"
+                 alt="{{ shot.caption | default: page.title | strip_html }}"
+                 loading="lazy" />
+            {% if shot.caption %}
+              <figcaption>{{ shot.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  {% if page.screenshots.size > 1 %}
+    <button class="screenshot-carousel-prev" type="button" aria-label="Previous screenshot">‹</button>
+    <button class="screenshot-carousel-next" type="button" aria-label="Next screenshot">›</button>
+    <div class="screenshot-carousel-dots" role="tablist">
+      {% for shot in page.screenshots %}
+        <button type="button"
+                class="screenshot-carousel-dot {% if forloop.first %}is-active{% endif %}"
+                role="tab"
+                aria-label="Go to screenshot {{ forloop.index }}"
+                data-index="{{ forloop.index0 }}"></button>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  const root = document.currentScript.previousElementSibling;
+  if (!root || !root.classList.contains('screenshot-carousel')) return;
+  const track  = root.querySelector('.screenshot-carousel-track');
+  const slides = Array.from(root.querySelectorAll('.screenshot-carousel-slide'));
+  const dots   = Array.from(root.querySelectorAll('.screenshot-carousel-dot'));
+  const prev   = root.querySelector('.screenshot-carousel-prev');
+  const next   = root.querySelector('.screenshot-carousel-next');
+  if (slides.length <= 1) return;
+  let idx = 0;
+  function go(n) {
+    idx = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+  }
+  prev && prev.addEventListener('click', () => go(idx - 1));
+  next && next.addEventListener('click', () => go(idx + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => go(i)));
+  // Keyboard support when the carousel has focus
+  root.tabIndex = 0;
+  root.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); go(idx - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(idx + 1); }
+  });
+  // Touch-swipe (basic; threshold 50px)
+  let startX = null;
+  root.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener('touchend',   e => {
+    if (startX == null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) go(idx + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+})();
+</script>
+{% endif %}

@@ -6,6 +6,9 @@ tags: [ AI, FinOps, Cost Management, LLM, Gateway, Budget, DLP ]
 categories: [Product, Technology]
 image: https://techmeka.com/blog/images/cost-observer-hero.png
 published: true
+screenshots:
+  - src: /blog/images/screenshots/cost-observer/overview.png
+    caption: Overview — requests, total cost, tokens, error rate, plus cost by project / model / source across the last 24h
 ---
 
 > What if your Anthropic and OpenAI bills broke down by project, team, and use case — and your budgets were actually enforced *before* the request left the wire?
@@ -18,6 +21,8 @@ published: true
 
 ![cost.observer](/blog/images/cost-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with AI Spend
 
 AI API spend is opaque. The Anthropic and OpenAI bills arrive as a single monthly number with no breakdown by project, team, or use case. Budgets are unenforceable until the invoice lands.

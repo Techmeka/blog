@@ -18,6 +18,8 @@ published: true
 
 ![logging.observer](/blog/images/logging-observer-hero.png)
 
+
+{% include screenshot-carousel.html %}
 ## The Problem with Building Observability
 
 Every team that runs more than five services hits the same wall:
