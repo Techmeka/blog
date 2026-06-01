@@ -8,7 +8,19 @@ image: https://techmeka.com/blog/images/cost-observer-hero.png
 published: true
 screenshots:
   - src: /blog/images/screenshots/cost-observer/overview.png
-    caption: Overview — requests, total cost, tokens, error rate, plus cost by project / model / source across the last 24h
+    caption: Overview — KPIs (requests, total cost, tokens, error rate) plus cost broken down by project, model, and source over 24h
+  - src: /blog/images/screenshots/cost-observer/requests.png
+    caption: Recent requests — every prompt logged with project, source, model, token counts, cost, latency, and status
+  - src: /blog/images/screenshots/cost-observer/providers.png
+    caption: Connected providers — health-checked upstreams (Anthropic, OpenAI, Spark) with model counts and live latency
+  - src: /blog/images/screenshots/cost-observer/analytics.png
+    caption: Analytics — time-window filters across projects / models / sources / providers with cost-over-time, request volume, token usage, latency trends
+  - src: /blog/images/screenshots/cost-observer/live.png
+    caption: Live tail — server-sent stream of in-flight requests, scoped by project, with pause / clear controls
+  - src: /blog/images/screenshots/cost-observer/budgets.png
+    caption: Budgets — declarative spend limits per scope, period, and action (warn / throttle / block) enforced before the request leaves
+  - src: /blog/images/screenshots/cost-observer/config.png
+    caption: Routing config — per-project provider/model overrides, applied per-request at the gateway
 ---
 
 > What if your Anthropic and OpenAI bills broke down by project, team, and use case — and your budgets were actually enforced *before* the request left the wire?
