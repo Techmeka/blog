@@ -8,13 +8,13 @@ image: https://techmeka.com/blog/images/tests-observer-hero.png
 published: true
 screenshots:
   - src: /blog/images/screenshots/tests-observer/dashboard.png
-    caption: Portfolio dashboard — pass rate, recent runs, and failing tests across every repo
+    caption: Portfolio dashboard — KPIs, project health grid, recent runs, and the live failing-tests list across every repo
   - src: /blog/images/screenshots/tests-observer/projects.png
-    caption: Registered projects with auto-detected stack tags and one-click run buttons
-  - src: /blog/images/screenshots/tests-observer/errors-setup.png
-    caption: Drop-in script tag — capture client-side errors, breadcrumbs, and perf from any site
-  - src: /blog/images/screenshots/tests-observer/client-errors.png
-    caption: Errors panel — browser errors, console logs, and failed requests aggregated per project
+    caption: Registered projects with auto-detected stack tags, last-run pass counts, and one-click run buttons
+  - src: /blog/images/screenshots/tests-observer/results.png
+    caption: Test results — every run with pass/fail status, duration, and inline stack traces for failures
+  - src: /blog/images/screenshots/tests-observer/errors.png
+    caption: Client errors panel — browser errors, console logs, and failed requests aggregated per project
 ---
 
 > What if every test result in your org — human or AI-triggered — showed up on the task that produced it?
