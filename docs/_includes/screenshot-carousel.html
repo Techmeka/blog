@@ -5,9 +5,13 @@
   Frontmatter shape:
     screenshots:
       - src: /blog/images/screenshots/tasks-observer/kanban.png
+        srcLight: /blog/images/screenshots/tasks-observer/kanban-light.png  # optional
         caption: Kanban board with full hierarchy
       - src: /blog/images/screenshots/tasks-observer/gantt.png
         caption: Gantt view with cross-project dependencies
+
+  `src` is the default (dark) asset; if `srcLight` is provided, a <picture>
+  source swaps it in for viewers with prefers-color-scheme: light.
 
   Multiple carousels on one page would collide on the global id — kept simple
   for now since each blog post renders one.
@@ -21,9 +25,18 @@
             aria-roledescription="slide"
             aria-label="{{ forloop.index }} of {{ page.screenshots.size }}">
           <figure>
-            <img src="{{ shot.src }}"
-                 alt="{{ shot.caption | default: page.title | strip_html }}"
-                 loading="lazy" />
+            {% if shot.srcLight %}
+              <picture>
+                <source media="(prefers-color-scheme: light)" srcset="{{ shot.srcLight }}">
+                <img src="{{ shot.src }}"
+                     alt="{{ shot.caption | default: page.title | strip_html }}"
+                     loading="lazy" />
+              </picture>
+            {% else %}
+              <img src="{{ shot.src }}"
+                   alt="{{ shot.caption | default: page.title | strip_html }}"
+                   loading="lazy" />
+            {% endif %}
             {% if shot.caption %}
               <figcaption>{{ shot.caption }}</figcaption>
             {% endif %}

@@ -9,10 +9,12 @@ published: true
 screenshots:
   - src: /blog/images/screenshots/state-observer/overview.png
     caption: Portfolio overview — activity calendar, top projects, run status across every repo
-  - src: /blog/images/screenshots/state-observer/runs.png
-    caption: Cron-triggered snapshot runs, with per-project history and trigger metadata
+  - src: /blog/images/screenshots/state-observer/simulations.png
+    caption: Simulations — sandbox commits and deploys against your project graph before they touch real state
   - src: /blog/images/screenshots/state-observer/pipelines.png
     caption: Snapshot pipelines — define what gets captured, when, and on which trigger
+  - src: /blog/images/screenshots/state-observer/runs.png
+    caption: Cron-triggered snapshot runs with per-project history and trigger metadata
   - src: /blog/images/screenshots/state-observer/sql.png
     caption: Built-in SQL workbench against the snapshot store — read-only, schema-aware
   - src: /blog/images/screenshots/state-observer/environments.png

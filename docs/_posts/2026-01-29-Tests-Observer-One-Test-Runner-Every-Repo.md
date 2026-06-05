@@ -8,11 +8,11 @@ image: https://techmeka.com/blog/images/tests-observer-hero.png
 published: true
 screenshots:
   - src: /blog/images/screenshots/tests-observer/dashboard.png
-    caption: Portfolio dashboard — KPIs, project health grid, recent runs, and the live failing-tests list across every repo
+    caption: Portfolio dashboard — KPIs, project health grid, and recent runs across every registered repo
   - src: /blog/images/screenshots/tests-observer/projects.png
     caption: Registered projects with auto-detected stack tags, last-run pass counts, and one-click run buttons
   - src: /blog/images/screenshots/tests-observer/results.png
-    caption: Test results — every run with pass/fail status, duration, and inline stack traces for failures
+    caption: Test results — filter across projects, statuses, and types; drill into individual test runs
   - src: /blog/images/screenshots/tests-observer/errors.png
     caption: Client errors panel — browser errors, console logs, and failed requests aggregated per project
 ---
