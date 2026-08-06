@@ -838,21 +838,28 @@ footer {
   margin: 0;
 }
 
+// Match the previous blog's flat monochromatic icons (from git 8232236):
+// dark grey glyph, 40% opacity default, full opacity on hover. Two icons
+// (LinkedIn + X) sit inline via .tm-footer-socials.
+.tm-footer-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  @media (max-width: 990px) { justify-content: center; }
+}
+
 .tm-footer-social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(to right, #29abe2 0%, #09c2c3 100%);
-  color: #fff;
+  color: #444444;
   text-decoration: none;
-  transition: transform 0.15s, box-shadow 0.15s;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, color 0.15s ease;
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(41, 171, 226, 0.35);
+    opacity: 1;
     text-decoration: none;
   }
 
