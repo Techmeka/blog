@@ -8,8 +8,18 @@
 # To publish a new whitepaper with zero-touch: just drop the HTML at
 # docs/whitepapers/YYYY-MM-DD-slug.html and commit. Metadata below is
 # strictly optional.
+#
+# `type` renders as a pill on the card. Suggested values:
+#   Whitepaper     - traditional analytical piece, vendor-neutral posture
+#   Perspective    - opinionated point of view; thought leadership
+#   Field Guide    - hands-on, interactive, scenario-heavy
+#   Category Brief - argues for a new category / positions vs incumbent
+#   Case Study     - real customer implementation and outcome
+#   Report         - data-forward research
+# Omit `type` to fall back to "Whitepaper".
 
 - slug: "2026-08-06-secure-html-sharing"
+  type: "Field Guide"
   title: "Secure HTML Document Sharing"
   subtitle: "A link-based, browser-native alternative to file-label DRM."
   date: 2026-08-06

@@ -58,6 +58,7 @@ image: /blog/images/optimized/logoTechMekaBlack.png
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-wrap: wrap;
   }
   .wp-card .meta .dot { color: #d0d0d0; }
   .wp-card .meta .featured {
@@ -66,6 +67,14 @@ image: /blog/images/optimized/logoTechMekaBlack.png
     padding: 2px 8px;
     border-radius: 2px;
     letter-spacing: 0.08em;
+  }
+  .wp-card .meta .type-pill {
+    background: #0e2340;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+    font-size: 0.68rem;
   }
   .wp-card h2 {
     font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
@@ -145,6 +154,7 @@ image: /blog/images/optimized/logoTechMekaBlack.png
       {% assign wp_tags = meta.tags %}
       {% assign wp_featured = meta.featured %}
       {% assign wp_reading = meta.reading_time %}
+      {% assign wp_type = meta.type | default: "Whitepaper" %}
     {% else %}
       {% assign wp_title = fslug_raw | replace: "-", " " | capitalize %}
       {% assign wp_subtitle = nil %}
@@ -153,10 +163,12 @@ image: /blog/images/optimized/logoTechMekaBlack.png
       {% assign wp_tags = nil %}
       {% assign wp_featured = nil %}
       {% assign wp_reading = nil %}
+      {% assign wp_type = "Whitepaper" %}
     {% endif %}
 
     <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
       <div class="meta">
+        <span class="type-pill">{{ wp_type }}</span>
         <span>{{ wp_date | date: "%B %-d, %Y" }}</span>
         {% if wp_reading %}<span class="dot">·</span><span>{{ wp_reading }} read</span>{% endif %}
         {% if wp_featured %}<span class="dot">·</span><span class="featured">Featured</span>{% endif %}

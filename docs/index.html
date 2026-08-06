@@ -85,7 +85,18 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
     font-weight: 700;
     color: #c9a94a;
     margin-bottom: 6px;
-    display: block;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .fwp-card .fwp-type {
+    background: #c9a94a;
+    color: #0e2340;
+    padding: 2px 8px;
+    border-radius: 2px;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
   }
   .fwp-card h4 {
     font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
@@ -116,7 +127,10 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
       {% assign fname = file.name | remove: ".html" %}
       {% assign meta = site.data.whitepapers | where: "slug", fname | first %}
       <a class="fwp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
-        <span class="fwp-date">{{ meta.date | date: "%b %-d, %Y" }}{% if meta.reading_time %} · {{ meta.reading_time }}{% endif %}</span>
+        <span class="fwp-date">
+          <span class="fwp-type">{{ meta.type | default: "Whitepaper" }}</span>
+          <span>{{ meta.date | date: "%b %-d, %Y" }}{% if meta.reading_time %} · {{ meta.reading_time }}{% endif %}</span>
+        </span>
         <h4>{{ meta.title }}</h4>
         {% if meta.subtitle %}<p>{{ meta.subtitle }}</p>{% else %}<p>{{ meta.description | strip_newlines | truncatewords: 22 }}</p>{% endif %}
       </a>
