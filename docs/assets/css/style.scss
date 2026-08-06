@@ -758,6 +758,139 @@ footer {
 // Legacy blog masthead — still referenced by other layouts, keep hidden here.
 .wrapper-masthead { display: none; }
 
+// Legacy blog footer wrapper — hidden in favor of the main-site-matching footer below.
+.wrapper-footer { display: none; }
+
+// ═══════════════════════════════════════════════════════════════════════
+// TechMeka main-site-matching footer.
+// Replicates the visual layout from techmeka.com (Footer.jsx) so the
+// blog and the main site feel like a single product.
+// ═══════════════════════════════════════════════════════════════════════
+.tm-mainsite-footer {
+  background: #ffffff;
+  color: #0e2340;
+  padding: 64px 0 24px;
+  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 40px;
+}
+
+.tm-mainsite-footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.tm-footer-cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 40px;
+  padding-bottom: 40px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.tm-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 340px;
+}
+
+.tm-footer-logo {
+  display: inline-block;
+  text-decoration: none;
+
+  svg {
+    width: 220px;
+    height: auto;
+    display: block;
+  }
+
+  &:hover { text-decoration: none; }
+}
+
+.tm-footer-tagline {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #0e2340;
+  margin: 0;
+  max-width: 300px;
+}
+
+.tm-footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #29abe2 0%, #09c2c3 100%);
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(41, 171, 226, 0.35);
+    text-decoration: none;
+  }
+
+  svg { display: block; }
+}
+
+.tm-footer-col {
+  h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0e2340;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  li a {
+    color: #0e2340;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.15s;
+
+    &:hover {
+      color: #29abe2;
+      text-decoration: underline;
+    }
+  }
+}
+
+.tm-footer-bottom {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 24px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    color: #0e2340;
+    font-size: 14px;
+  }
+}
+
 // CTA button styling for Schedule A Meeting (kept for other components)
 .cta-button {
   display: inline-block;
