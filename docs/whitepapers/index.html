@@ -128,66 +128,72 @@ description: In-depth field guides, perspectives, and whitepapers on secure cont
 </div>
 
 {% comment %}
-  Auto-scan: iterate every .html file dropped into /whitepapers/ (except this index).
-  Filenames follow YYYY-MM-DD-slug.html. Date + slug are derived from the filename.
-  If _data/whitepapers.yml has a matching entry, its metadata takes precedence.
+  Sort whitepapers by _data/whitepapers.yml date descending. Each YAML
+  entry matches a static HTML file at /whitepapers/<slug>.html. Entries
+  without a matching file are skipped; files without an entry are still
+  listed (using filename as title) so a drop-in without YAML doesn't
+  vanish, but they sort to the bottom by falling back to a zero date.
 {% endcomment %}
 
+{% assign wp_entries = site.data.whitepapers | sort: "date" | reverse %}
 {% assign wp_files = site.static_files
     | where_exp: "f", "f.path contains '/whitepapers/'"
-    | where_exp: "f", "f.extname == '.html'"
-    | sort: "name" | reverse %}
+    | where_exp: "f", "f.extname == '.html'" %}
 
 <div class="wp-list">
-  {% for file in wp_files %}
-    {% assign fname = file.name | remove: ".html" %}
-    {% assign fdate = fname | slice: 0, 10 %}
-    {% assign fslug_raw = fname | slice: 11, 100 %}
-    {% assign fslug = fname %}
-
-    {% assign meta = site.data.whitepapers | where: "slug", fslug | first %}
-
-    {% if meta %}
+  {% comment %} First: emit every YAML entry that has a matching file, in date order. {% endcomment %}
+  {% assign emitted = "" | split: "" %}
+  {% for meta in wp_entries %}
+    {% assign target_name = meta.slug | append: ".html" %}
+    {% assign match = wp_files | where: "name", target_name | first %}
+    {% if match %}
+      {% assign emitted = emitted | push: match.name %}
       {% assign wp_title = meta.title %}
       {% assign wp_subtitle = meta.subtitle %}
       {% assign wp_desc = meta.description %}
-      {% assign wp_date = meta.date | default: fdate %}
+      {% assign wp_date = meta.date %}
       {% assign wp_tags = meta.tags %}
       {% assign wp_featured = meta.featured %}
       {% assign wp_reading = meta.reading_time %}
       {% assign wp_type = meta.type | default: "Whitepaper" %}
-    {% else %}
-      {% assign wp_title = fslug_raw | replace: "-", " " | capitalize %}
-      {% assign wp_subtitle = nil %}
-      {% assign wp_desc = "Dropped in on " | append: fdate | append: ". Click to read." %}
-      {% assign wp_date = fdate %}
-      {% assign wp_tags = nil %}
-      {% assign wp_featured = nil %}
-      {% assign wp_reading = nil %}
-      {% assign wp_type = "Whitepaper" %}
-    {% endif %}
 
-    <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
-      <div class="meta">
-        <span class="type-pill">{{ wp_type }}</span>
-        <span>{{ wp_date | date: "%B %-d, %Y" }}</span>
-        {% if wp_reading %}<span class="dot">·</span><span>{{ wp_reading }} read</span>{% endif %}
-        {% if wp_featured %}<span class="dot">·</span><span class="featured">Featured</span>{% endif %}
-      </div>
-      <h2>{{ wp_title }}</h2>
-      {% if wp_subtitle %}<p class="subtitle">{{ wp_subtitle }}</p>{% endif %}
-      <p class="desc">{{ wp_desc }}</p>
-      {% if wp_tags %}
-        <div class="tags">
-          {% for tag in wp_tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+      <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ match.name }}">
+        <div class="meta">
+          <span class="type-pill">{{ wp_type }}</span>
+          {% if wp_date %}<span>{{ wp_date | date: "%B %-d, %Y" }}</span>{% endif %}
+          {% if wp_reading %}<span class="dot">·</span><span>{{ wp_reading }} read</span>{% endif %}
+          {% if wp_featured %}<span class="dot">·</span><span class="featured">Featured</span>{% endif %}
         </div>
-      {% endif %}
-    </a>
+        <h2>{{ wp_title }}</h2>
+        {% if wp_subtitle %}<p class="subtitle">{{ wp_subtitle }}</p>{% endif %}
+        {% if wp_desc %}<p class="desc">{{ wp_desc }}</p>{% endif %}
+        {% if wp_tags %}
+          <div class="tags">
+            {% for tag in wp_tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+          </div>
+        {% endif %}
+      </a>
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Then: any dropped-in HTML files without a YAML entry, filename-titled. {% endcomment %}
+  {% for file in wp_files %}
+    {% unless emitted contains file.name %}
+      {% assign fslug = file.name | remove: ".html" %}
+      {% assign wp_title = fslug | replace: "-", " " | capitalize %}
+      <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
+        <div class="meta">
+          <span class="type-pill">Whitepaper</span>
+        </div>
+        <h2>{{ wp_title }}</h2>
+        <p class="desc">Dropped in without a metadata entry — add one to <code>_data/whitepapers.yml</code> for a richer card.</p>
+      </a>
+    {% endunless %}
   {% endfor %}
 
   {% if wp_files.size == 0 %}
     <div class="wp-empty">
-      No whitepapers yet. Drop an HTML file at <code>docs/whitepapers/YYYY-MM-DD-slug.html</code> and it will appear here automatically.
+      No whitepapers yet. Drop an HTML file at <code>docs/whitepapers/&lt;slug&gt;.html</code> and add an entry to <code>_data/whitepapers.yml</code>.
     </div>
   {% endif %}
 </div>

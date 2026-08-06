@@ -10,14 +10,14 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
 
 {% assign wp_files_home = site.static_files
     | where_exp: "f", "f.path contains '/whitepapers/'"
-    | where_exp: "f", "f.extname == '.html'"
-    | sort: "name" | reverse %}
+    | where_exp: "f", "f.extname == '.html'" %}
+{% assign wp_entries_home = site.data.whitepapers | sort: "date" | reverse %}
 {% assign featured_wp = "" | split: "" %}
-{% for file in wp_files_home %}
-  {% assign fname = file.name | remove: ".html" %}
-  {% assign meta = site.data.whitepapers | where: "slug", fname | first %}
-  {% if meta and meta.featured %}
-    {% assign featured_wp = featured_wp | push: file %}
+{% for meta in wp_entries_home %}
+  {% assign target_name = meta.slug | append: ".html" %}
+  {% assign match = wp_files_home | where: "name", target_name | first %}
+  {% if match and meta.featured %}
+    {% assign featured_wp = featured_wp | push: match %}
   {% endif %}
 {% endfor %}
 
@@ -124,8 +124,8 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
   </div>
   <div class="fwp-grid">
     {% for file in featured_wp limit: 3 %}
-      {% assign fname = file.name | remove: ".html" %}
-      {% assign meta = site.data.whitepapers | where: "slug", fname | first %}
+      {% assign fslug = file.name | remove: ".html" %}
+      {% assign meta = site.data.whitepapers | where: "slug", fslug | first %}
       <a class="fwp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
         <span class="fwp-date">
           <span class="fwp-type">{{ meta.type | default: "Whitepaper" }}</span>

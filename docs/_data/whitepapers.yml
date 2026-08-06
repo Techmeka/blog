@@ -1,13 +1,18 @@
-# Optional metadata enrichment for whitepapers.
+# Metadata for whitepapers listed at /blog/whitepapers/.
 #
-# The listing at /blog/whitepapers/ auto-scans docs/whitepapers/*.html and
-# derives a title + date from the filename (format: YYYY-MM-DD-slug.html).
-# Adding an entry here overrides the auto-scan defaults and enables richer
-# card display (description, thumbnail, tags, featured flag).
+# The listing auto-scans docs/whitepapers/*.html and matches each file to
+# an entry here by slug (the filename minus .html). Add an entry to
+# publish and control ordering.
 #
-# To publish a new whitepaper with zero-touch: just drop the HTML at
-# docs/whitepapers/YYYY-MM-DD-slug.html and commit. Metadata below is
-# strictly optional.
+# Required per entry:
+#   slug   — matches the HTML filename (secure-html-sharing → secure-html-sharing.html)
+#   title  — headline for the card
+#   date   — publication date (sorts listings, shown on the card).
+#            Add it in the article itself too if you want it visible there.
+#
+# Optional:
+#   type   — pill badge (see suggested values below). Defaults to "Whitepaper".
+#   subtitle, description, tags, thumbnail, featured, reading_time
 #
 # `type` renders as a pill on the card. Suggested values:
 #   Whitepaper     - traditional analytical piece, vendor-neutral posture
@@ -18,7 +23,7 @@
 #   Report         - data-forward research
 # Omit `type` to fall back to "Whitepaper".
 
-- slug: "2026-08-06-secure-html-sharing"
+- slug: "secure-html-sharing"
   type: "Field Guide"
   title: "Secure HTML Document Sharing"
   subtitle: "A link-based, browser-native alternative to file-label DRM."
