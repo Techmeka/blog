@@ -23,7 +23,7 @@
 #   Report         - data-forward research
 # Omit `type` to fall back to "Whitepaper".
 
-- slug: "secure-html-sharing"
+- slug: "ai-dlp-secure-html-sharing"
   type: "Field Guide"
   title: "Secure HTML Document Sharing"
   subtitle: "A link-based, browser-native alternative to file-label DRM."
