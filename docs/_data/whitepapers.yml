@@ -1,0 +1,25 @@
+# Optional metadata enrichment for whitepapers.
+#
+# The listing at /blog/whitepapers/ auto-scans docs/whitepapers/*.html and
+# derives a title + date from the filename (format: YYYY-MM-DD-slug.html).
+# Adding an entry here overrides the auto-scan defaults and enables richer
+# card display (description, thumbnail, tags, featured flag).
+#
+# To publish a new whitepaper with zero-touch: just drop the HTML at
+# docs/whitepapers/YYYY-MM-DD-slug.html and commit. Metadata below is
+# strictly optional.
+
+- slug: "2026-08-06-secure-html-sharing"
+  title: "Secure HTML Document Sharing"
+  subtitle: "A link-based, browser-native alternative to file-label DRM."
+  date: 2026-08-06
+  description: >-
+    Modern AI produces its highest-fidelity output in HTML. The tools your
+    organization already uses (AIP, Purview DLP) were built for a different
+    world. This is what a protection layer designed for AI-native content
+    looks like — with concrete examples, threat model, and a head-to-head
+    against the incumbent stack.
+  thumbnail: /blog/images/optimized/logoTechMekaBlack.png
+  tags: [ai, security, dlp, sales-enablement]
+  featured: true
+  reading_time: "12 min"

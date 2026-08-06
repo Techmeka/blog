@@ -592,6 +592,23 @@ footer {
   text-align: center;
 }
 
+// Nav link styling for Articles / Whitepapers links in masthead
+.nav-link {
+  display: inline-block;
+  color: #0e2340;
+  font-weight: 600;
+  padding: 8px 14px;
+  margin-right: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.15s;
+
+  &:hover {
+    background: rgba(14, 35, 64, 0.06);
+    text-decoration: none;
+  }
+}
+
 // CTA button styling for Schedule A Meeting
 .cta-button {
   display: inline-block;

@@ -3,6 +3,128 @@ layout: default
 image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
 ---
 
+{% comment %}
+  Featured Whitepapers strip — auto-scans /whitepapers/ and shows entries
+  flagged featured: true in _data/whitepapers.yml. Hidden if none.
+{% endcomment %}
+
+{% assign wp_files_home = site.static_files
+    | where_exp: "f", "f.path contains '/whitepapers/'"
+    | where_exp: "f", "f.extname == '.html'"
+    | sort: "name" | reverse %}
+{% assign featured_wp = "" | split: "" %}
+{% for file in wp_files_home %}
+  {% assign fname = file.name | remove: ".html" %}
+  {% assign meta = site.data.whitepapers | where: "slug", fname | first %}
+  {% if meta and meta.featured %}
+    {% assign featured_wp = featured_wp | push: file %}
+  {% endif %}
+{% endfor %}
+
+{% if featured_wp.size > 0 %}
+<style>
+  .fwp-strip {
+    background: linear-gradient(135deg, #0e2340 0%, #1f3961 100%);
+    color: #fff;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  .fwp-strip::before {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(201,169,74,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .fwp-hdr {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .fwp-hdr h3 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-size: 1.35rem;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .fwp-hdr a { color: #c9a94a; font-size: 0.85rem; text-decoration: none; font-weight: 600; }
+  .fwp-hdr a:hover { text-decoration: underline; }
+  .fwp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .fwp-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 5px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.15s;
+  }
+  .fwp-card:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(201,169,74,0.6);
+    text-decoration: none;
+  }
+  .fwp-card .fwp-date {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #c9a94a;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .fwp-card h4 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin: 0 0 6px;
+    color: #fff;
+  }
+  .fwp-card p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.72);
+    margin: 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<section class="fwp-strip">
+  <div class="fwp-hdr">
+    <h3>Featured Whitepapers</h3>
+    <a href="{{ site.baseurl }}/whitepapers/">All whitepapers &rarr;</a>
+  </div>
+  <div class="fwp-grid">
+    {% for file in featured_wp limit: 3 %}
+      {% assign fname = file.name | remove: ".html" %}
+      {% assign meta = site.data.whitepapers | where: "slug", fname | first %}
+      <a class="fwp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
+        <span class="fwp-date">{{ meta.date | date: "%b %-d, %Y" }}{% if meta.reading_time %} · {{ meta.reading_time }}{% endif %}</span>
+        <h4>{{ meta.title }}</h4>
+        {% if meta.subtitle %}<p>{{ meta.subtitle }}</p>{% else %}<p>{{ meta.description | strip_newlines | truncatewords: 22 }}</p>{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <div class="tag-filter-container">
   <div class="popular-tags">
     <span class="filter-label">Filter:</span>

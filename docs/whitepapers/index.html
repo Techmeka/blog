@@ -1,0 +1,180 @@
+---
+layout: default
+title: Whitepapers · TechMeka
+permalink: /whitepapers/
+image: /blog/images/optimized/logoTechMekaBlack.png
+---
+
+<style>
+  .wp-hero {
+    padding: 32px 0 24px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 32px;
+  }
+  .wp-hero h1 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-size: 2.4rem;
+    margin: 0 0 8px;
+    color: #0e2340;
+    letter-spacing: -0.01em;
+  }
+  .wp-hero p {
+    font-size: 1.05rem;
+    color: #5a6478;
+    max-width: 640px;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .wp-list {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+  .wp-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid #c9a94a;
+    border-radius: 4px;
+    padding: 24px 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  .wp-card:hover {
+    border-left-color: #0e2340;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(14, 35, 64, 0.08);
+    text-decoration: none;
+  }
+  .wp-card .meta {
+    font-size: 0.72rem;
+    color: #8a8a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .wp-card .meta .dot { color: #d0d0d0; }
+  .wp-card .meta .featured {
+    background: #c9a94a;
+    color: #0e2340;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.08em;
+  }
+  .wp-card h2 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+    color: #0e2340;
+    line-height: 1.25;
+  }
+  .wp-card .subtitle {
+    color: #5a6478;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0 0 12px;
+  }
+  .wp-card .desc {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 12px;
+  }
+  .wp-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .wp-card .tag {
+    background: #f4f2ec;
+    color: #5a6478;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .wp-empty {
+    padding: 40px;
+    background: #fbf9f4;
+    border-left: 4px solid #c9a94a;
+    color: #5a6478;
+    font-style: italic;
+  }
+</style>
+
+<div class="wp-hero">
+  <h1>Whitepapers</h1>
+  <p>In-depth explorations of the problems we solve, the systems we build, and the shifts we see. Downloadable, shareable, and designed to be read.</p>
+</div>
+
+{% comment %}
+  Auto-scan: iterate every .html file dropped into /whitepapers/ (except this index).
+  Filenames follow YYYY-MM-DD-slug.html. Date + slug are derived from the filename.
+  If _data/whitepapers.yml has a matching entry, its metadata takes precedence.
+{% endcomment %}
+
+{% assign wp_files = site.static_files
+    | where_exp: "f", "f.path contains '/whitepapers/'"
+    | where_exp: "f", "f.extname == '.html'"
+    | sort: "name" | reverse %}
+
+<div class="wp-list">
+  {% for file in wp_files %}
+    {% assign fname = file.name | remove: ".html" %}
+    {% assign fdate = fname | slice: 0, 10 %}
+    {% assign fslug_raw = fname | slice: 11, 100 %}
+    {% assign fslug = fname %}
+
+    {% assign meta = site.data.whitepapers | where: "slug", fslug | first %}
+
+    {% if meta %}
+      {% assign wp_title = meta.title %}
+      {% assign wp_subtitle = meta.subtitle %}
+      {% assign wp_desc = meta.description %}
+      {% assign wp_date = meta.date | default: fdate %}
+      {% assign wp_tags = meta.tags %}
+      {% assign wp_featured = meta.featured %}
+      {% assign wp_reading = meta.reading_time %}
+    {% else %}
+      {% assign wp_title = fslug_raw | replace: "-", " " | capitalize %}
+      {% assign wp_subtitle = nil %}
+      {% assign wp_desc = "Dropped in on " | append: fdate | append: ". Click to read." %}
+      {% assign wp_date = fdate %}
+      {% assign wp_tags = nil %}
+      {% assign wp_featured = nil %}
+      {% assign wp_reading = nil %}
+    {% endif %}
+
+    <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ file.name }}">
+      <div class="meta">
+        <span>{{ wp_date | date: "%B %-d, %Y" }}</span>
+        {% if wp_reading %}<span class="dot">·</span><span>{{ wp_reading }} read</span>{% endif %}
+        {% if wp_featured %}<span class="dot">·</span><span class="featured">Featured</span>{% endif %}
+      </div>
+      <h2>{{ wp_title }}</h2>
+      {% if wp_subtitle %}<p class="subtitle">{{ wp_subtitle }}</p>{% endif %}
+      <p class="desc">{{ wp_desc }}</p>
+      {% if wp_tags %}
+        <div class="tags">
+          {% for tag in wp_tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+        </div>
+      {% endif %}
+    </a>
+  {% endfor %}
+
+  {% if wp_files.size == 0 %}
+    <div class="wp-empty">
+      No whitepapers yet. Drop an HTML file at <code>docs/whitepapers/YYYY-MM-DD-slug.html</code> and it will appear here automatically.
+    </div>
+  {% endif %}
+</div>
