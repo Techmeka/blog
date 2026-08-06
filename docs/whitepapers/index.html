@@ -129,25 +129,31 @@ description: In-depth field guides, perspectives, and whitepapers on secure cont
 
 {% comment %}
   Sort whitepapers by _data/whitepapers.yml date descending. Each YAML
-  entry matches a static HTML file at /whitepapers/<slug>.html. Entries
-  without a matching file are skipped; files without an entry are still
-  listed (using filename as title) so a drop-in without YAML doesn't
-  vanish, but they sort to the bottom by falling back to a zero date.
+  entry matches a whitepaper at /whitepapers/<slug>.html — either a raw
+  static HTML drop OR a Jekyll page (front-matter file with layout:
+  whitepaper). Entries without a matching file are skipped; static file
+  drops without a YAML entry are still listed with a stub card so a
+  drop-in without YAML doesn't vanish.
 {% endcomment %}
 
 {% assign wp_entries = site.data.whitepapers | sort: "date" | reverse %}
-{% assign wp_files = site.static_files
+{% assign wp_static = site.static_files
     | where_exp: "f", "f.path contains '/whitepapers/'"
     | where_exp: "f", "f.extname == '.html'" %}
+{% assign wp_pages = site.pages
+    | where_exp: "p", "p.url contains '/whitepapers/'"
+    | where_exp: "p", "p.url != '/whitepapers/'" %}
 
 <div class="wp-list">
   {% comment %} First: emit every YAML entry that has a matching file, in date order. {% endcomment %}
   {% assign emitted = "" | split: "" %}
   {% for meta in wp_entries %}
     {% assign target_name = meta.slug | append: ".html" %}
-    {% assign match = wp_files | where: "name", target_name | first %}
-    {% if match %}
-      {% assign emitted = emitted | push: match.name %}
+    {% assign target_url = "/whitepapers/" | append: target_name %}
+    {% assign static_match = wp_static | where: "name", target_name | first %}
+    {% assign page_match = wp_pages | where: "url", target_url | first %}
+    {% if static_match or page_match %}
+      {% assign emitted = emitted | push: target_name %}
       {% assign wp_title = meta.title %}
       {% assign wp_subtitle = meta.subtitle %}
       {% assign wp_desc = meta.description %}
@@ -157,7 +163,7 @@ description: In-depth field guides, perspectives, and whitepapers on secure cont
       {% assign wp_reading = meta.reading_time %}
       {% assign wp_type = meta.type | default: "Whitepaper" %}
 
-      <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ match.name }}">
+      <a class="wp-card" href="{{ site.baseurl }}/whitepapers/{{ target_name }}">
         <div class="meta">
           <span class="type-pill">{{ wp_type }}</span>
           {% if wp_date %}<span>{{ wp_date | date: "%B %-d, %Y" }}</span>{% endif %}
@@ -176,8 +182,8 @@ description: In-depth field guides, perspectives, and whitepapers on secure cont
     {% endif %}
   {% endfor %}
 
-  {% comment %} Then: any dropped-in HTML files without a YAML entry, filename-titled. {% endcomment %}
-  {% for file in wp_files %}
+  {% comment %} Then: any dropped-in static HTML files without a YAML entry, filename-titled. {% endcomment %}
+  {% for file in wp_static %}
     {% unless emitted contains file.name %}
       {% assign fslug = file.name | remove: ".html" %}
       {% assign wp_title = fslug | replace: "-", " " | capitalize %}
@@ -191,7 +197,8 @@ description: In-depth field guides, perspectives, and whitepapers on secure cont
     {% endunless %}
   {% endfor %}
 
-  {% if wp_files.size == 0 %}
+  {% assign total_wp = wp_static.size | plus: wp_pages.size %}
+  {% if total_wp == 0 %}
     <div class="wp-empty">
       No whitepapers yet. Drop an HTML file at <code>docs/whitepapers/&lt;slug&gt;.html</code> and add an entry to <code>_data/whitepapers.yml</code>.
     </div>
