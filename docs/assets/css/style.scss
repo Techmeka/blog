@@ -620,7 +620,7 @@ footer {
 .tm-mainsite-header {
   width: 92%;
   max-width: 100%;
-  padding: 12px 0;
+  padding: 8px 0; // matches marketing site's ._initialBg bar (8px 0)
   border-radius: 16px;
   background: linear-gradient(
     to bottom,
@@ -642,13 +642,18 @@ footer {
   gap: 24px;
 }
 
+// Marketing-site nav bar is ~64px tall; blog was ~91px. To land at the
+// same height we tighten header padding (12→8), shrink the logo
+// (45→34), drop nav-item vertical padding to zero (marketing buttons
+// have no padding — the row height is set by the CTA), and shave the
+// CTA (9/24 → 7/20, 16→15px).
 .tm-mainsite-logo {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  width: 220px;
-  height: 45px;
+  width: 165px;
+  height: 34px;
 
   svg {
     width: 100%;
@@ -663,12 +668,12 @@ footer {
 .tm-mainsite-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 
   ul {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -677,10 +682,10 @@ footer {
   li a {
     color: #000000;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: 0.02em;
-    padding: 8px 14px;
+    padding: 4px 10px;
     text-decoration: none;
     border-radius: 4px;
     transition: opacity 0.2s ease;
@@ -702,10 +707,10 @@ footer {
   background: linear-gradient(to right, #29abe2 0%, #09c2c3 100%);
   color: #ffffff !important;
   font-weight: 600;
-  padding: 9px 24px;
+  padding: 7px 20px;
   border-radius: 45px;
   text-decoration: none !important;
-  font-size: 16px;
+  font-size: 15px;
   white-space: nowrap;
   border: none;
   transition: transform 0.15s, box-shadow 0.15s;
