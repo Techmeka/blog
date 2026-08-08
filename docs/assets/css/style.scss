@@ -669,6 +669,10 @@ footer {
   display: flex;
   align-items: center;
   gap: 20px;
+  // Override the legacy global `nav { margin-top: 23px }` rule (line ~255)
+  // that was pushing the nav row below the vertically-centered logo.
+  margin-top: 0;
+  float: none;
 
   ul {
     display: flex;
