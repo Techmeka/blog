@@ -27,6 +27,14 @@
   gtag('config', '{{ site.analytics.google.tracking_id }}', { 'anonymize_ip': {{ site.analytics.google.anonymize_ip | default: false }} });
 </script>
 {% endif %}
+
+<!-- IP-6814: analytics.direct — self-hosted, privacy-first analytics.
+     Runs alongside GA4; no cookies, IP hashed with daily salt, DNT respected.
+     Jekyll = full page reload per nav, so no SPA pageview hook needed —
+     the tracker auto-fires on script load. Shares the `techmeka` site
+     with the marketing site (same tenant, same dashboard). Path filter
+     `startswith(/blog/)` on the dashboard segments blog vs marketing. -->
+<script async src="https://analytics.direct/t.js" data-site="techmeka"></script>
   </head>
 
   <body>
