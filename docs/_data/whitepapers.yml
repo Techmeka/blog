@@ -38,3 +38,19 @@
   tags: [ai, security, dlp, sales-enablement]
   featured: true
   reading_time: "12 min"
+
+- slug: "made-around-me-canada-map"
+  type: "Category Brief"
+  title: "Made Around Me — Building the Map of What's Actually Made in Canada"
+  subtitle: "The shelf-level answer Statistics Canada can't give."
+  date: 2026-09-03
+  description: >-
+    A pan-Canadian, product-level catalogue that answers the shelf-level
+    question Statistics Canada can't: which brands are Canadian-owned,
+    which are Canadian-made, and where a new domestic producer would
+    move the needle. Written for shoppers, producers, retail buyers,
+    provincial economic development, journalists, and policymakers.
+  thumbnail: /blog/images/optimized/logoTechMekaBlack.png
+  tags: [canada, made-in-canada, data, retail, policy]
+  featured: true
+  reading_time: "8 min"
