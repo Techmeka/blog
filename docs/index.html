@@ -168,7 +168,78 @@ image: https://techmeka.com/blog/images/optimized/logoTechMekaBlack.png
   </div>
 </div>
 
+<style>
+  .wp-type-pill {
+    display: inline-block;
+    background: #0e2340;
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .post-preview.is-whitepaper .post-title h2 { display: inline; }
+</style>
+
 <div class="posts grid-view">
+  {% comment %}
+    Whitepapers rendered as post-preview cards so the tag-filter JS applies
+    unchanged (matches on .post-preview + data-tags). Listed before posts
+    (chronologically appropriate for the current catalogue). Only entries
+    with a matching file in /whitepapers/ are emitted.
+  {% endcomment %}
+  {% assign wp_static_home_grid = site.static_files
+      | where_exp: "f", "f.path contains '/whitepapers/'"
+      | where_exp: "f", "f.extname == '.html'" %}
+  {% assign wp_pages_home_grid = site.pages
+      | where_exp: "p", "p.url contains '/whitepapers/'"
+      | where_exp: "p", "p.url != '/whitepapers/'" %}
+  {% assign wp_entries_grid = site.data.whitepapers | sort: "date" | reverse %}
+  {% for meta in wp_entries_grid %}
+    {% assign target_name = meta.slug | append: ".html" %}
+    {% assign target_url = "/whitepapers/" | append: target_name %}
+    {% assign static_match = wp_static_home_grid | where: "name", target_name | first %}
+    {% assign page_match = wp_pages_home_grid | where: "url", target_url | first %}
+    {% if static_match or page_match %}
+      {% assign wp_img = meta.image | default: meta.thumbnail %}
+      <article class="post-preview is-whitepaper" {% if meta.tags %}data-tags="{% for tag in meta.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
+        <div class="post-preview-flex">
+          {% if wp_img %}
+            <div class="post-image-desktop">
+              <picture class="responsive-image">
+                <img src="{{ wp_img }}" alt="{{ meta.title }}" loading="lazy" class="adaptive-image">
+              </picture>
+            </div>
+          {% endif %}
+          <div class="post-preview-content">
+            <div class="post-title">
+              <span class="wp-type-pill">{{ meta.type | default: "Whitepaper" }}</span>
+              <h2><a href="{{ site.baseurl }}/whitepapers/{{ target_name }}">{{ meta.title }}</a></h2>
+              {% if meta.tags %}
+                <div class="post-tags">
+                  {% for tag in meta.tags %}
+                    <span class="tag tag-{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+            <div class="post-content">
+              <div class="entry">
+                <p>{{ meta.description | strip_newlines }}</p>
+              </div>
+              <a href="{{ site.baseurl }}/whitepapers/{{ target_name }}" class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr class="post-separator" data-follows-post="wp-{{ forloop.index }}">
+    {% endif %}
+  {% endfor %}
+
   {% for post in site.posts %}
     <article class="post-preview" {% if post.tags %}data-tags="{% for tag in post.tags %}{{ tag | downcase }} {% endfor %}"{% endif %}>
       <div class="post-preview-flex">
