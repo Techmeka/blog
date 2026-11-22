@@ -4,7 +4,7 @@ title: "customOrg is Live: Printed-to-Fit Drawer Organizers, Made in Toronto"
 date: 2026-11-20 00:00:00
 tags: [ Made-to-Measure, Made in Canada, Home Organization, Mass Customization, 3D Printing, E-commerce ]
 categories: [Case Study, Product]
-image: https://techmeka.com/blog/images/customorg/og-image.png
+image: https://techmeka.com/blog/images/customorg-hero.png
 published: true
 ---
 
