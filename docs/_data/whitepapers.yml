@@ -56,3 +56,21 @@
   tags: [Data, Policy, Canada, Retail, Manufacturing]
   featured: true
   reading_time: "8 min"
+
+- slug: "customorg-from-millimetres-to-mailbox"
+  type: "Case Study"
+  title: "Printed to Fit — Making a Drawer Organizer That Actually Fits the Drawer"
+  subtitle: "customOrg, Techmeka's first business built end-to-end with the Observers."
+  date: 2026-11-20
+  description: >-
+    A field dispatch on customOrg — the Canadian made-to-measure drawer
+    organizer service, live and shipping. What the product is, how it
+    moves from browser to mailbox in five audited hand-offs, and the
+    eight-service Observer platform underneath that lets a focused team
+    run a production business without hiring a devops, security,
+    analytics, and privacy team to run alongside.
+  image: /blog/images/customorg/og-image.png
+  thumbnail: /blog/images/customorg/og-image.png
+  tags: [Case Study, Made in Canada, Mass Customization, Observers, E-commerce]
+  featured: true
+  reading_time: "10 min"
