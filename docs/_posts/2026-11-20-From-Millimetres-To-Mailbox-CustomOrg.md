@@ -10,7 +10,7 @@ published: true
 
 > A drawer organizer should fit the drawer. Not the SKU. Not the closest stock size. Not a bamboo lattice that slides every time you open it.
 
-**customOrg** is live and shipping — a Canadian made-to-measure drawer organizer service, built by Techmeka.<!--more--> You punch your drawer's inside dimensions into a browser, drag compartments onto a grid, pick a colour, see the price land as you go, and we print the whole insert as one piece in Toronto. In your mailbox in seven to ten business days. If the fit is off, we reprint it.
+**customOrg** is live and shipping — a Canadian made-to-measure drawer organizer service, built by Techmeka.<!--more--> You punch your drawer's inside dimensions into a browser, drag compartments onto a grid, pick a colour, see the price land as you go, and customOrg prints the whole insert as one piece in Toronto. In your mailbox in seven to ten business days. If the fit is off, they reprint it.
 
 **[Read the full whitepaper →](/whitepapers/customorg-from-millimetres-to-mailbox.html)**
 
@@ -48,7 +48,7 @@ Five handoffs. The first is yours.
 
 **The price moves as you drag.** No contact-us-for-a-quote, no deposit on an open-ended number. A vanity drawer, 258 × 414 millimetres, four centimetres deep — first draft is six compartments, the editor says $32. Make one compartment deeper for a taller brush: $41. Shave it back half a centimetre: $37. The editor is a conversation about trade-offs you were going to have anyway. And the price the browser shows is the price the server trusts — the browser doesn't send a number to checkout, it sends a design, and the server recomputes from scratch.
 
-**Fit the drawer, not the SKU.** A Burlington mechanic with a Craftsman tool chest, middle drawer 482 × 398 millimetres — not a size anyone sells inserts for. He drops in silhouettes for his ten specific sockets, three ratchets, two torque wrenches, and a magnetic parts tray. The whole insert prints as one piece. Nothing rattles when the chest closes. If the fit is wrong, we reprint it at our cost — our measurements match what you entered, so if the fit's off, we made the mistake.
+**Fit the drawer, not the SKU.** A Burlington mechanic with a Craftsman tool chest, middle drawer 482 × 398 millimetres — not a size anyone sells inserts for. He drops in silhouettes for his ten specific sockets, three ratchets, two torque wrenches, and a magnetic parts tray. The whole insert prints as one piece. Nothing rattles when the chest closes. If the fit is wrong, customOrg reprints it at their cost — their measurements match what you entered, so if the fit's off, the mistake is on their side.
 
 **Made in Toronto, shipped Canada-wide.** No cross-border customs. No "shipped from China in six to eight weeks." A 230 × 230 millimetre kitchen drawer insert ordered from Halifax on a Tuesday evening: printed Wednesday night, labelled Thursday morning, picked up by Canada Post on Thursday afternoon, in the mailbox the following Wednesday. Six business days, door to door, for an organizer that didn't exist the week before.
 
@@ -67,7 +67,7 @@ The result is an operations team that can focus on the actual product — the ed
 
 ## If you're reading this
 
-**[Open the editor at design.customorg.com](https://design.customorg.com)** if you have a drawer in mind. First draft takes about ten minutes. Nothing you do in the editor costs money until you check out. If the organizer arrives and doesn't fit, we reprint it.
+**[Open the editor at design.customorg.com](https://design.customorg.com)** if you have a drawer in mind. First draft takes about ten minutes. Nothing you do in the editor costs money until you check out. If the organizer arrives and doesn't fit, customOrg reprints it.
 
 **[Hire Techmeka](https://techmeka.com/#contactUs)** if you're trying to ship something in the same shape — a browser experience with real math underneath, a payment surface, a shipping promise.
 
