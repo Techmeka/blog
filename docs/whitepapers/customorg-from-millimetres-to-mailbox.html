@@ -1108,28 +1108,64 @@ image:
   }
   .feature-caption a { color: var(--ink-2); }
 
-  /* ─────────── USE-CASE CROSSFADE CAROUSEL ─────────── */
-  .use-case-cycle { position: absolute; inset: 0; overflow: hidden; }
-  .use-case-cycle img {
+  /* ─────────── USE-CASE LABEL OVERLAY (synced to 8s tools-rotation cycle) ─────────── */
+  .use-case-labels {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    pointer-events: none;
+    min-height: 44px;
+  }
+  .ucl {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 14px;
+    background: rgba(14, 35, 64, 0.75);
+    color: #fff;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    border-radius: 4px;
     opacity: 0;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
     will-change: opacity;
   }
-  .use-case-cycle img:nth-child(1) { animation: ucFade1 20s ease-in-out infinite; }
-  .use-case-cycle img:nth-child(2) { animation: ucFade2 20s ease-in-out infinite; }
-  .use-case-cycle img:nth-child(3) { animation: ucFade3 20s ease-in-out infinite; }
-  .use-case-cycle img:nth-child(4) { animation: ucFade4 20s ease-in-out infinite; }
-  @keyframes ucFade1 { 0%, 20% { opacity: 1; } 25%, 95% { opacity: 0; } 100% { opacity: 1; } }
-  @keyframes ucFade2 { 0%, 20% { opacity: 0; } 25%, 45% { opacity: 1; } 50%, 100% { opacity: 0; } }
-  @keyframes ucFade3 { 0%, 45% { opacity: 0; } 50%, 70% { opacity: 1; } 75%, 100% { opacity: 0; } }
-  @keyframes ucFade4 { 0%, 70% { opacity: 0; } 75%, 95% { opacity: 1; } 100% { opacity: 0; } }
+  .ucl-1 { animation-name: uclFade1; }
+  .ucl-2 { animation-name: uclFade2; }
+  .ucl-3 { animation-name: uclFade3; }
+  .ucl-4 { animation-name: uclFade4; }
+  @keyframes uclFade1 {
+    0%, 22%  { opacity: 1; }
+    25%, 95% { opacity: 0; }
+    100%     { opacity: 1; }
+  }
+  @keyframes uclFade2 {
+    0%, 22%  { opacity: 0; }
+    25%, 47% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  @keyframes uclFade3 {
+    0%, 47%  { opacity: 0; }
+    50%, 72% { opacity: 1; }
+    75%, 100% { opacity: 0; }
+  }
+  @keyframes uclFade4 {
+    0%, 72%  { opacity: 0; }
+    75%, 97% { opacity: 1; }
+    100%     { opacity: 0; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    .use-case-cycle img { animation: none; }
-    .use-case-cycle img:nth-child(1) { opacity: 1; }
+    .ucl { animation: none; }
+    .ucl-1 { opacity: 1; }
   }
 
   @media (max-width: 1080px) {
@@ -1272,12 +1308,16 @@ image:
   <div class="feature-pair">
     <figure class="feature-card">
       <div class="feature-media">
-        <!-- 4-image crossfade carousel sourced from customorg.com's Use Cases 2x2 grid. Awaiting customOrg's cleaner 1280x800 renders per msg 476 (IP-9813); cosmetics, workshop, garage captured fully populated; artist drawer rendered empty mid-animation in source screenshot. -->
-        <div class="use-case-cycle" role="img" aria-label="Four use-case drawer renders: cosmetics and vanity, workshop and toolbox, artist and maker, garage and auto">
-          <img src="/blog/images/customorg/use-cases/cosmetics.jpg" alt="Cosmetics and vanity drawer" loading="lazy">
-          <img src="/blog/images/customorg/use-cases/workshop.jpg" alt="Workshop and toolbox drawer" loading="lazy">
-          <img src="/blog/images/customorg/use-cases/artist.jpg" alt="Artist and maker drawer" loading="lazy">
-          <img src="/blog/images/customorg/use-cases/garage.jpg" alt="Garage and auto drawer" loading="lazy">
+        <!-- TODO: swap to 4 canvas-only use-case WebMs per customOrg msg 477 (cosmetics, workshop, artist, garage) when they ship. Current fallback is tools-rotation.webm (single 8s looped clip cycling all 4) with CSS-overlay labels synced to the 8s cycle. -->
+        <video class="use-case-video" poster="/blog/images/customorg/tools-rotation-poster.jpg" autoplay loop muted playsinline preload="metadata">
+          <source src="/blog/images/customorg/tools-rotation.webm" type="video/webm">
+          <source src="/blog/images/customorg/tools-rotation.mp4" type="video/mp4">
+        </video>
+        <div class="use-case-labels" aria-hidden="true">
+          <span class="ucl ucl-1">Cosmetics &amp; vanity</span>
+          <span class="ucl ucl-2">Workshop &amp; toolbox</span>
+          <span class="ucl ucl-3">Artist &amp; maker</span>
+          <span class="ucl ucl-4">Garage &amp; auto</span>
         </div>
       </div>
       <figcaption class="feature-caption">Four use-case renders cycling from <a href="https://customorg.com">customorg.com</a>: cosmetics, workshop, artist, garage. Same 3D engine the editor uses.</figcaption>
