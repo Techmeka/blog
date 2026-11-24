@@ -1,13 +1,13 @@
 ---
 layout: whitepaper
-title: "Printed to Fit &mdash; Making a Drawer Organizer That Actually Fits the Drawer"
-description: "A field dispatch on customOrg &mdash; the Canadian made-to-measure drawer organizer service, live and shipping. Who it's for, how it works, and the engineering shop in Toronto that built it."
+title: "Printed to Fit: Making a Drawer Organizer That Actually Fits the Drawer"
+description: "A field dispatch on customOrg, the Canadian made-to-measure drawer organizer service, live and shipping. Who it's for, how it works, and the engineering shop in Toronto that built it."
 permalink: /whitepapers/customorg-from-millimetres-to-mailbox.html
 image:
   path: /blog/images/customorg-whitepaper-og-1200x630.jpg
   width: 1200
   height: 630
-  alt: "Printed to Fit &mdash; a field dispatch on customOrg"
+  alt: "Printed to Fit: a field dispatch on customOrg"
 ---
 <style>
   :root {
@@ -191,29 +191,82 @@ image:
   .scene .opener em { color: var(--gold-2); font-weight: 600; }
   .scene p { font-size: 1.1rem; max-width: 760px; color: var(--ink-3); }
   .scene p strong { color: var(--ink); }
-  .three-answers {
-    margin: 36px 0 20px;
+  /* ─────────── COMPROMISES (card grid) ─────────── */
+  .compromises {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin: 36px 0 24px;
+    max-width: 920px;
+  }
+  .compromise-card {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 26px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+  .compromise-logo {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .compromise-logo svg { max-height: 32px; max-width: 100%; display: block; }
+  .compromise-card h4 {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    color: var(--ink);
+    line-height: 1.3;
+    margin: 0 0 10px;
+    letter-spacing: -0.015em;
+  }
+  .compromise-card .lede-line {
+    font-size: 0.95rem;
+    color: var(--ink-3);
+    line-height: 1.55;
+    margin: 0 0 18px;
+  }
+  .metrics-list {
+    margin: auto 0 0;
     padding: 0;
     list-style: none;
-    max-width: 760px;
-  }
-  .three-answers li {
-    padding: 20px 0 20px 32px;
-    position: relative;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: var(--ink-3);
     border-top: 1px solid var(--line);
   }
-  .three-answers li:last-child { border-bottom: 1px solid var(--line); }
-  .three-answers li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 30px;
-    width: 18px; height: 1.5px;
-    background: var(--gold);
+  .metric {
+    padding: 11px 0 11px;
+    border-bottom: 1px solid var(--line-2);
   }
-  .three-answers li strong { color: var(--ink); display: block; margin-bottom: 4px; }
+  .metric:last-child { border-bottom: 0; }
+  .metric-label {
+    display: block;
+    font-size: 0.70rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .metric-value {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* ─────────── 4-COL GRID + CUSTOMORG HIGHLIGHT ─────────── */
+  .compromises.compromises-3col { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 920px; }
+  .customorg-card {
+    border-top: 4px solid var(--gold);
+    background: linear-gradient(180deg, rgba(201,169,74,0.10) 0%, var(--paper-2) 55%);
+    box-shadow: 0 1px 24px rgba(201,169,74,0.10);
+  }
+  .customorg-card h4 { color: var(--ink); }
+  .customorg-card .metric-label { color: var(--gold-2); }
+  .customorg-card .metric-value { color: var(--ink); }
 
   /* ─────────── THESIS ─────────── */
   .thesis-sec { background: var(--paper-2); text-align: center; padding: 100px 72px; }
@@ -322,6 +375,88 @@ image:
     margin-bottom: 10px;
   }
   .scenario p { margin: 0; font-size: 1rem; color: var(--ink); font-style: italic; line-height: 1.65; }
+
+  /* ─────────── BUILD CHAPTER ─────────── */
+  .build { background: var(--paper-2); padding: 100px 72px; }
+  .build h2 em { color: var(--signal); font-style: italic; }
+  .build .lede-para { font-size: 1.2rem; color: var(--ink-3); max-width: 760px; margin: 0 0 24px; line-height: 1.6; }
+  .build .build-intro { font-size: 1.05rem; color: var(--ink-3); max-width: 760px; margin: 0 0 20px; line-height: 1.75; }
+  .build-step {
+    padding: 44px 0;
+    border-top: 1px solid var(--line);
+    max-width: 820px;
+  }
+  .build-step:last-child { border-bottom: 1px solid var(--line); }
+  .build-head {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .build-num {
+    font-family: var(--font-head);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--signal);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .build-step h3 { margin: 0; font-size: 1.65rem; line-height: 1.25; color: var(--ink); }
+  .build-step p { font-size: 1.05rem; color: var(--ink-3); line-height: 1.75; max-width: 760px; margin: 14px 0; }
+  .gate-list {
+    margin: 18px 0;
+    padding: 0;
+    list-style: none;
+    max-width: 760px;
+  }
+  .gate-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px 16px 22px;
+    border-left: 3px solid var(--signal);
+    margin: 0 0 12px;
+    background: var(--signal-soft);
+    border-radius: 0 6px 6px 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-3);
+  }
+  .gate-list li strong { color: var(--ink); }
+  .gate-logo {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    display: block;
+  }
+  .gate-logo svg { width: 40px; height: 40px; display: block; }
+  .gate-body { flex: 1 1 auto; min-width: 0; }
+  .gate-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 1 auto;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.15s ease;
+  }
+  .gate-link::after {
+    content: "\2197"; /* ↗ */
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+    color: var(--signal);
+    font-size: 0.95rem;
+    opacity: 0;
+    transition: opacity 0.15s ease, right 0.15s ease;
+  }
+  .gate-link:hover { color: var(--signal-2); }
+  .gate-link:hover::after { opacity: 0.85; right: -2px; }
+  .gate-link:hover strong { color: var(--signal-2); }
+  .gate-list li:has(.gate-link) { padding-right: 32px; }
 
   /* ─────────── INTERLUDE (dark) ─────────── */
   .interlude {
@@ -932,6 +1067,50 @@ image:
   @media (max-width: 940px) {
     .observer-layers { grid-template-columns: repeat(2, 1fr); }
   }
+  /* ─────────── FEATURE PAIR (2-card screenshot block) ─────────── */
+  .feature-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 32px 0 20px;
+    max-width: 920px;
+  }
+  .feature-card {
+    margin: 0;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-media {
+    aspect-ratio: 16 / 10;
+    background: var(--paper-3);
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  .feature-media img,
+  .feature-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .feature-caption {
+    padding: 12px 16px 14px;
+    font-size: 0.88rem;
+    color: var(--ink-3);
+    line-height: 1.5;
+    background: var(--paper-2);
+    margin: 0;
+  }
+  .feature-caption a { color: var(--ink-2); }
+
+  @media (max-width: 1080px) {
+    .compromises.compromises-3col { grid-template-columns: 1fr; max-width: 540px; }
+  }
   @media (max-width: 720px) {
     section { padding: 56px 28px; }
     .hero { padding: 72px 28px 56px; }
@@ -944,10 +1123,20 @@ image:
     .process .step-list li { padding-left: 64px; }
     .process .step-list li::before { width: 44px; height: 44px; font-size: 1.3rem; }
     .win h3 { font-size: 1.4rem; }
+    .build { padding: 72px 28px; }
+    .build-step h3 { font-size: 1.4rem; }
+    .gate-list li { padding: 12px 16px 12px 18px; }
+    .gate-list li { gap: 12px; }
+    .gate-logo { flex-basis: 32px; width: 32px; height: 32px; }
+    .gate-logo svg { width: 32px; height: 32px; }
     .close-sec .two-cols { grid-template-columns: 1fr; gap: 32px; }
     .brand-mark .logo { width: 48px; height: 48px; }
     .brand-mark .wordmark { font-size: 1.2rem; }
     .observer-layers { grid-template-columns: 1fr; }
+    .compromises { grid-template-columns: 1fr; gap: 16px; max-width: 540px; }
+    .feature-pair { grid-template-columns: 1fr; gap: 14px; max-width: 540px; }
+    .compromises.compromises-3col { grid-template-columns: 1fr; max-width: 540px; }
+    .compromise-footer { flex-direction: column; gap: 6px; }
   }
 </style>
 
@@ -1015,31 +1204,71 @@ image:
     Somewhere in your house there is a drawer full of things that <em>almost</em> fit.
   </p>
 
-  <p>It might be the vanity drawer of an IKEA Alex 5, loaded with eyeshadow palettes that lean against each other because the acrylic tray from Amazon was built for a different drawer. Or the mechanic&rsquo;s tool chest where the three-eighths sockets and the half-inch sockets share one plastic bin, and two of the half-inch ones went missing last Tuesday.</p>
+  <p>The vanity drawer where the acrylic tray is 23&nbsp;mm too narrow. The tool chest where the three-eighths and the half-inch sockets share one bin.</p>
 
   <p>The drawer is a fixed shape. The things in it are also fixed shapes. The organizer is the only variable. Almost nothing on sale is built for <em>your</em> drawer and <em>your</em> things at the same time.</p>
 
-  <p><strong>Three answers exist today, and all three are compromises.</strong></p>
+  <p><strong>Three options existed before customOrg. One doesn&rsquo;t ask you to compromise on fit, time, or cost.</strong></p>
 
-  <ul class="three-answers">
-    <li><strong>Stock-size tray on Amazon.</strong> $14, two days, 23&nbsp;mm gap along one edge. You tell yourself you can live with it.</li>
-    <li><strong>Gridfinity bin, 3D-printed at home.</strong> Beautiful system &mdash; if you own a printer, know your slicer, and have a weekend.</li>
-    <li><strong>Custom maker on Etsy.</strong> Message, wait, discuss, quote, deposit, wait fourteen to twenty-one business days. Hope the fit lands.</li>
-  </ul>
+  <div class="compromises compromises-3col">
+    <div class="compromise-card customorg-card">
+      <div class="compromise-logo"><svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="customOrg" style="color:#a5893a"><style>@keyframes co-cellpop{0%,10%{opacity:0;transform:scale(0.6)}20%{opacity:0.85;transform:scale(1)}70%{opacity:0.85;transform:scale(1)}85%,100%{opacity:0;transform:scale(0.85)}}.co-cell{transform-origin:center;transform-box:fill-box;animation:co-cellpop 4.5s cubic-bezier(0.4,0,0.2,1) infinite}.co-cell-1{animation-delay:0s}.co-cell-2{animation-delay:0.35s}.co-cell-3{animation-delay:0.7s}.co-cell-4{animation-delay:1.05s}.co-cell-5{animation-delay:1.4s}</style><rect x="3" y="5" width="34" height="30" rx="3.5" stroke="currentColor" stroke-width="1.75" fill="none"/><g fill="currentColor"><rect class="co-cell co-cell-1" x="5" y="7" width="15" height="12" rx="1"/><rect class="co-cell co-cell-2" x="22" y="7" width="13" height="12" rx="1"/><rect class="co-cell co-cell-3" x="5" y="21" width="10" height="12" rx="1"/><rect class="co-cell co-cell-4" x="17" y="21" width="9" height="12" rx="1"/><rect class="co-cell co-cell-5" x="28" y="21" width="7" height="12" rx="1"/></g><g stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55" fill="none"><line x1="4" y1="20" x2="36" y2="20"/><line x1="21" y1="6" x2="21" y2="20"/><line x1="16" y1="20" x2="16" y2="34"/><line x1="27" y1="20" x2="27" y2="34"/></g><text x="46" y="27" font-family="Georgia, serif" font-size="20" font-weight="700" fill="currentColor">customOrg</text></svg></div>
+      <h4>Printed to fit.</h4>
+      <p class="lede-line">Design in a browser. Pay what the editor says. Printed as one piece, in Toronto.</p>
+      <ul class="metrics-list">
+        <li class="metric"><span class="metric-label">Price</span><span class="metric-value">$15&ndash;$80</span></li>
+        <li class="metric"><span class="metric-label">Fit</span><span class="metric-value">Custom to the millimetre</span></li>
+        <li class="metric"><span class="metric-label">Time</span><span class="metric-value">7&ndash;10 business days</span></li>
+      </ul>
+    </div>
 
-  <p>customOrg is the fourth option: ten minutes, fifteen to eighty Canadian dollars, mailbox in seven to ten business days.</p>
+    <div class="compromise-card">
+      <div class="compromise-logo"><svg viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amazon"><text x="2" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#232F3E">amazon</text><path d="M 4 26 Q 36 33 70 26" stroke="#FF9900" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M 66 24 L 70 26 L 66 28" stroke="#FF9900" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Stock-size tray.</h4>
+      <p class="lede-line">Pick the closest listing. Live with the gap along one edge.</p>
+      <ul class="metrics-list">
+        <li class="metric"><span class="metric-label">Price</span><span class="metric-value">$15&ndash;$40</span></li>
+        <li class="metric"><span class="metric-label">Fit</span><span class="metric-value">One size, closest match</span></li>
+        <li class="metric"><span class="metric-label">Time</span><span class="metric-value">2 days shipping</span></li>
+      </ul>
+    </div>
 
-  <div class="photo">
-    <img src="/blog/images/customorg/use-cases.jpg" alt="Two customOrg organizers rendered in 3D &mdash; a cosmetics vanity insert with brushes, lipsticks, and palettes in their silhouettes, and a workshop toolbox insert with wrenches, drivers, and pliers organized by profile.">
-    <p class="photo-caption">Real 3D previews from <a href="https://customorg.com">customorg.com</a> &mdash; a vanity insert on the left, a workshop toolbox insert on the right. Every silhouette matches a real item.</p>
+    <div class="compromise-card">
+      <div class="compromise-logo"><svg viewBox="0 0 80 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Etsy"><text x="40" y="24" font-family="Georgia, serif" font-size="26" font-style="italic" font-weight="700" text-anchor="middle" fill="#F56400">Etsy</text></svg></div>
+      <h4>Custom maker.</h4>
+      <p class="lede-line">A person who&rsquo;ll build you one, if you can describe it.</p>
+      <ul class="metrics-list">
+        <li class="metric"><span class="metric-label">Price</span><span class="metric-value">$60&ndash;$200+</span></li>
+        <li class="metric"><span class="metric-label">Fit</span><span class="metric-value">Custom, if measured right</span></li>
+        <li class="metric"><span class="metric-label">Time</span><span class="metric-value">14&ndash;21 business days</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="feature-pair">
+    <figure class="feature-card">
+      <div class="feature-media">
+        <video poster="/blog/images/customorg/tools-rotation-poster.jpg" autoplay loop muted playsinline preload="metadata">
+          <source src="/blog/images/customorg/tools-rotation.webm" type="video/webm">
+          <source src="/blog/images/customorg/tools-rotation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <figcaption class="feature-caption">Four use-case renders cycling: cosmetics, workshop, artist, mechanic. Produced live by the same 3D engine <a href="https://customorg.com">customorg.com</a> uses.</figcaption>
+    </figure>
+    <figure class="feature-card">
+      <div class="feature-media">
+        <video src="/blog/images/customorg/howstep-preview.webm" poster="/blog/images/customorg/howstep-preview-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+      </div>
+      <figcaption class="feature-caption">Compartments generating in the editor as you drag. The same clip <a href="https://customorg.com">customorg.com</a> ships on its landing.</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- ═══════════════════════ 3. HOW IT WORKS ═══════════════════════ -->
 <section class="process">
   <span class="eyebrow">Part 2 &middot; From browser to mailbox</span>
-  <h2>Five steps, one afternoon, <em>seven to ten business days</em>.</h2>
-  <p class="lede-para">A measurement goes in on one end; a finished organizer comes out the other. Five hand-offs in between &mdash; the first is yours, the other four are ours.</p>
+  <h2>Three steps, one afternoon, <em>seven to ten business days</em>.</h2>
+  <p class="lede-para">A measurement goes in on one end; a finished organizer comes out the other. Three hand-offs in between. The first is yours. The other two are ours.</p>
 
   <div class="visual">
     <svg viewBox="0 0 880 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="viz-pipe-title">
@@ -1071,28 +1300,21 @@ image:
   <ul class="step-list">
     <li>
       <h4>Design in your browser.</h4>
-      <p>Open <a href="https://design.customorg.com">design.customorg.com</a>. Three numbers go in &mdash; the drawer's width, depth, and height, in millimetres. Drag compartments onto the grid. Organizing tools? Drop in silhouettes for the specific sockets, wrenches, or ratchets you own. Pick a body colour (Jet Black, Slate, Bone, or Maple) and an accent. Rotate the 3D preview. First draft, about ten minutes.</p>
+      <p>Open <a href="https://design.customorg.com">design.customorg.com</a>. Three numbers go in: the drawer's width, depth, and height, all in millimetres. Drag compartments onto the grid. Organizing tools? Drop in silhouettes for the specific sockets, wrenches, or ratchets you own. Pick a body colour (Jet Black, Slate, Bone, or Maple) and an accent. Rotate the 3D preview. First draft, about ten minutes.</p>
       <div class="photo inline">
+        <!-- TODO: swap to a WebM showing the full design.customorg.com UI (compartment sidebar + grid + live price + 3D preview + colour picker) once customOrg publishes it. Asked for via session_send msg 471 to customOrg, correlation IP-9813, 2026-11-24. Current image shows 3D preview only. -->
         <img src="/blog/images/customorg/editor-preview.jpg" alt="A 3D-rendered preview of a 4-compartment drawer organizer, shown from above in Jet Black with soft shadows.">
-        <p class="photo-caption">A design snapshot &mdash; rendered live in the editor as you drag.</p>
+        <p class="photo-caption">A design snapshot, rendered live in the editor as you drag.</p>
       </div>
     </li>
     <li>
-      <h4>Pay a number that doesn't drift.</h4>
-      <p>The price updates as you edit &mdash; the same code that would print your organizer computes its cost from grams of plastic and minutes of machine time. Canada Post rates land live at checkout against your real parcel dimensions, so the shipping number is on screen before you confirm.</p>
+      <h4>Real-time pricing.</h4>
+      <p>The price updates as you edit. The same code that would print your organizer computes its cost from grams of plastic and minutes of machine time. Canada Post rates land live at checkout against your real parcel dimensions, so the shipping number is on screen before you confirm.</p>
       <p>What you see on the editor is what you pay. The server recomputes from your design at checkout; nothing drifts between the preview and the charge.</p>
     </li>
     <li>
-      <h4>Approved by a human in Toronto.</h4>
-      <p>An operator opens your order, looks at the design, confirms the layout makes sense, and marks it for print. Ten seconds of a human eye catches a measurement entered in inches &mdash; before three hours of print time gets spent on it.</p>
-    </li>
-    <li>
-      <h4>Printed as one piece.</h4>
-      <p>Your organizer prints on an industrial 3D printer as a single piece &mdash; no assembly, no glue, no post-processing. Three to six hours on the floor, depending on size. Drawers that exceed one build plate split into pieces that fit together like a puzzle, each printed on its own plate.</p>
-    </li>
-    <li>
-      <h4>Shipped from Toronto.</h4>
-      <p>Packed, labelled, handed to Canada Post. Tracking fires the moment the label is generated. Typical arrival: seven to ten business days &mdash; faster across Ontario and Quebec, up to fifteen on the longer prairie and maritime routes. One organizer, one parcel; multi-piece drawers ship one parcel per piece, each labelled at real dimensions.</p>
+      <h4>Approved and shipped from Toronto.</h4>
+      <p>An operator opens your order, confirms the layout makes sense, and marks it for print. Ten seconds of a human eye catches a measurement entered in inches, before three hours of print time gets spent on it. The organizer prints as a single piece on an industrial 3D printer (no assembly, no glue), then goes straight to Canada Post. Typical arrival: seven to ten business days across most of Canada.</p>
     </li>
   </ul>
 </section>
@@ -1107,10 +1329,10 @@ image:
       <span class="win-num">One</span>
       <h3>The price moves as you drag.</h3>
     </div>
-    <p>No quote form. No "contact us for pricing." No deposit on an open-ended number. The amount on the right-hand side of the editor updates in real time as you edit the geometry, because the same geometry that would print your organizer is also computing its cost &mdash; grams of plastic, print hours, a labour charge, a margin. Every input is defensible because every input is a real cost.</p>
+    <p>No quote form. No "contact us for pricing." No deposit on an open-ended number. The amount on the right-hand side of the editor updates in real time as you edit the geometry, because the same geometry that would print your organizer is also computing its cost: grams of plastic, print hours, a labour charge, a margin. Every input is defensible because every input is a real cost.</p>
     <div class="scenario">
       <span class="label">Scenario</span>
-      <p>A vanity drawer, 258 millimetres by 414 millimetres, four centimetres deep. First draft: six compartments, mostly shallow, one for brushes standing upright. The number starts at $32. The brush compartment grows taller &mdash; more plastic, more print time &mdash; and the number climbs to $41. The brush compartment shrinks half a centimetre. The number drops to $37. The editor is a conversation about trade-offs you were going to have anyway.</p>
+      <p>A vanity drawer, 258 millimetres by 414 millimetres, four centimetres deep. First draft: six compartments, mostly shallow, one for brushes standing upright. The number starts at $32. The brush compartment grows taller (more plastic, more print time), and the number climbs to $41. The brush compartment shrinks half a centimetre. The number drops to $37. The editor is basically a conversation about trade-offs you were going to have anyway.</p>
     </div>
 
     <div class="price-evo" aria-label="How the price moves as the drawer design changes">
@@ -1143,7 +1365,7 @@ image:
       <p class="price-evo-foot">No quote form. No deposit. No surprise at checkout. <strong>The editor is the quote.</strong></p>
     </div>
 
-    <p>The browser never sends a number to checkout &mdash; it sends a design, and the server recomputes. Nothing drifts between the editor and the receipt.</p>
+    <p>The browser never sends a number to checkout. It sends a design, and the server recomputes. Nothing drifts between the editor and the receipt.</p>
   </div>
 
   <div class="win">
@@ -1151,18 +1373,18 @@ image:
       <span class="win-num">Two</span>
       <h3>Fit the drawer, not the SKU.</h3>
     </div>
-    <p>You measured the drawer. The organizer fits. That sounds trivial until you remember how often it hasn't been true. The industry has been training buyers for thirty years to pick the closest stock size and live with the gap. customOrg is retraining it &mdash; one drawer at a time, one insert at a time.</p>
+    <p>You measured the drawer. The organizer fits. That sounds trivial until you remember how often it hasn't been true. The industry has been training buyers for thirty years to pick the closest stock size and live with the gap. customOrg is retraining it, one drawer at a time, one insert at a time.</p>
     <div class="scenario">
       <span class="label">Scenario</span>
-      <p>A mechanic in Burlington with a Craftsman tool chest. The middle drawer is 482 millimetres by 398 millimetres &mdash; not a size anyone sells inserts for. He drops in silhouettes for his ten specific sockets, three ratchets, two torque wrenches, and a magnetic parts tray, in a layout that fills the drawer. The whole insert prints as one piece. Nothing rattles when the chest closes.</p>
+      <p>A mechanic in Burlington with a Craftsman tool chest. The middle drawer is 482 millimetres by 398 millimetres. Not a size anyone sells inserts for. He drops in silhouettes for his ten specific sockets, three ratchets, two torque wrenches, and a magnetic parts tray, in a layout that fills the drawer. The whole insert prints as one piece. Nothing rattles when the chest closes.</p>
     </div>
 
     <div class="photo">
-      <img src="/blog/images/customorg/use-cases-2.jpg" alt="Two customOrg organizers rendered in 3D &mdash; an artist's maker insert with pockets for sketch tools, and a garage auto insert with sockets, a torque wrench, spark plugs, and an oil filter all in their silhouettes.">
-      <p class="photo-caption">An artist's kit and a garage auto drawer &mdash; from <a href="https://customorg.com">customorg.com</a>. Every tool has a silhouette, not a bin.</p>
+      <img src="/blog/images/customorg/use-cases-2.jpg" alt="Two customOrg organizers rendered in 3D: an artist's maker insert with pockets for sketch tools, and a garage auto insert with sockets, a torque wrench, spark plugs, and an oil filter all in their silhouettes.">
+      <p class="photo-caption">An artist's kit and a garage auto drawer, from <a href="https://customorg.com">customorg.com</a>. Every tool has a silhouette, not a bin.</p>
     </div>
 
-    <p>If the fit is off, customOrg reprints it. Their measurements match what you entered &mdash; if something&rsquo;s wrong, it&rsquo;s on their side, not yours.</p>
+    <p>If the fit is off, customOrg reprints it. Their measurements match what you entered. If something&rsquo;s wrong, that&rsquo;s on their side, not yours.</p>
   </div>
 
   <div class="win">
@@ -1179,13 +1401,69 @@ image:
   </div>
 </section>
 
+<!-- ═══════════════════════ 5. BUILD CHAPTER ═══════════════════════ -->
+<section class="build">
+  <span class="eyebrow">Part 4 &middot; How customOrg got built</span>
+  <h2>The build <em>underneath</em> the product.</h2>
+
+  <p class="lede-para">The product story is a browser, 3D printers, and Canada Post. The build story is tasks, gates, and a stack that stayed small on purpose. Here&rsquo;s how customOrg actually got made, and why the shape it has is the shape Techmeka wants every project to have.</p>
+
+  <p class="build-intro">The brief that opened the build was two lines long: <em>a browser where the customer designs a drawer insert, and customOrg prints it to fit</em>. Four months later the same stack ran live payments, live shipping, daily security scans, and an admin surface that only answers inside the Toronto tailnet. The trail between those two moments is what the rest of this section is about.</p>
+
+  <div class="build-step">
+    <div class="build-head">
+      <span class="build-num">One</span>
+      <h3>The work moved as tasks.</h3>
+    </div>
+    <p>Any product of this scope &mdash; a browser editor, a pricing engine, a shipping integration, an admin surface, an identity layer &mdash; decomposes into smaller tasks. The visible work on customOrg ran the gamut: UI fit-and-finish, DNS and mail deliverability, third-party API edge cases, build-system races, test coverage, security hardening.</p>
+    <p>For most of them, <em>AI did the decomposition itself</em>. A high-level ask lands as a task; an AI session claims it, breaks it into the sub-tasks that actually need to ship, writes the plan comment, writes the code, writes the tests, and closes the loop with a summary. Humans review proposals, approve surfaces, and resolve ambiguity when the AI flags it. The Observers meter the work in flight: Tests Observer verifies, Shield Observer scans, State Observer pushes, Tasks Observer refuses closure without the full artifact set.</p>
+    <p>Every task had the same shape. A plan comment on claim. Running-log entries at every pivot. A provenance card from the automated test runner. A shield scan. The commit hashes that landed. A one-line closure summary with follow-up tasks linked out. By the time of the pre-launch audit in November, every line item on the audit sheet (sixty-four of them) had either closed through that workflow or been explicitly deferred with a documented reason. All sixty-four closed on the same day.</p>
+  </div>
+
+  <div class="build-step">
+    <div class="build-head">
+      <span class="build-num">Two</span>
+      <h3>The gates caught what reviewers wouldn&rsquo;t.</h3>
+    </div>
+    <p>Reviewers are good at style. Gates are what catch regressions. The Observer platform is eight products running as one governed pipe from plan to ship: every prompt budgeted, every action logged. This is what each one did during the customOrg build.</p>
+    <ul class="gate-list">
+      
+      <li><a class="gate-link" href="https://tasks.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Tasks Observer"><defs><radialGradient id="tasks-sclera" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.85"/></radialGradient><radialGradient id="tasks-iris" cx="45%" cy="40%" r="55%"><stop offset="0%" stop-color="#F87171"/><stop offset="55%" stop-color="#DC2626"/><stop offset="100%" stop-color="#991B1B"/></radialGradient><radialGradient id="tasks-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FCA5A5"/><stop offset="60%" stop-color="#F87171" stop-opacity="0.6"/><stop offset="100%" stop-color="#DC2626" stop-opacity="0"/></radialGradient><radialGradient id="tasks-depth" cx="50%" cy="50%" r="50%"><stop offset="70%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.3"/></radialGradient><filter id="tasks-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="0.8"/></filter></defs><circle cx="20" cy="20" r="19" fill="url(#tasks-depth)"/><circle cx="20" cy="20" r="17" fill="url(#tasks-sclera)"/><g><animateTransform attributeName="transform" type="translate" values="0,0; 1.5,0.5; -1,1; 0,-1; 0,0" dur="5s" repeatCount="indefinite"/><circle cx="20" cy="20" r="9" fill="url(#tasks-iris)" filter="url(#tasks-glow)"/><circle cx="20" cy="20" r="7" fill="none" stroke="#FCA5A5" stroke-width="0.5" opacity="0.5"/><circle cx="20" cy="20" r="4" fill="#0F172A"/><circle cx="20" cy="20" r="2.5" fill="url(#tasks-core)"><animate attributeName="r" values="2.2;3.4;2.2" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/></circle><circle cx="17" cy="17" r="1.6" fill="#ffffff" opacity="0.9"/></g></svg></span><div class="gate-body"><strong>Tasks Observer</strong>. The Work OS where every task closed through a defined artifact set: plan, running-log, test provenance, commit hashes, closure summary. Tasks that tried to skip a step were blocked at the gate. Why the launch audit could read as a trail instead of a memory.</div></a></li>
+      <li><a class="gate-link" href="https://cost.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Cost Observer"><defs><radialGradient id="cost-sclera" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#1e1e2e"/><stop offset="100%" stop-color="#0a0a0f"/></radialGradient><radialGradient id="cost-iris" cx="45%" cy="40%" r="55%"><stop offset="0%" stop-color="#e2e8f0"/><stop offset="50%" stop-color="#94a3b8"/><stop offset="100%" stop-color="#64748b"/></radialGradient><radialGradient id="cost-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#cbd5e1" stop-opacity="0.6"/><stop offset="100%" stop-color="#94a3b8" stop-opacity="0"/></radialGradient><filter id="cost-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="0.6"/></filter><clipPath id="cost-clip"><circle cx="20" cy="20" r="16"/></clipPath></defs><circle cx="20" cy="20" r="18.5" fill="none" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3 2 6 2" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="25s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="16" fill="url(#cost-sclera)"/><circle cx="20" cy="20" r="11" fill="none" stroke="url(#cost-iris)" stroke-width="5" opacity="0.9"/><circle cx="20" cy="20" r="11" fill="none" stroke="#e2e8f0" stroke-width="5" stroke-dasharray="0.8 1.8" opacity="0.2"><animateTransform attributeName="transform" type="rotate" from="360 20 20" to="0 20 20" dur="12s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="6" fill="#0a0a0f"/><text x="20" y="23.5" text-anchor="middle" font-size="9" font-family="monospace" font-weight="bold" fill="#e2e8f0" filter="url(#cost-glow)"><animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;1" dur="2s" repeatCount="indefinite"/>$</text><circle cx="20" cy="20" r="2.5" fill="url(#cost-core)" filter="url(#cost-glow)"><animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/></circle><g clip-path="url(#cost-clip)"><circle cx="20" cy="8" r="0.7" fill="#cbd5e1" opacity="0.8"><animate attributeName="cy" values="8;32" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite"/></circle><circle cx="25" cy="10" r="0.5" fill="#ffffff" opacity="0.7"><animate attributeName="cy" values="10;32" dur="2.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="2.4s" repeatCount="indefinite"/></circle></g><ellipse cx="16" cy="16" rx="2" ry="1.3" fill="#ffffff" opacity="0.4"/></svg></span><div class="gate-body"><strong>Cost Observer</strong>. The AI gateway. Every outbound LLM call attributed, cost-estimated, and budget-capped in flight. Per-project ceilings, multi-provider failover. The build never ran up an invisible bill.</div></a></li>
+      <li><a class="gate-link" href="https://transmission.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Transmission Observer"><defs><radialGradient id="trans-sclera" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0a0a0f"/><stop offset="100%" stop-color="#064E3B" stop-opacity="0.4"/></radialGradient><radialGradient id="trans-iris" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#34D399"/><stop offset="50%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></radialGradient><radialGradient id="trans-pupil" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0a0a0f"/><stop offset="100%" stop-color="#022c22"/></radialGradient><radialGradient id="trans-beacon" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#6EE7B7"/><stop offset="60%" stop-color="#10B981" stop-opacity="0.6"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></radialGradient><filter id="trans-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1"/></filter><clipPath id="trans-clip"><circle cx="20" cy="20" r="16"/></clipPath></defs><circle cx="20" cy="20" r="18" fill="none" stroke="#10B981" stroke-width="0.7" stroke-dasharray="3 2" opacity="0.6"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="10s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="16" fill="url(#trans-sclera)"/><circle cx="20" cy="20" r="11" fill="none" stroke="url(#trans-iris)" stroke-width="5" opacity="0.9"/><g><animateTransform attributeName="transform" type="translate" values="0,0; 2,-1; -1,2; -2,-1; 0,0" dur="4s" repeatCount="indefinite"/><circle cx="20" cy="20" r="6" fill="url(#trans-pupil)"/><circle cx="20" cy="20" r="3" fill="url(#trans-beacon)" filter="url(#trans-glow)"><animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/></circle></g><g clip-path="url(#trans-clip)"><line x1="4" y1="20" x2="36" y2="20" stroke="#6EE7B7" stroke-width="1" opacity="0.6"><animate attributeName="y1" values="8;32;8" dur="2s" repeatCount="indefinite"/><animate attributeName="y2" values="8;32;8" dur="2s" repeatCount="indefinite"/></line></g><ellipse cx="15" cy="15" rx="3" ry="2" fill="#ffffff" opacity="0.3"/></svg></span><div class="gate-body"><strong>Transmission Observer</strong>. The command center. Spawned and monitored the AI work sessions that moved the code, routed approval widgets to Tasks, threaded ninety-plus MCP tools between services. The reason the other seven feel like one platform instead of seven.</div></a></li>
+      <li><a class="gate-link" href="https://tests.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="tests-eye-R0-outline" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00FFFF"></stop><stop offset="50%" stop-color="#0088FF"></stop><stop offset="100%" stop-color="#8B5CF6"></stop></linearGradient><linearGradient id="tests-eye-R0-iris" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00FFFF"></stop><stop offset="50%" stop-color="#00D4FF"></stop><stop offset="100%" stop-color="#0088FF"></stop></linearGradient><filter id="tests-eye-R0-glow"><feGaussianBlur stdDeviation="1" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><circle cx="20" cy="20" r="14" fill="#0a0a1a" stroke="url(#tests-eye-R0-outline)" stroke-width="2.5" filter="url(#tests-eye-R0-glow)"><animate attributeName="opacity" values="1;0.7;1" dur="3s" repeatCount="indefinite"></animate></circle><g filter="url(#tests-eye-R0-glow)"><animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 4,-4; -4,-4; -5,0; -4,4; 4,4; 5,0; 0,0" dur="6s" repeatCount="indefinite"></animateTransform><circle cx="20" cy="20" r="6" fill="url(#tests-eye-R0-iris)"></circle><circle cx="20" cy="20" r="2.5" fill="#000033"></circle><circle cx="19" cy="18.5" r="1" fill="#fff" opacity="0.9"></circle></g><line x1="6" y1="20" x2="34" y2="20" stroke="#00FFFF" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"><animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite"></animate></line></svg></span><div class="gate-body"><strong>Tests Observer</strong>. The universal test runner. Ninety-four test files, roughly eight hundred and fifty tests at launch, every closed task carrying a provenance card the runner posted directly. Also captured client-side errors streaming in from the live site.</div></a></li>
+      <li><a class="gate-link" href="https://automation.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Automation Observer"><defs><radialGradient id="auto-sclera" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#1a0d05"/><stop offset="100%" stop-color="#0a0503"/></radialGradient><radialGradient id="auto-iris" cx="45%" cy="40%" r="55%"><stop offset="0%" stop-color="#fdba74"/><stop offset="50%" stop-color="#f97316"/><stop offset="100%" stop-color="#9a3412"/></radialGradient><radialGradient id="auto-pupil" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a0d05"/><stop offset="100%" stop-color="#3b1605"/></radialGradient><radialGradient id="auto-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fff7ed"/><stop offset="60%" stop-color="#fb923c" stop-opacity="0.6"/><stop offset="100%" stop-color="#f97316" stop-opacity="0"/></radialGradient><filter id="auto-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="0.8"/></filter><clipPath id="auto-clip"><circle cx="20" cy="20" r="17"/></clipPath></defs><circle cx="20" cy="20" r="18.5" fill="none" stroke="#fb923c" stroke-width="0.6" stroke-dasharray="2 3" opacity="0.5"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="18s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="17" fill="url(#auto-sclera)"/><circle cx="20" cy="20" r="11" fill="none" stroke="url(#auto-iris)" stroke-width="5" opacity="0.85"/><circle cx="20" cy="20" r="11" fill="none" stroke="#fed7aa" stroke-width="5" stroke-dasharray="0.6 2.2" opacity="0.3"><animateTransform attributeName="transform" type="rotate" from="360 20 20" to="0 20 20" dur="10s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="6" fill="url(#auto-pupil)"/><circle cx="20" cy="20" r="2.5" fill="url(#auto-core)" filter="url(#auto-glow)" opacity="0.7"><animate attributeName="opacity" values="0.5;0.9;0.5" dur="1.5s" repeatCount="indefinite"/></circle><g clip-path="url(#auto-clip)"><g><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="6s" repeatCount="indefinite"/><g transform="translate(20 13)"><path d="M -1.4 -2 L -1.4 2.2 L -0.3 1.1 L 0.4 2.4 L 1.1 2.0 L 0.4 0.7 L 1.7 0.7 Z" fill="#fff7ed" stroke="#9a3412" stroke-width="0.25" stroke-linejoin="round" filter="url(#auto-glow)"/></g></g><circle cx="20" cy="13" r="2" fill="none" stroke="#fdba74" stroke-width="0.5"><animate attributeName="r" values="1;4;1" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0;0.7" dur="1.5s" repeatCount="indefinite"/></circle></g><ellipse cx="15" cy="15" rx="2.5" ry="1.5" fill="#fff7ed" opacity="0.25"/></svg></span><div class="gate-body"><strong>Automation Observer</strong>. Browser automation built for AI agents. Real Chromium, real WebKit, real iOS Safari driving the dev and live URLs; one API call returns screenshot, console, network, errors, and HTML in a single round-trip. Caught layout regressions no unit test would have.</div></a></li>
+      <li><a class="gate-link" href="https://shield.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Shield Observer"><defs><radialGradient id="shield-sclera" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#020617"/></radialGradient><radialGradient id="shield-iris" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#60a5fa"/><stop offset="40%" stop-color="#3b82f6"/><stop offset="80%" stop-color="#1e40af"/><stop offset="100%" stop-color="#1e3a8a"/></radialGradient><radialGradient id="shield-core" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#93c5fd"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></radialGradient><linearGradient id="shield-sweep" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/><stop offset="100%" stop-color="#60a5fa" stop-opacity="0.4"/></linearGradient><filter id="shield-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="0.8"/></filter><clipPath id="shield-clip"><circle cx="20" cy="20" r="17"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#020617" stroke="#3b82f6" stroke-width="0.4" opacity="0.6"/><circle cx="20" cy="20" r="17" fill="url(#shield-sclera)"/><g><animateTransform attributeName="transform" type="translate" values="0,0; 2,0; -2,0; 0,0" dur="5s" repeatCount="indefinite"/><path d="M20 10 L27 13.5 L27 20.5 C27 26 23.5 29.5 20 32 C16.5 29.5 13 26 13 20.5 L13 13.5 Z" fill="url(#shield-iris)" filter="url(#shield-glow)"/><path d="M20 10 L27 13.5 L27 20.5 C27 26 23.5 29.5 20 32 C16.5 29.5 13 26 13 20.5 L13 13.5 Z" fill="none" stroke="#60a5fa" stroke-width="0.4" opacity="0.6"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="4s" repeatCount="indefinite"/></path><circle cx="20" cy="20" r="4" fill="#020617"/><circle cx="20" cy="20" r="2" fill="url(#shield-core)" filter="url(#shield-glow)"><animate attributeName="r" values="1.5;2.5;1.5" dur="2s" repeatCount="indefinite"/></circle><circle cx="17" cy="17" r="1.5" fill="#ffffff" opacity="0.6"/></g><g clip-path="url(#shield-clip)"><path d="M20 20 L20 3 A17 17 0 0 1 37 20 Z" fill="url(#shield-sweep)"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="3s" repeatCount="indefinite"/></path></g><circle cx="20" cy="20" r="17" fill="none" stroke="#3b82f6" stroke-width="0.3" stroke-dasharray="3 3" opacity="0.4"><animateTransform attributeName="transform" type="rotate" from="360 20 20" to="0 20 20" dur="15s" repeatCount="indefinite"/></circle><path d="M18.5 20.5 L19.5 21.5 L22 18.5" fill="none" stroke="#60a5fa" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" filter="url(#shield-glow)"><animate attributeName="opacity" values="0;0;0.9;0.9;0" dur="4s" repeatCount="indefinite"/></path></svg></span><div class="gate-body"><strong>Shield Observer</strong>. Twenty-seven scanners (AI-specific ones include prompt-injection scanning and live DLP), five hundred-plus controls mapped across OWASP, GDPR, PCI, SOC 2. Pre-commit hook on the dev side; daily DAST against the live VPS; external probe for the Internet-facing surface. Two advisories caught in the pre-launch audit; both closed before launch.</div></a></li>
+      <li><a class="gate-link" href="https://st8.observer" target="_blank" rel="noopener"><span class="gate-logo"><svg viewBox="0 0 40 40"><defs><radialGradient id="state-eye-R0-sclera" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0a0a0f"></stop><stop offset="100%" stop-color="#451A03" stop-opacity="0.3"></stop></radialGradient><radialGradient id="state-eye-R0-iris" cx="50%" cy="40%" r="50%"><stop offset="0%" stop-color="#FCD34D"></stop><stop offset="50%" stop-color="#F59E0B"></stop><stop offset="100%" stop-color="#D97706"></stop></radialGradient><radialGradient id="state-eye-R0-pupil" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#0a0a0f"></stop><stop offset="100%" stop-color="#1C1004"></stop></radialGradient><radialGradient id="state-eye-R0-core-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FDE68A"></stop><stop offset="50%" stop-color="#F59E0B"></stop><stop offset="100%" stop-color="#F59E0B" stop-opacity="0"></stop></radialGradient><filter id="state-eye-R0-glow"><feGaussianBlur stdDeviation="0.5" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><circle cx="20" cy="20" r="17" fill="none" stroke="#F59E0B" stroke-width="0.8" stroke-dasharray="1.5 7.2" opacity="0.6"><animateTransform attributeName="transform" type="rotate" from="360 20 20" to="0 20 20" dur="20s" repeatCount="indefinite"></animateTransform></circle><circle cx="20" cy="20" r="16" fill="url(#state-eye-R0-sclera)"></circle><circle cx="20" cy="20" r="11" fill="none" stroke="url(#state-eye-R0-iris)" stroke-width="5" opacity="0.9"></circle><circle cx="20" cy="20" r="6" fill="url(#state-eye-R0-pupil)"></circle><g filter="url(#state-eye-R0-glow)"><line x1="20" y1="20" x2="20" y2="12" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="8s" repeatCount="indefinite"></animateTransform></line></g><circle cx="20" cy="20" r="2.5" fill="url(#state-eye-R0-core-glow)"></circle><ellipse cx="15" cy="15" rx="3" ry="2" fill="#fff" opacity="0.3"></ellipse></svg></span><div class="gate-body"><strong>State Observer</strong>. The Git-backed push queue and PR gate. Dev sessions never pushed to GitHub directly; the commit went into a queue that fanned out to GitHub and an internal mirror, auto-opened and gated the PR, and surfaced every repo&rsquo;s remote state on one dashboard. Verified-pushed or visibly pending. Never silently dropped.</div></a></li>
+      <li><span class="gate-logo"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="logging-eye-R0-eyeWhite" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#1a1a2e" stop-opacity="1"></stop><stop offset="100%" stop-color="#0f0f1a" stop-opacity="0.9"></stop></radialGradient><radialGradient id="logging-eye-R0-irisGradient" cx="45%" cy="40%" r="50%"><stop offset="0%" stop-color="#22d3ee"></stop><stop offset="60%" stop-color="#0891b2"></stop><stop offset="100%" stop-color="#065f73"></stop></radialGradient><linearGradient id="logging-eye-R0-scanLineGradient" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#22d3ee" stop-opacity="0"></stop><stop offset="50%" stop-color="#22d3ee" stop-opacity="0.8"></stop><stop offset="100%" stop-color="#22d3ee" stop-opacity="0"></stop></linearGradient><filter id="logging-eye-R0-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter><clipPath id="logging-eye-R0-eyeClip"><circle cx="20" cy="20" r="17"></circle></clipPath></defs><circle cx="20" cy="20" r="19" fill="#0a0a14" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"></circle><circle cx="20" cy="20" r="17" fill="url(#logging-eye-R0-eyeWhite)"></circle><circle cx="20" cy="20" r="9" fill="url(#logging-eye-R0-irisGradient)" filter="url(#logging-eye-R0-glow)"></circle><circle cx="20" cy="20" r="7" fill="none" stroke="#22d3ee" stroke-width="0.3" opacity="0.6"></circle><circle cx="20" cy="20" r="4" fill="#0a0a14"></circle><circle cx="20" cy="20" r="2" fill="#22d3ee" filter="url(#logging-eye-R0-glow)"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"></animate></circle><circle cx="17.5" cy="17.5" r="1.5" fill="white" opacity="0.7"></circle><g clip-path="url(#logging-eye-R0-eyeClip)"><rect x="3" y="-5" width="34" height="3" fill="url(#logging-eye-R0-scanLineGradient)"><animateTransform attributeName="transform" type="translate" values="0,0;0,50;0,0" dur="3s" repeatCount="indefinite"></animateTransform></rect></g><circle cx="20" cy="20" r="17" fill="none" stroke="#22d3ee" stroke-width="0.3" stroke-dasharray="2 4"><animateTransform attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="20s" repeatCount="indefinite"></animateTransform></circle></svg></span><div class="gate-body"><strong>Logging Observer</strong>. The observability backplane. Loki, Promtail, Prometheus, Grafana. Every service call streamed with PII redaction at ingest. Two hundred and thirty pre-built dashboards for the Observer suite. The record of what happened when nothing was supposed to happen.</div></li>
+    
+    </ul>
+  </div>
+
+  <div class="build-step">
+    <div class="build-head">
+      <span class="build-num">Three</span>
+      <h3>One VPS, one container. On purpose.</h3>
+    </div>
+    <p>customOrg is a full e-commerce business running on a single server. One machine hosts everything a customer or operator touches: the storefront, the 3D design editor, the payment flow with Stripe, the Canada Post shipping integration, and the admin console. No separate database server, no managed cloud services, no orchestration layer that needs an on-call rotation. The admin console is reachable only from inside Techmeka&rsquo;s secure network, so the public internet cannot probe it at all. Nightly backups are automatically restored every Sunday to prove they actually work. A backup you can&rsquo;t restore isn&rsquo;t a backup. The result is a system whose surface area is small enough to audit end-to-end at any time, which is the reason customOrg moved from brief to accepting live payments in two months.</p>
+  </div>
+
+  <div class="build-step">
+    <div class="build-head">
+      <span class="build-num">Four</span>
+      <h3>If you&rsquo;re building the next one.</h3>
+    </div>
+    <p>Techmeka runs every production application with the same gates: tasks, tests, security, state, and observability. If your product has any of the pieces customOrg does (a browser surface, a payment flow, operators who need an admin console, an identity you can&rsquo;t afford to muddle), the workflow already fits. We don&rsquo;t adapt the workflow to the project; the project moves through the workflow. That&rsquo;s what makes the cadence repeatable, and that&rsquo;s what we hire out.</p>
+  </div>
+</section>
+
 <!-- ═══════════════════════ 6. OBSERVER PLATFORM (dark, setpiece) ═══════════════════════ -->
 <section class="interlude">
-  <span class="eyebrow">Part 4 &middot; The Observers underneath</span>
-  <h2>The Observers &mdash; <em>eight services</em> watching everything that ships.</h2>
+  <span class="eyebrow">Part 5 &middot; The Observers underneath</span>
+  <h2>The Observers: <em>eight services</em> watching everything that ships.</h2>
   <p class="lede-para">The parts of production you shouldn't rebuild from scratch, built once, used everywhere.</p>
 
-  <p>customOrg was built by <strong>Techmeka</strong>, and Techmeka builds every production application with <strong>the Observers</strong> &mdash; eight services, each with a single job, each assuming the presence of the other seven. They meter money, route messages, scan for security holes, verify every change, store every ledger, journal what happened, drive the outside world, and surface anything that needs a human.</p>
+  <p>customOrg was built by <strong>Techmeka</strong>, and Techmeka builds every production application with <strong>the Observers</strong>, eight services, each with a single job, each assuming the presence of the other seven. They meter money, route messages, scan for security holes, verify every change, store every ledger, journal what happened, drive the outside world, and surface anything that needs a human.</p>
 
   <p>customOrg is the first business built and managed with the Observers end-to-end.</p>
 
@@ -1288,7 +1566,7 @@ image:
 
   <div class="observer-flow">
     
-    <div class="observer-flow-head">Eight observers, one pipeline &mdash; intake to evaluate</div>
+    <div class="observer-flow-head">Eight observers, one pipeline: intake to evaluate</div>
     <div class="observer-pipeline">
       <div class="pipe-stage pipe-intake">
         <div class="pipe-stage-head">
@@ -1377,7 +1655,7 @@ image:
   </div>
 
   <div class="observer-callout">
-    <p>Everything the other seven observers surface &mdash; cost spikes, failing tests, security findings, successful deploys &mdash; flows into <strong>tasks</strong> as human-visible, assignable work with full context.</p>
+    <p>Everything the other seven observers surface (cost spikes, failing tests, security findings, successful deploys) flows into <strong>tasks</strong> as human-visible, assignable work with full context.</p>
   </div>
 
   <div class="observer-cta">
@@ -1387,23 +1665,23 @@ image:
 
 <!-- ═══════════════════════ 6. CLOSE ═══════════════════════ -->
 <section class="close-sec">
-  <span class="eyebrow">Part 5 &middot; If you're reading this</span>
+  <span class="eyebrow">Part 6 &middot; If you're reading this</span>
   <h2>There's a chance one of these two <em>applies to you</em>.</h2>
 
   <div class="two-cols">
     <div class="col">
       <h3>You have a drawer in mind.</h3>
-      <p>Open the editor. Measure the inside of the drawer &mdash; width, depth, height, all in millimetres. Drag compartments. See the price land as you go. First draft takes about ten minutes, and nothing you do in the editor costs money until you check out.</p>
+      <p>Open the editor. Measure the inside of the drawer: width, depth, height, all in millimetres. Drag compartments. See the price land as you go. First draft takes about ten minutes, and nothing you do in the editor costs money until you check out.</p>
       <p>If the organizer arrives and doesn't fit, customOrg reprints it. If it arrives and you don't like it, there's a thirty-day return window.</p>
       <a href="https://design.customorg.com" class="cta gold">Start a design →</a>
 
       <a href="https://customorg.com" class="og-card" aria-label="Visit customorg.com">
         <span class="og-card-image">
-          <img src="/blog/images/customorg/og-image.png" alt="Custom Organizers &mdash; custom drawer organizers, designed by you">
+          <img src="/blog/images/customorg/og-image.png" alt="Custom Organizers: custom drawer organizers, designed by you">
         </span>
         <span class="og-card-body">
           <span class="og-card-url">customorg.com</span>
-          <span class="og-card-title">Custom Drawer Organizers &mdash; Design &amp; Print to Fit Any Drawer</span>
+          <span class="og-card-title">Custom Drawer Organizers: Design &amp; Print to Fit Any Drawer</span>
           <span class="og-card-desc">Made-to-fit. Drag dividers. Pick your colours. Delivered.</span>
         </span>
       </a>
@@ -1411,7 +1689,7 @@ image:
     <div class="col">
       <h3>You have a product to build.</h3>
       <p>Techmeka builds applications that have the same shape as customOrg: a browser experience with real math underneath, a pipeline from the customer's intent to a real-world hand-off, a payment surface, a shipping promise. The Observers are how we keep them running.</p>
-      <p>If you're trying to ship something similar &mdash; or something not similar at all but of the same seriousness &mdash; write to us.</p>
+      <p>If you're trying to ship something similar, or something not similar at all but of the same seriousness, write to us.</p>
       <a href="https://techmeka.com/#contactUs" class="cta">Hire Techmeka →</a>
     </div>
   </div>
