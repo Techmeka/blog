@@ -1,7 +1,7 @@
 ---
 layout: whitepaper
 title: "Printed to Fit: Making a Drawer Organizer That Actually Fits the Drawer"
-description: "A field dispatch on customOrg, the Canadian made-to-measure drawer organizer service, live and shipping. Who it's for, how it works, and the engineering shop in Toronto that built it."
+description: "A field dispatch on customOrg, the made-to-measure drawer organizer service, live and shipping. Who it's for, how it works, and the engineering shop in Toronto that built it."
 permalink: /whitepapers/customorg-from-millimetres-to-mailbox.html
 image:
   path: /blog/images/customorg-whitepaper-og-1200x630.jpg
@@ -834,10 +834,10 @@ image:
   /* ─────────── OG LINK PREVIEW CARD ─────────── */
   .og-card {
     display: block;
-    max-width: 560px;
-    margin: 36px 0 12px;
+    max-width: 920px;
+    margin: 32px auto 16px;
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     text-decoration: none !important;
     background: var(--paper-2);
@@ -852,7 +852,7 @@ image:
   .og-card-image {
     display: block;
     width: 100%;
-    aspect-ratio: 1200 / 630;
+    aspect-ratio: 1200 / 360;
     background: #000;
     overflow: hidden;
   }
@@ -861,10 +861,11 @@ image:
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
   .og-card-body {
     display: block;
-    padding: 16px 22px 18px;
+    padding: 14px 22px 16px;
     border-top: 1px solid var(--line-2);
   }
   .og-card-title, .og-card-desc {
@@ -1190,6 +1191,9 @@ image:
     .gate-logo { flex-basis: 32px; width: 32px; height: 32px; }
     .gate-logo svg { width: 32px; height: 32px; }
     .close-sec .two-cols { grid-template-columns: 1fr; gap: 32px; }
+    .og-card { max-width: 540px; margin: 24px auto 12px; }
+    .og-card-image { aspect-ratio: 1200 / 500; }
+    .og-card-body { padding: 12px 18px 14px; }
     .brand-mark .logo { width: 48px; height: 48px; }
     .brand-mark .wordmark { font-size: 1.2rem; }
     .observer-layers { grid-template-columns: 1fr; }
@@ -1244,7 +1248,7 @@ image:
   </div>
   <h1>Printed <em>to fit</em>.</h1>
   <p class="subtitle">How a drawer organizer gets made to measure, from a browser in your kitchen to a mailbox two provinces away.</p>
-  <p class="lede">customOrg is a Canadian made-to-measure drawer organizer service: punch in your drawer's inside dimensions in millimetres, design the layout in a browser, and customOrg prints it as one piece in Toronto and ships it Canada-wide.</p>
+  <p class="lede">customOrg is a made-to-measure drawer organizer service: punch in your drawer's inside dimensions in millimetres, design the layout in a browser, and customOrg prints it and ships it to your doorstep.</p>
 
   <div class="signoff">
     <span class="label">Live on launch</span>
@@ -1386,7 +1390,7 @@ image:
   <div class="win">
     <div class="win-head">
       <span class="win-num">One</span>
-      <h3>The price moves as you drag.</h3>
+      <h3>Realtime pricing as you design.</h3>
     </div>
     <p>No quote form. No "contact us for pricing." No deposit on an open-ended number. The amount on the right-hand side of the editor updates in real time as you edit the geometry, because the same geometry that would print your organizer is also computing its cost: grams of plastic, print hours, a labour charge, a margin. Every input is defensible because every input is a real cost.</p>
     <div class="scenario">
@@ -1504,7 +1508,7 @@ image:
       <span class="build-num">Three</span>
       <h3>One VPS, one container. On purpose.</h3>
     </div>
-    <p>customOrg is a full e-commerce business running on a single server. One machine hosts everything a customer or operator touches: the storefront, the 3D design editor, the payment flow with Stripe, the Canada Post shipping integration, and the admin console. No separate database server, no managed cloud services, no orchestration layer that needs an on-call rotation. The admin console is reachable only from inside Techmeka&rsquo;s secure network, so the public internet cannot probe it at all. Nightly backups are automatically restored every Sunday to prove they actually work. A backup you can&rsquo;t restore isn&rsquo;t a backup. The result is a system whose surface area is small enough to audit end-to-end at any time, which is the reason customOrg moved from brief to accepting live payments in two months.</p>
+    <p>customOrg is a full e-commerce business running on a single server. One machine hosts everything a customer or operator touches: the storefront, the 3D design editor, the payment flow with Stripe, the Canada Post shipping integration, and the admin console. No separate database server, no managed cloud services, no orchestration layer that needs an on-call rotation. The admin console is reachable only from inside customOrg&rsquo;s secure network, so the public internet cannot probe it at all.</p>
   </div>
 
   <div class="build-step">
@@ -1733,17 +1737,6 @@ image:
       <p>Open the editor. Measure the inside of the drawer: width, depth, height, all in millimetres. Drag compartments. See the price land as you go. First draft takes about ten minutes, and nothing you do in the editor costs money until you check out.</p>
       <p>If the organizer arrives and doesn't fit, customOrg reprints it. If it arrives and you don't like it, there's a thirty-day return window.</p>
       <a href="https://design.customorg.com" class="cta gold">Start a design →</a>
-
-      <a href="https://customorg.com" class="og-card" aria-label="Visit customorg.com">
-        <span class="og-card-image">
-          <img src="/blog/images/customorg/og-image.png" alt="Custom Organizers: custom drawer organizers, designed by you">
-        </span>
-        <span class="og-card-body">
-          <span class="og-card-url">customorg.com</span>
-          <span class="og-card-title">Custom Drawer Organizers: Design &amp; Print to Fit Any Drawer</span>
-          <span class="og-card-desc">Made-to-fit. Drag dividers. Pick your colours. Delivered.</span>
-        </span>
-      </a>
     </div>
     <div class="col">
       <h3>You have a product to build.</h3>
@@ -1752,6 +1745,17 @@ image:
       <a href="https://techmeka.com/#contactUs" class="cta">Hire Techmeka →</a>
     </div>
   </div>
+
+  <a href="https://customorg.com" class="og-card" aria-label="Visit customorg.com">
+    <span class="og-card-image">
+      <img src="/blog/images/customorg/og-image.png" alt="Custom Organizers: custom drawer organizers, designed by you">
+    </span>
+    <span class="og-card-body">
+      <span class="og-card-url">customorg.com</span>
+      <span class="og-card-title">Custom Drawer Organizers: Design &amp; Print to Fit Any Drawer</span>
+      <span class="og-card-desc">Made-to-fit. Drag dividers. Pick your colours. Delivered.</span>
+    </span>
+  </a>
 
   <p class="fine">customOrg is live on payment and shipping as of November 2026. Techmeka is a Toronto engineering shop; the Observers are in daily production use behind the customer-facing work we ship. None of the Observers is open to the public yet.</p>
 </section>
