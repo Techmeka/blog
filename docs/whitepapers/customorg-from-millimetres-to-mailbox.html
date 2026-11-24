@@ -1108,6 +1108,30 @@ image:
   }
   .feature-caption a { color: var(--ink-2); }
 
+  /* ─────────── USE-CASE CROSSFADE CAROUSEL ─────────── */
+  .use-case-cycle { position: absolute; inset: 0; overflow: hidden; }
+  .use-case-cycle img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    will-change: opacity;
+  }
+  .use-case-cycle img:nth-child(1) { animation: ucFade1 20s ease-in-out infinite; }
+  .use-case-cycle img:nth-child(2) { animation: ucFade2 20s ease-in-out infinite; }
+  .use-case-cycle img:nth-child(3) { animation: ucFade3 20s ease-in-out infinite; }
+  .use-case-cycle img:nth-child(4) { animation: ucFade4 20s ease-in-out infinite; }
+  @keyframes ucFade1 { 0%, 20% { opacity: 1; } 25%, 95% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes ucFade2 { 0%, 20% { opacity: 0; } 25%, 45% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes ucFade3 { 0%, 45% { opacity: 0; } 50%, 70% { opacity: 1; } 75%, 100% { opacity: 0; } }
+  @keyframes ucFade4 { 0%, 70% { opacity: 0; } 75%, 95% { opacity: 1; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .use-case-cycle img { animation: none; }
+    .use-case-cycle img:nth-child(1) { opacity: 1; }
+  }
+
   @media (max-width: 1080px) {
     .compromises.compromises-3col { grid-template-columns: 1fr; max-width: 540px; }
   }
@@ -1212,7 +1236,7 @@ image:
 
   <div class="compromises compromises-3col">
     <div class="compromise-card customorg-card">
-      <div class="compromise-logo"><svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="customOrg" style="color:#a5893a"><style>@keyframes co-cellpop{0%,10%{opacity:0;transform:scale(0.6)}20%{opacity:0.85;transform:scale(1)}70%{opacity:0.85;transform:scale(1)}85%,100%{opacity:0;transform:scale(0.85)}}.co-cell{transform-origin:center;transform-box:fill-box;animation:co-cellpop 4.5s cubic-bezier(0.4,0,0.2,1) infinite}.co-cell-1{animation-delay:0s}.co-cell-2{animation-delay:0.35s}.co-cell-3{animation-delay:0.7s}.co-cell-4{animation-delay:1.05s}.co-cell-5{animation-delay:1.4s}</style><rect x="3" y="5" width="34" height="30" rx="3.5" stroke="currentColor" stroke-width="1.75" fill="none"/><g fill="currentColor"><rect class="co-cell co-cell-1" x="5" y="7" width="15" height="12" rx="1"/><rect class="co-cell co-cell-2" x="22" y="7" width="13" height="12" rx="1"/><rect class="co-cell co-cell-3" x="5" y="21" width="10" height="12" rx="1"/><rect class="co-cell co-cell-4" x="17" y="21" width="9" height="12" rx="1"/><rect class="co-cell co-cell-5" x="28" y="21" width="7" height="12" rx="1"/></g><g stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55" fill="none"><line x1="4" y1="20" x2="36" y2="20"/><line x1="21" y1="6" x2="21" y2="20"/><line x1="16" y1="20" x2="16" y2="34"/><line x1="27" y1="20" x2="27" y2="34"/></g><text x="46" y="27" font-family="Georgia, serif" font-size="20" font-weight="700" fill="currentColor">customOrg</text></svg></div>
+      <div class="compromise-logo"><svg viewBox="0 0 170 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="customOrg" style="color:#a5893a"><style>@keyframes co-cellpop{0%,10%{opacity:0;transform:scale(0.6)}20%{opacity:0.85;transform:scale(1)}70%{opacity:0.85;transform:scale(1)}85%,100%{opacity:0;transform:scale(0.85)}}.co-cell{transform-origin:center;transform-box:fill-box;animation:co-cellpop 4.5s cubic-bezier(0.4,0,0.2,1) infinite}.co-cell-1{animation-delay:0s}.co-cell-2{animation-delay:0.35s}.co-cell-3{animation-delay:0.7s}.co-cell-4{animation-delay:1.05s}.co-cell-5{animation-delay:1.4s}</style><rect x="3" y="5" width="34" height="30" rx="3.5" stroke="currentColor" stroke-width="1.75" fill="none"/><g fill="currentColor"><rect class="co-cell co-cell-1" x="5" y="7" width="15" height="12" rx="1"/><rect class="co-cell co-cell-2" x="22" y="7" width="13" height="12" rx="1"/><rect class="co-cell co-cell-3" x="5" y="21" width="10" height="12" rx="1"/><rect class="co-cell co-cell-4" x="17" y="21" width="9" height="12" rx="1"/><rect class="co-cell co-cell-5" x="28" y="21" width="7" height="12" rx="1"/></g><g stroke="currentColor" stroke-width="1.25" stroke-linecap="round" opacity="0.55" fill="none"><line x1="4" y1="20" x2="36" y2="20"/><line x1="21" y1="6" x2="21" y2="20"/><line x1="16" y1="20" x2="16" y2="34"/><line x1="27" y1="20" x2="27" y2="34"/></g><text x="46" y="27" font-family="Georgia, serif" font-size="20" font-weight="700" fill="currentColor">customOrg</text></svg></div>
       <h4>Printed to fit.</h4>
       <p class="lede-line">Design in a browser. Pay what the editor says. Printed as one piece, in Toronto.</p>
       <ul class="metrics-list">
@@ -1248,12 +1272,15 @@ image:
   <div class="feature-pair">
     <figure class="feature-card">
       <div class="feature-media">
-        <video poster="/blog/images/customorg/tools-rotation-poster.jpg" autoplay loop muted playsinline preload="metadata">
-          <source src="/blog/images/customorg/tools-rotation.webm" type="video/webm">
-          <source src="/blog/images/customorg/tools-rotation.mp4" type="video/mp4">
-        </video>
+        <!-- 4-image crossfade carousel sourced from customorg.com's Use Cases 2x2 grid. Awaiting customOrg's cleaner 1280x800 renders per msg 476 (IP-9813); cosmetics, workshop, garage captured fully populated; artist drawer rendered empty mid-animation in source screenshot. -->
+        <div class="use-case-cycle" role="img" aria-label="Four use-case drawer renders: cosmetics and vanity, workshop and toolbox, artist and maker, garage and auto">
+          <img src="/blog/images/customorg/use-cases/cosmetics.jpg" alt="Cosmetics and vanity drawer" loading="lazy">
+          <img src="/blog/images/customorg/use-cases/workshop.jpg" alt="Workshop and toolbox drawer" loading="lazy">
+          <img src="/blog/images/customorg/use-cases/artist.jpg" alt="Artist and maker drawer" loading="lazy">
+          <img src="/blog/images/customorg/use-cases/garage.jpg" alt="Garage and auto drawer" loading="lazy">
+        </div>
       </div>
-      <figcaption class="feature-caption">Four use-case renders cycling: cosmetics, workshop, artist, mechanic. Produced live by the same 3D engine <a href="https://customorg.com">customorg.com</a> uses.</figcaption>
+      <figcaption class="feature-caption">Four use-case renders cycling from <a href="https://customorg.com">customorg.com</a>: cosmetics, workshop, artist, garage. Same 3D engine the editor uses.</figcaption>
     </figure>
     <figure class="feature-card">
       <div class="feature-media">
@@ -1272,28 +1299,20 @@ image:
 
   <div class="visual">
     <svg viewBox="0 0 880 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="viz-pipe-title">
-      <title id="viz-pipe-title">Five-step order pipeline: design, pay, approve, print, ship, with the time spent at each stage.</title>
-      <line x1="132" y1="55" x2="748" y2="55" stroke="#c9a94a" stroke-width="2" stroke-dasharray="3,7"/>
-      <circle cx="100" cy="55" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
-      <text x="100" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">1</text>
-      <text x="100" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">DESIGN</text>
-      <text x="100" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">~10 minutes</text>
-      <circle cx="270" cy="55" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
-      <text x="270" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">2</text>
-      <text x="270" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">PAY</text>
-      <text x="270" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">all-in at checkout</text>
+      <title id="viz-pipe-title">Three-step order pipeline: design, pay, ship, with the time spent at each stage.</title>
+      <line x1="172" y1="55" x2="708" y2="55" stroke="#c9a94a" stroke-width="2" stroke-dasharray="3,7"/>
+      <circle cx="140" cy="55" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+      <text x="140" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">1</text>
+      <text x="140" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">DESIGN</text>
+      <text x="140" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">~10 minutes</text>
       <circle cx="440" cy="55" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
-      <text x="440" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">3</text>
-      <text x="440" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">APPROVE</text>
-      <text x="440" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">a Toronto eye</text>
-      <circle cx="610" cy="55" r="30" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
-      <text x="610" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">4</text>
-      <text x="610" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">PRINT</text>
-      <text x="610" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">3&ndash;6 hours</text>
-      <circle cx="780" cy="55" r="30" fill="#c9a94a" stroke="#c9a94a" stroke-width="2.5"/>
-      <text x="780" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#0e2340">5</text>
-      <text x="780" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">SHIP</text>
-      <text x="780" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">7&ndash;10 days</text>
+      <text x="440" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#2563eb">2</text>
+      <text x="440" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">PAY</text>
+      <text x="440" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">all-in at checkout</text>
+      <circle cx="740" cy="55" r="30" fill="#c9a94a" stroke="#c9a94a" stroke-width="2.5"/>
+      <text x="740" y="63" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="22" font-weight="700" fill="#0e2340">3</text>
+      <text x="740" y="115" text-anchor="middle" font-family="'Iowan Old Style', Georgia, serif" font-size="15" font-weight="700" fill="#0e2340">SHIP</text>
+      <text x="740" y="135" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="#5a6478">7&ndash;10 days</text>
     </svg>
   </div>
 
