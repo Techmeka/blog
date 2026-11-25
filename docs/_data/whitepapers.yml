@@ -57,3 +57,21 @@
   featured: true
   reading_time: "8 min"
 
+- slug: "customorg-from-millimetres-to-mailbox"
+  type: "Case Study"
+  title: "Printed to Fit: Making a Drawer Organizer That Actually Fits the Drawer"
+  subtitle: "A field dispatch on customOrg, the made-to-measure drawer organizer service built on the Observer platform."
+  date: 2026-11-25
+  description: >-
+    customOrg is live and shipping. Punch your drawer's dimensions into a
+    browser, drag compartments onto a grid, watch the price land live, and
+    the organizer prints as one piece in Toronto. This is the build story:
+    how a browser editor, a pricing engine, a shipping integration, and a
+    print floor came together in a few months on the Observer platform —
+    one VPS, one container, every change gated.
+  image: /blog/assets/images/whitepaper-cards/customorg-card.jpg
+  thumbnail: /blog/images/optimized/logoTechMekaBlack.png
+  tags: [Case Study, Product, Observer Platform, 3D Printing, Made in Canada]
+  featured: true
+  reading_time: "14 min"
+
