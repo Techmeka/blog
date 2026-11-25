@@ -1,1 +1,7 @@
 .DS_Store
+
+# Local-preview symlink so Python http.server can serve /blog/... prefix (Jekyll's baseurl is only applied on production build)
+docs/blog
+
+# Agent debug output (screenshots used to verify renders during editing)
+.verify/
