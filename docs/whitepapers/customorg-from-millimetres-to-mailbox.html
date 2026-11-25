@@ -929,9 +929,14 @@ image:
   .photo.inline {
     margin: 28px 0;
   }
-  .photo.inline img {
+  .photo.inline img,
+  .photo.inline video {
+    display: block;
+    width: 100%;
     max-width: 440px;
     margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(14,35,64,0.12), 0 4px 12px rgba(14,35,64,0.08);
   }
   .photo.inline .photo-caption {
     text-align: left;
@@ -1357,9 +1362,10 @@ image:
       <h4>Design in your browser.</h4>
       <p>Open <a href="https://design.customorg.com">design.customorg.com</a>. Three numbers go in: the drawer's width, depth, and height, all in millimetres. Drag compartments onto the grid. Organizing tools? Drop in silhouettes for the specific sockets, wrenches, or ratchets you own. Pick a body colour (Jet Black, Slate, Bone, or Maple) and an accent. Rotate the 3D preview. First draft, about ten minutes.</p>
       <div class="photo inline">
-        <!-- TODO: swap to a WebM showing the full design.customorg.com UI (compartment sidebar + grid + live price + 3D preview + colour picker) once customOrg publishes it. Asked for via session_send msg 471 to customOrg, correlation IP-9813, 2026-11-24. Current image shows 3D preview only. -->
-        <img src="/blog/images/customorg/editor-preview.jpg" alt="A 3D-rendered preview of a 4-compartment drawer organizer, shown from above in Jet Black with soft shadows.">
-        <p class="photo-caption">A design snapshot, rendered live in the editor as you drag.</p>
+        <video autoplay loop muted playsinline preload="metadata" aria-label="Screen recording of the design.customorg.com editor: dragging compartments onto the grid, live price updating, 3D preview rotating, colour picker.">
+          <source src="/blog/images/customorg/scenes/studio.webm" type="video/webm">
+        </video>
+        <p class="photo-caption">The editor on design.customorg.com: compartments drop onto a grid, price updates live, 3D preview rotates.</p>
       </div>
     </li>
     <li>
