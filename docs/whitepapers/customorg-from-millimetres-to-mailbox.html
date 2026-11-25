@@ -1109,64 +1109,47 @@ image:
   }
   .feature-caption a { color: var(--ink-2); }
 
-  /* ─────────── USE-CASE LABEL OVERLAY (synced to 8s tools-rotation cycle) ─────────── */
-  .use-case-labels {
+  /* ───────���─── 4-VIDEO SCENE CYCLE (LEFT card) ─────────── */
+  .scene-cycle { position: absolute; inset: 0; overflow: hidden; }
+  .scene {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation-duration: 24s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    will-change: opacity;
+  }
+  .scene video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scene-label {
     position: absolute;
     left: 14px;
     right: 14px;
     bottom: 14px;
-    pointer-events: none;
-    min-height: 44px;
-  }
-  .ucl {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 10px 14px;
     background: rgba(14, 35, 64, 0.75);
     color: #fff;
     font-family: var(--font-head);
     font-weight: 600;
     font-size: 0.95rem;
-    letter-spacing: 0.01em;
-    border-radius: 4px;
-    opacity: 0;
     text-align: center;
+    border-radius: 4px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    animation-duration: 8s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    will-change: opacity;
+    pointer-events: none;
   }
-  .ucl-1 { animation-name: uclFade1; }
-  .ucl-2 { animation-name: uclFade2; }
-  .ucl-3 { animation-name: uclFade3; }
-  .ucl-4 { animation-name: uclFade4; }
-  @keyframes uclFade1 {
-    0%, 22%  { opacity: 1; }
-    25%, 95% { opacity: 0; }
-    100%     { opacity: 1; }
-  }
-  @keyframes uclFade2 {
-    0%, 22%  { opacity: 0; }
-    25%, 47% { opacity: 1; }
-    50%, 100% { opacity: 0; }
-  }
-  @keyframes uclFade3 {
-    0%, 47%  { opacity: 0; }
-    50%, 72% { opacity: 1; }
-    75%, 100% { opacity: 0; }
-  }
-  @keyframes uclFade4 {
-    0%, 72%  { opacity: 0; }
-    75%, 97% { opacity: 1; }
-    100%     { opacity: 0; }
-  }
+  .scene-1 { animation-name: sceneFade1; }
+  .scene-2 { animation-name: sceneFade2; }
+  .scene-3 { animation-name: sceneFade3; }
+  .scene-4 { animation-name: sceneFade4; }
+  /* 24s cycle, each scene visible ~5s with 1s crossfade overlaps */
+  @keyframes sceneFade1 { 0%, 22%  { opacity: 1; } 25%, 95% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes sceneFade2 { 0%, 22%  { opacity: 0; } 25%, 47% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  @keyframes sceneFade3 { 0%, 47%  { opacity: 0; } 50%, 72% { opacity: 1; } 75%, 100% { opacity: 0; } }
+  @keyframes sceneFade4 { 0%, 72%  { opacity: 0; } 75%, 97% { opacity: 1; } 100%     { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
-    .ucl { animation: none; }
-    .ucl-1 { opacity: 1; }
+    .scene { animation: none; }
+    .scene-1 { opacity: 1; }
   }
 
   @media (max-width: 1080px) {
@@ -1312,25 +1295,34 @@ image:
   <div class="feature-pair">
     <figure class="feature-card">
       <div class="feature-media">
-        <!-- TODO: swap to 4 canvas-only use-case WebMs per customOrg msg 477 (cosmetics, workshop, artist, garage) when they ship. Current fallback is tools-rotation.webm (single 8s looped clip cycling all 4) with CSS-overlay labels synced to the 8s cycle. -->
-        <video class="use-case-video" poster="/blog/images/customorg/tools-rotation-poster.jpg" autoplay loop muted playsinline preload="metadata">
-          <source src="/blog/images/customorg/tools-rotation.webm" type="video/webm">
-          <source src="/blog/images/customorg/tools-rotation.mp4" type="video/mp4">
-        </video>
-        <div class="use-case-labels" aria-hidden="true">
-          <span class="ucl ucl-1">Cosmetics &amp; vanity</span>
-          <span class="ucl ucl-2">Workshop &amp; toolbox</span>
-          <span class="ucl ucl-3">Artist &amp; maker</span>
-          <span class="ucl ucl-4">Garage &amp; auto</span>
+        <div class="scene-cycle" role="group" aria-label="Four use-case 3D scenes: cosmetics and vanity, workshop and toolbox, artist and maker, garage and auto">
+          <div class="scene scene-1">
+            <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/cosmetics.webm" type="video/webm"></video>
+            <span class="scene-label">Cosmetics &amp; vanity</span>
+          </div>
+          <div class="scene scene-2">
+            <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/workshop.webm" type="video/webm"></video>
+            <span class="scene-label">Workshop &amp; toolbox</span>
+          </div>
+          <div class="scene scene-3">
+            <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/artist.webm" type="video/webm"></video>
+            <span class="scene-label">Artist &amp; maker</span>
+          </div>
+          <div class="scene scene-4">
+            <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/mechanic.webm" type="video/webm"></video>
+            <span class="scene-label">Garage &amp; auto</span>
+          </div>
         </div>
       </div>
       <figcaption class="feature-caption">Four use-case renders cycling from <a href="https://customorg.com">customorg.com</a>: cosmetics, workshop, artist, garage. Same 3D engine the editor uses.</figcaption>
     </figure>
     <figure class="feature-card">
       <div class="feature-media">
-        <video src="/blog/images/customorg/howstep-preview.webm" poster="/blog/images/customorg/howstep-preview-poster.jpg" autoplay loop muted playsinline preload="metadata"></video>
+        <video autoplay loop muted playsinline preload="metadata">
+          <source src="/blog/images/customorg/scenes/compartment.webm" type="video/webm">
+        </video>
       </div>
-      <figcaption class="feature-caption">Compartments generating in the editor as you drag. The same clip <a href="https://customorg.com">customorg.com</a> ships on its landing.</figcaption>
+      <figcaption class="feature-caption">Compartments forming in the editor as you drag. The <a href="https://customorg.com"><em>design your compartments</em></a> scene from customorg.com.</figcaption>
     </figure>
   </div>
 </section>
