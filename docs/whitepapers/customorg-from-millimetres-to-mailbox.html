@@ -1091,11 +1091,41 @@ image:
     flex-direction: column;
   }
   .feature-media {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     background: var(--paper-3);
     overflow: hidden;
     display: block;
     position: relative;
+  }
+  /* Scene-label chip track: lives BETWEEN the video and the caption copy,
+     in the white area, not overlaid on the video (IP-9813 request). */
+  .scene-label-track {
+    position: relative;
+    min-height: 44px;
+    padding: 10px 16px 0;
+    background: var(--paper-2);
+  }
+  .scene-label-track .scene-label {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 10px;
+    text-align: center;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    opacity: 0;
+    will-change: opacity;
+  }
+  .scene-label-track .label-1 { animation: sceneFade1 36s ease-in-out infinite; }
+  .scene-label-track .label-2 { animation: sceneFade2 36s ease-in-out infinite; }
+  .scene-label-track .label-3 { animation: sceneFade3 36s ease-in-out infinite; }
+  .scene-label-track .label-4 { animation: sceneFade4 36s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .scene-label-track .scene-label { animation: none; }
+    .scene-label-track .label-1 { opacity: 1; }
   }
   .feature-media img,
   .feature-media video {
@@ -1120,34 +1150,17 @@ image:
     position: absolute;
     inset: 0;
     opacity: 0;
-    animation-duration: 24s;
+    animation-duration: 36s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     will-change: opacity;
   }
   .scene-cycle > .scene video { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .scene-cycle .scene-label {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    padding: 10px 14px;
-    background: rgba(14, 35, 64, 0.75);
-    color: #fff;
-    font-family: var(--font-head);
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-align: center;
-    border-radius: 4px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    pointer-events: none;
-  }
   .scene-cycle > .scene-1 { animation-name: sceneFade1; }
   .scene-cycle > .scene-2 { animation-name: sceneFade2; }
   .scene-cycle > .scene-3 { animation-name: sceneFade3; }
   .scene-cycle > .scene-4 { animation-name: sceneFade4; }
-  /* 24s cycle, each scene visible ~5s with 1s crossfade overlaps */
+  /* 36s cycle, each scene visible ~8s with 1s crossfade overlaps */
   @keyframes sceneFade1 { 0%, 22%  { opacity: 1; } 25%, 95% { opacity: 0; } 100% { opacity: 1; } }
   @keyframes sceneFade2 { 0%, 22%  { opacity: 0; } 25%, 47% { opacity: 1; } 50%, 100% { opacity: 0; } }
   @keyframes sceneFade3 { 0%, 47%  { opacity: 0; } 50%, 72% { opacity: 1; } 75%, 100% { opacity: 0; } }
@@ -1303,23 +1316,25 @@ image:
         <div class="scene-cycle" role="group" aria-label="Four use-case 3D scenes: cosmetics and vanity, workshop and toolbox, artist and maker, garage and auto">
           <div class="scene scene-1">
             <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/cosmetics.webm" type="video/webm"></video>
-            <span class="scene-label">Cosmetics &amp; vanity</span>
           </div>
           <div class="scene scene-2">
             <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/workshop.webm" type="video/webm"></video>
-            <span class="scene-label">Workshop &amp; toolbox</span>
           </div>
           <div class="scene scene-3">
             <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/artist.webm" type="video/webm"></video>
-            <span class="scene-label">Artist &amp; maker</span>
           </div>
           <div class="scene scene-4">
             <video autoplay loop muted playsinline preload="metadata"><source src="/blog/images/customorg/scenes/mechanic.webm" type="video/webm"></video>
-            <span class="scene-label">Garage &amp; auto</span>
           </div>
         </div>
       </div>
-      <figcaption class="feature-caption">Four use-case renders cycling from <a href="https://customorg.com">customorg.com</a>: cosmetics, workshop, artist, garage. Same 3D engine the editor uses.</figcaption>
+      <div class="scene-label-track" aria-hidden="true">
+        <span class="scene-label label-1">Cosmetics &amp; vanity</span>
+        <span class="scene-label label-2">Workshop &amp; toolbox</span>
+        <span class="scene-label label-3">Artist &amp; maker</span>
+        <span class="scene-label label-4">Garage &amp; auto</span>
+      </div>
+      <figcaption class="feature-caption">Four customer tableaus, rendered live in the <a href="https://customorg.com">customorg.com</a> editor.</figcaption>
     </figure>
     <figure class="feature-card">
       <div class="feature-media">
@@ -1327,7 +1342,7 @@ image:
           <source src="/blog/images/customorg/scenes/compartment.webm" type="video/webm">
         </video>
       </div>
-      <figcaption class="feature-caption">Compartments forming in the editor as you drag. The <a href="https://customorg.com"><em>design your compartments</em></a> scene from customorg.com.</figcaption>
+      <figcaption class="feature-caption">Compartments forming as you drag &mdash; the design surface at <a href="https://customorg.com">customorg.com</a>.</figcaption>
     </figure>
   </div>
 </section>
